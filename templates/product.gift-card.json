@@ -304,17 +304,6 @@
     "166662021941d5bb0a": {
       "type": "apps",
       "disabled": true,
-      "blocks": {
-        "dd45462f-8853-4ab3-92bf-1130eadb97b9": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "dd45462f-8853-4ab3-92bf-1130eadb97b9"
-      ],
       "settings": {
       }
     },

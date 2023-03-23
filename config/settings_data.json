@@ -259,63 +259,6 @@
           "color_scheme": "background-1"
         }
       },
-      "footer-mama": {
-        "type": "footer-mama",
-        "blocks": {
-          "c30ab1a5-1881-414b-99a9-89443224eb3e": {
-            "type": "link_list",
-            "settings": {
-              "heading": "NOS PRODUITS",
-              "menu": "nos-produits"
-            }
-          },
-          "footer-mama-0": {
-            "type": "link_list",
-            "settings": {
-              "heading": "CONSEILS",
-              "menu": "conseil"
-            }
-          },
-          "2e429f80-8fe9-41b1-a5ba-21219d6316b4": {
-            "type": "link_list",
-            "settings": {
-              "heading": "CONTACT",
-              "menu": "contact"
-            }
-          }
-        },
-        "block_order": [
-          "c30ab1a5-1881-414b-99a9-89443224eb3e",
-          "footer-mama-0",
-          "2e429f80-8fe9-41b1-a5ba-21219d6316b4"
-        ],
-        "settings": {
-          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo.svg?v=1662912874",
-          "image_certification": "shopify:\/\/shop_images\/Frame_8890_93054863-769c-4751-8cd8-66add179e51f.png",
-          "subtext": "<p>Parce que chaque femme est différente, et que chaque moment nécessite que l’on imagine des produits spécifiques<\/p>",
-          "show_social": true,
-          "image-footer": "shopify:\/\/shop_images\/produit-mamapoule-packshot-desktop.jpg",
-          "subtitle-image-footer": "NOUVEAUTÉ",
-          "header-image-footer": "ENVIE D'UN BOUILLON<br><span>AU COLLAGÈNE ?<\/span>",
-          "link-image-footer": "Je découvre",
-          "link-image": "shopify:\/\/products\/mama-poule",
-          "mention-legal": "<p><a href=\"\/pages\/mentions-legales\" title=\"Mentions legales\">Mentions légales<\/a> — <a href=\"\/pages\/politique-de-confidentialite\" title=\"Politique de confidentialité\">Politique de confidentialité<\/a> © Jolly Mama! 2022<\/p>",
-          "bg_color": "#e8e2db",
-          "subtitle-image-footer-color": "#ffffff",
-          "header-image-footer-color": "#ffffff",
-          "header-image-footer-color-2": "#f4ffaf",
-          "link-image-footer-color": "#ffffff"
-        }
-      },
-      "ingredient-image-text": {
-        "type": "ingredient-image-text",
-        "settings": {
-          "subtitle": "Compatible grossesse",
-          "title": "Magnésium",
-          "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
-          "title_accordion": "Nos sources"
-        }
-      },
       "products-carousel": {
         "type": "products-carousel",
         "settings": {
@@ -390,35 +333,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "8962992520437913685": {
-        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": false,
-        "settings": {
-          "inject_modules_loader": true,
-          "inject_sdk_loader": true
-        }
-      },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "1744161739547163668": {
-        "type": "shopify:\/\/apps\/countdown-timer-bar-hextom\/blocks\/ctb-embeded-block\/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Default": {

@@ -1,52 +1,58 @@
 {%- style -%}
   /* RADIO BUTTON STYLE */
-input[type="radio"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  /* Remove most all native input styles */
-  appearance: none;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 50%;
+  input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
 
-}
-input[type="radio"]::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 1s transform ease-in-out;
-}
-input[type="radio"]:focus {
-  background-color: currentColor;
-  outline: max(1px, 0.15em) solid currentColor;
-  outline-offset: max(1px, 0.15em);
-  transform: scale(0.8);
-}
+  }
+  input[type="radio"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 1s transform ease-in-out;
+  }
+  input[type="radio"]:focus {
+    background-color: currentColor;
+    outline: max(1px, 0.15em) solid currentColor;
+    outline-offset: max(1px, 0.15em);
+    transform: scale(0.8);
+  }
   /* END RADIO BUTTON STYLE */
-
 {%- endstyle -%}
-
 
 
 {%- comment -%} DESKTOP {%- endcomment -%}
 <div class="hidden md:flex flex-col max-w-[234px] ml-10 mb-10 gap-5">
   {% for block in section.blocks %}
-    <div class="
-        {%- if block.settings.radius == "Top" -%} rounded-t-[94.5px]
-            {%- elsif block.settings.radius == "Full" -%} rounded-[50px]
-            {%- elsif block.settings.radius == "Bottom" -%} rounded-br-[70px]
-            {%- elsif block.settings.radius == "None" -%} rounded-none
-        {%- endif -%}" style="background-color: {{ block.settings.background_color }}">
-    <div class=" flex flex-col  justify-center gap-3 pl-11 pr-6 py-10">
+    <div
+      class="
+      {%- if block.settings.radius == "Top" -%}
+        rounded-t-[94.5px]
+      {%- elsif block.settings.radius == "Full" -%}
+        rounded-[50px]
+      {%- elsif block.settings.radius == "Bottom" -%}
+        rounded-br-[70px]
+      {%- elsif block.settings.radius == "None" -%}
+        rounded-none
+      {%- endif -%}"
+      style="background-color: {{ block.settings.background_color }}">
+      <div class=" flex flex-col  justify-center gap-3 pl-11 pr-6 py-10">
         <div class=" font-extrabold text-base" style="color:{{ block.settings.title_color }}">
-        {{ block.settings.block-title }}
+          {{ block.settings.block-title }}
         </div>
         <div class="text-bold text-[15px]" style="color:{{ block.settings.text_color }}">
-         <p> {{ block.settings.block-text }} </p>
+          <p>
+            {{ block.settings.block-text }}
+          </p>
         </div>
       </div>
     </div>
@@ -56,28 +62,26 @@ input[type="radio"]:focus {
 
 {%- comment -%} MOBILE {%- endcomment -%}
 
-  <div class="my-10 max-w-[1250px] md:hidden">
-     <div class="scrollbar flex relative overflow-hidden overflow-x-scroll snap-mandatory gap-4 snap-x mx-5 xl:overflow-x-hidden">
-          {% for block in section.blocks %}
+<div class="my-10 max-w-[1250px] md:hidden">
+  <div class="scrollbar flex relative overflow-hidden overflow-x-scroll snap-mandatory gap-4 snap-x mx-5 xl:overflow-x-hidden">
+    {% for block in section.blocks %}
 
-    <div class="rounded-t-[100px] flex flex-col items-center justify-center snap-center min-w-[232px] max-h-[268px]" style="background-color: {{ block.settings.background_color }}">
-    <div class=" py-5 px-4 text-center">
-        <div class="mb-1 text-extrabold text-base" style="color:{{ block.settings.title_color }}">
-           {{ block.settings.block-title }}
-        </div>
-        <div class="text-bold text-[15px]" style="color:{{ block.settings.text_color }}">
-          {{ block.settings.block-text }}
+      <div class="rounded-t-[100px] flex flex-col items-center justify-center snap-center min-w-[232px] max-h-[268px]" style="background-color: {{ block.settings.background_color }}">
+        <div class=" py-5 px-4 text-center">
+          <div class="mb-1 text-extrabold text-base" style="color:{{ block.settings.title_color }}">
+            {{ block.settings.block-title }}
+          </div>
+          <div class="text-bold text-[15px]" style="color:{{ block.settings.text_color }}">
+            {{ block.settings.block-text }}
+          </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
-         <div class="snap-start">
-        </div>
-     </div>
+    {% endfor %}
+    <div class="snap-start"></div>
   </div>
+</div>
 
 {%- comment -%} END MOBILE {%- endcomment -%}
-
 
 
 {% schema %}
@@ -140,13 +144,8 @@ input[type="radio"]:focus {
             "id": "text_color",
             "label": "Text color",
             "default": "#733E2B"
-          } 
+          }
         ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Side block article" 
       }
     ]
   }
