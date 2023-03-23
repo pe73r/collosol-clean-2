@@ -17,7 +17,7 @@
       "settings": {
         "text": "<p>Abonnez vous et économisez 15% sur tous vos achats <\/p>",
         "text_color": "#323338",
-        "background_color": "#F6D8DA"
+        "background_color": "#f6d8da"
       }
     },
     "1663586369b92a04be": {
@@ -26,8 +26,8 @@
         "16635863695bdbafb2-0": {
           "type": "slide",
           "settings": {
-            "title": "LA NUTRITION POUR <br> LES \n(FUTURES) MAMAS",
-            "title_mobile": "LA NUTRITION POUR LES \n<br>(FUTURES) MAMAS",
+            "title": "Craquez pour notre Eau<br> de Lait iconique, le must-have<br> des stars",
+            "title_mobile": "Craquez pour notre Eau<br> de Lait iconique, le must-have<br> des stars",
             "cta": "Je découvre les produits",
             "button_link": "shopify:\/\/collections\/tous-nos-produits",
             "text_color": "#ffffff",
@@ -45,24 +45,10 @@
     "1663589479ccdb2991": {
       "type": "marquee",
       "blocks": {
-        "1663589479fb3ec4c5-2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Recommandés par des <strong>MEDECINS<\/strong><\/p>",
-            "url": ""
-          }
-        },
         "a9914a83-cd6c-4bf3-b9d7-8eb1c8ed624d": {
           "type": "image",
           "settings": {
             "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/mother.svg?v=1663515225"
-          }
-        },
-        "1663589479fb3ec4c5-0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>par les <strong>MAMAS<\/strong> pour les <strong>MAMAS<\/strong><\/p>",
-            "url": ""
           }
         },
         "1663589479fb3ec4c5-4": {
@@ -70,18 +56,6 @@
           "settings": {
             "text": "<p>bio et naturel<\/p>",
             "url": ""
-          }
-        },
-        "1663589479fb3ec4c5-1": {
-          "type": "image",
-          "settings": {
-            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/femenine.svg?v=1663515225"
-          }
-        },
-        "1663589479fb3ec4c5-3": {
-          "type": "image",
-          "settings": {
-            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/post.svg?v=1663515225"
           }
         },
         "3e9e0ea7-7147-4b7b-a26c-7c1ba8c7e14c": {
@@ -93,18 +67,14 @@
         }
       },
       "block_order": [
-        "1663589479fb3ec4c5-2",
         "a9914a83-cd6c-4bf3-b9d7-8eb1c8ed624d",
-        "1663589479fb3ec4c5-0",
         "1663589479fb3ec4c5-4",
-        "1663589479fb3ec4c5-1",
-        "1663589479fb3ec4c5-3",
         "3e9e0ea7-7147-4b7b-a26c-7c1ba8c7e14c"
       ],
       "settings": {
         "animationDuration": 30,
-        "text_color": "#733e2b",
-        "background_color": "#e8e2db"
+        "text_color": "#323338",
+        "background_color": "#fcf5fa"
       }
     },
     "16629152089602a089": {
@@ -162,7 +132,7 @@
         "1662915208285fddee-2"
       ],
       "settings": {
-        "bg_color": "#f4ffaf",
+        "bg_color": "#fcf5fa",
         "add_margin": 0
       }
     }

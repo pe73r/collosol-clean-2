@@ -137,9 +137,8 @@
           "bbc724c6-30ab-4e7f-b250-da0bc7ceacfc": {
             "type": "megamenu",
             "settings": {
-              "megamenu": "produits",
+              "megamenu": "",
               "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
-              "featured_link_image_1": "shopify:\/\/shop_images\/Diagnotic_v2_208_257.jpg",
               "featured_link_subtitle_1": "NOUVEAU",
               "featured_link_title_1": "<p>Je fais <\/p><p><strong>mon diagnostic<\/strong><\/p><p><\/p>",
               "featured_link_2": "",
@@ -150,13 +149,11 @@
           "9361598a-ff81-4f8d-a8a3-71f39892e985": {
             "type": "megamenu",
             "settings": {
-              "megamenu": "blog",
+              "megamenu": "",
               "featured_link_1": "shopify:\/\/blogs\/guide\/l-alimentation-en-postpartum-en-quoi-est-elle-essentielle",
-              "featured_link_image_1": "shopify:\/\/shop_images\/menu_alimentation_postpartum.jpg",
               "featured_link_subtitle_1": "POSTPARTUM",
               "featured_link_title_1": "<p>EN QUOI L'<strong>ALIMENTATION EN POSTPARTUM<\/strong> EST ESSENTIELLE ?<\/p>",
               "featured_link_2": "shopify:\/\/blogs\/guide\/acide-folique-ou-folates-quelle-difference",
-              "featured_link_image_2": "shopify:\/\/shop_images\/acide_folique_menu.jpg",
               "featured_link_subtitle_2": "DERNIER ARTICLE",
               "featured_link_title_2": "<p>ACIDE FOLIQUE OU FOLATE, <strong>QUELLE DIFFÉRENCE<\/strong> ?<\/p>"
             }
@@ -164,13 +161,11 @@
           "9fa1b736-166f-4ace-9c2a-464a277ad13f": {
             "type": "megamenu",
             "settings": {
-              "megamenu": "conseil",
+              "megamenu": "",
               "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
-              "featured_link_image_1": "shopify:\/\/shop_images\/208_x_257.jpg",
               "featured_link_subtitle_1": "DIAGNOSTIC",
               "featured_link_title_1": "<p>TROUVEZ VOTRE <strong>ROUTINE BIEN ÊTRE<\/strong><\/p>",
               "featured_link_2": "shopify:\/\/pages\/ebooks-gratuits",
-              "featured_link_image_2": "shopify:\/\/shop_images\/208_x_257_216a04df-db58-4436-9c60-13fcc3ec0a91.jpg",
               "featured_link_subtitle_2": "EBOOK",
               "featured_link_title_2": "<p>GROSSESSE ET<strong> COMPLÉMENTS ALIMENTAIRES<\/strong><\/p>"
             }
@@ -179,9 +174,8 @@
             "type": "mobile_tabs",
             "settings": {
               "title": "Produits",
-              "menu": "produit-mobile",
+              "menu": "",
               "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
-              "featured_link_image_1": "shopify:\/\/shop_images\/diagnostic_320_200.jpg",
               "featured_link_subtitle_1": "NOUVEAU",
               "featured_link_title_1": "<p>Je fais <\/p><p><strong>mon diagnostic<\/strong><\/p>",
               "featured_link_2": "",
@@ -193,13 +187,11 @@
             "type": "mobile_tabs",
             "settings": {
               "title": "Blog",
-              "menu": "blog-mobile",
+              "menu": "",
               "featured_link_1": "shopify:\/\/blogs\/guide\/l-alimentation-en-postpartum-en-quoi-est-elle-essentielle",
-              "featured_link_image_1": "shopify:\/\/shop_images\/postpartum_menu_mobile_fb334954-59e7-4385-9d7a-3d324893e6c8.jpg",
               "featured_link_subtitle_1": "POSTPARTUM",
               "featured_link_title_1": "<p>EN QUOI L'<strong>ALIMENTATION EN POSTPARTUM<\/strong> EST ESSENTIELLE ?<\/p>",
               "featured_link_2": "shopify:\/\/blogs\/guide\/acide-folique-ou-folates-quelle-difference",
-              "featured_link_image_2": "shopify:\/\/shop_images\/acide_folique_menu_mobile.jpg",
               "featured_link_subtitle_2": "DERNIER ARTICLE",
               "featured_link_title_2": "<p>ACIDE FOLIQUE OU FOLATE, <strong>QUELLE DIFFÉRENCE<\/strong> ?<\/p>"
             }
@@ -208,13 +200,11 @@
             "type": "mobile_tabs",
             "settings": {
               "title": "Conseil",
-              "menu": "conseil-mobile",
+              "menu": "",
               "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
-              "featured_link_image_1": "shopify:\/\/shop_images\/320_x_200.jpg",
               "featured_link_subtitle_1": "DIAGNOSTIC",
               "featured_link_title_1": "<p>TROUVEZ VOTRE <strong>ROUTINE BIEN ÊTRE<\/strong><\/p>",
               "featured_link_2": "shopify:\/\/pages\/ebooks-gratuits",
-              "featured_link_image_2": "shopify:\/\/shop_images\/320_x_200_638c30c0-ed9b-4807-b850-57f164396367.jpg",
               "featured_link_subtitle_2": "EBOOK",
               "featured_link_title_2": "<p>GROSSESSE ET <strong>COMPLÉMENTS ALIMENTAIRES<\/strong><\/p>"
             }
@@ -222,7 +212,7 @@
           "d078ac29-3acc-4a33-88c8-85f12a06fbdd": {
             "type": "mobile_bottom",
             "settings": {
-              "menu": "menu-footer-mobile"
+              "menu": ""
             }
           }
         },
@@ -277,8 +267,7 @@
       "logo": {
         "type": "logo",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/unnamed_1.png",
-          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/unnamed_1.png?v=1673451194"
+          "logo_svg": ""
         }
       },
       "side-cart": {
@@ -328,6 +317,36 @@
           "product_2_limit": 0,
           "product_2_text_before": "Plus que ((rest)) pour un deuxième cadeau.",
           "product_2_text_after": "Vous bénéficiez du cadeau offert."
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "conseils",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0"
+        ],
+        "settings": {
+          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo.svg?v=1662912874",
+          "subtext": "<p>Parce que chaque femme est différente, et que chaque moment nécessite que l’on imagine des produits spécifiques<\/p>",
+          "show_social": true,
+          "subtitle-image-footer": "NOUVEAUTÉ",
+          "header-image-footer": "DEVENEZ UNE <br><span>GOLDEN MAMA<\/span>",
+          "link-image-footer": "Je découvre",
+          "link-image": "",
+          "mention-legal": "<p>Mentions légales — Privacy Policy ©Jolly Mama 2021<\/p>",
+          "bg_color": "#fff",
+          "subtitle-image-footer-color": "#FFFFFF",
+          "header-image-footer-color": "#FFFFFF",
+          "header-image-footer-color-2": "#F4FFAF",
+          "link-image-footer-color": "#FFFFFF"
         }
       }
     },
