@@ -1,0 +1,550 @@
+{
+  "current": {
+    "colors_text": "#927254",
+    "colors_heading": "#733e2b",
+    "colors_background_1": "#f5f5f5",
+    "type_header_font": "anonymous_pro_n4",
+    "heading_scale": 150,
+    "type_body_font": "assistant_n4",
+    "body_scale": 130,
+    "social_twitter_link": "https:\/\/twitter.com\/jollymamafrance",
+    "social_facebook_link": "https:\/\/www.facebook.com\/jollymamafrance\/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/jollymamafrance\/",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/jolly-mama\/",
+    "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
+    "account_image_1": "shopify:\/\/shop_images\/Banner-page-compte-client-1-desktop.jpg",
+    "account_image_2": "shopify:\/\/shop_images\/Banner-page-compte-client-2-desktop.jpg",
+    "account_image_6": "shopify:\/\/shop_images\/JOLLYMAMA-louiseskadhauge-DSCF0490_2ef38ba1-b684-42a8-a186-f29735f25c3f.jpg",
+    "account_image_3": "shopify:\/\/shop_images\/jollymama-louiseskadhauge-DSCF8328.jpg",
+    "account_image_4": "shopify:\/\/shop_images\/Microchimerisme-et-grossesse---que-se-passe-t-il---mobile.jpg",
+    "account_image_5": "shopify:\/\/shop_images\/320_x_200.jpg",
+    "welcome_text_1": "Bienvenue dans votre espace personnel. Modifiez les informations de votre compte et accédez à l'historique de vos commandes.",
+    "welcome_text_2": "Cumulez vos points pour débloquer des offres avantages livraison et accès en avant-première aux nouveautés",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo.webp",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_color": "#f5f5f5",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#e8e2db",
+    "checkout_accent_color": "#927254",
+    "checkout_button_color": "#927254",
+    "cart_title": "PANIER",
+    "cart_title_when_empty": "PANIER",
+    "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo-simple.svg?v=1661947522",
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#121212",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#334fb4",
+    "gradient_accent_2": "",
+    "colors_outline_button_labels": "#121212",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "tag_france_image": "shopify:\/\/shop_images\/Frame_8305_1.png",
+    "tag_vegan_image": "shopify:\/\/shop_images\/Frame_8305_4.png",
+    "tag_no_animal_image": "shopify:\/\/shop_images\/Frame_8306.png",
+    "tag_mama_image": "shopify:\/\/shop_images\/Frame_8306_445e89a1-9209-40c5-933d-a187813c0a43.png",
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
+    "aloe_image": "shopify:\/\/shop_images\/Frame_8305_1.png",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "text": "<p>Dans vos valises cet été : -20% à partir de 100€ d'achat code SUMMER20<\/p>",
+          "text_color": "#000000"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "bbc724c6-30ab-4e7f-b250-da0bc7ceacfc": {
+            "type": "megamenu",
+            "settings": {
+              "megamenu": "produits",
+              "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
+              "featured_link_image_1": "shopify:\/\/shop_images\/Diagnotic_v2_208_257.jpg",
+              "featured_link_subtitle_1": "NOUVEAU",
+              "featured_link_title_1": "<p>Je fais <\/p><p><strong>mon diagnostic<\/strong><\/p><p><\/p>",
+              "featured_link_2": "",
+              "featured_link_subtitle_2": "",
+              "featured_link_title_2": ""
+            }
+          },
+          "9361598a-ff81-4f8d-a8a3-71f39892e985": {
+            "type": "megamenu",
+            "settings": {
+              "megamenu": "blog",
+              "featured_link_1": "shopify:\/\/blogs\/guide\/l-alimentation-en-postpartum-en-quoi-est-elle-essentielle",
+              "featured_link_image_1": "shopify:\/\/shop_images\/menu_alimentation_postpartum.jpg",
+              "featured_link_subtitle_1": "POSTPARTUM",
+              "featured_link_title_1": "<p>EN QUOI L'<strong>ALIMENTATION EN POSTPARTUM<\/strong> EST ESSENTIELLE ?<\/p>",
+              "featured_link_2": "shopify:\/\/blogs\/guide\/acide-folique-ou-folates-quelle-difference",
+              "featured_link_image_2": "shopify:\/\/shop_images\/acide_folique_menu.jpg",
+              "featured_link_subtitle_2": "DERNIER ARTICLE",
+              "featured_link_title_2": "<p>ACIDE FOLIQUE OU FOLATE, <strong>QUELLE DIFFÉRENCE<\/strong> ?<\/p>"
+            }
+          },
+          "9fa1b736-166f-4ace-9c2a-464a277ad13f": {
+            "type": "megamenu",
+            "settings": {
+              "megamenu": "conseil",
+              "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
+              "featured_link_image_1": "shopify:\/\/shop_images\/208_x_257.jpg",
+              "featured_link_subtitle_1": "DIAGNOSTIC",
+              "featured_link_title_1": "<p>TROUVEZ VOTRE <strong>ROUTINE BIEN ÊTRE<\/strong><\/p>",
+              "featured_link_2": "shopify:\/\/pages\/ebooks-gratuits",
+              "featured_link_image_2": "shopify:\/\/shop_images\/208_x_257_216a04df-db58-4436-9c60-13fcc3ec0a91.jpg",
+              "featured_link_subtitle_2": "EBOOK",
+              "featured_link_title_2": "<p>GROSSESSE ET<strong> COMPLÉMENTS ALIMENTAIRES<\/strong><\/p>"
+            }
+          },
+          "6330de6b-0c75-4f1c-b01e-c913d3b7be38": {
+            "type": "mobile_tabs",
+            "settings": {
+              "title": "Produits",
+              "menu": "produit-mobile",
+              "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
+              "featured_link_image_1": "shopify:\/\/shop_images\/diagnostic_320_200.jpg",
+              "featured_link_subtitle_1": "NOUVEAU",
+              "featured_link_title_1": "<p>Je fais <\/p><p><strong>mon diagnostic<\/strong><\/p>",
+              "featured_link_2": "",
+              "featured_link_subtitle_2": "",
+              "featured_link_title_2": ""
+            }
+          },
+          "88838b44-682b-443b-95f8-b0f4e0dc4926": {
+            "type": "mobile_tabs",
+            "settings": {
+              "title": "Blog",
+              "menu": "blog-mobile",
+              "featured_link_1": "shopify:\/\/blogs\/guide\/l-alimentation-en-postpartum-en-quoi-est-elle-essentielle",
+              "featured_link_image_1": "shopify:\/\/shop_images\/postpartum_menu_mobile_fb334954-59e7-4385-9d7a-3d324893e6c8.jpg",
+              "featured_link_subtitle_1": "POSTPARTUM",
+              "featured_link_title_1": "<p>EN QUOI L'<strong>ALIMENTATION EN POSTPARTUM<\/strong> EST ESSENTIELLE ?<\/p>",
+              "featured_link_2": "shopify:\/\/blogs\/guide\/acide-folique-ou-folates-quelle-difference",
+              "featured_link_image_2": "shopify:\/\/shop_images\/acide_folique_menu_mobile.jpg",
+              "featured_link_subtitle_2": "DERNIER ARTICLE",
+              "featured_link_title_2": "<p>ACIDE FOLIQUE OU FOLATE, <strong>QUELLE DIFFÉRENCE<\/strong> ?<\/p>"
+            }
+          },
+          "71f5eb72-b019-4a03-8e19-59b3b90d90b8": {
+            "type": "mobile_tabs",
+            "settings": {
+              "title": "Conseil",
+              "menu": "conseil-mobile",
+              "featured_link_1": "shopify:\/\/pages\/diagnostic-jollymama",
+              "featured_link_image_1": "shopify:\/\/shop_images\/320_x_200.jpg",
+              "featured_link_subtitle_1": "DIAGNOSTIC",
+              "featured_link_title_1": "<p>TROUVEZ VOTRE <strong>ROUTINE BIEN ÊTRE<\/strong><\/p>",
+              "featured_link_2": "shopify:\/\/pages\/ebooks-gratuits",
+              "featured_link_image_2": "shopify:\/\/shop_images\/320_x_200_638c30c0-ed9b-4807-b850-57f164396367.jpg",
+              "featured_link_subtitle_2": "EBOOK",
+              "featured_link_title_2": "<p>GROSSESSE ET <strong>COMPLÉMENTS ALIMENTAIRES<\/strong><\/p>"
+            }
+          },
+          "d078ac29-3acc-4a33-88c8-85f12a06fbdd": {
+            "type": "mobile_bottom",
+            "settings": {
+              "menu": "menu-footer-mobile"
+            }
+          }
+        },
+        "block_order": [
+          "bbc724c6-30ab-4e7f-b250-da0bc7ceacfc",
+          "9361598a-ff81-4f8d-a8a3-71f39892e985",
+          "9fa1b736-166f-4ace-9c2a-464a277ad13f",
+          "6330de6b-0c75-4f1c-b01e-c913d3b7be38",
+          "88838b44-682b-443b-95f8-b0f4e0dc4926",
+          "71f5eb72-b019-4a03-8e19-59b3b90d90b8",
+          "d078ac29-3acc-4a33-88c8-85f12a06fbdd"
+        ],
+        "settings": {
+          "sticky_header": true,
+          "dynamic_header": true,
+          "show_announce_when_down": true,
+          "menu_desktop": "main-menu",
+          "menu_mobile": "main-menu",
+          "feature_drawer_title": "",
+          "feature_drawer_subtitle": "",
+          "feature_drawer_link": ""
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "footer-mama": {
+        "type": "footer-mama",
+        "blocks": {
+          "c30ab1a5-1881-414b-99a9-89443224eb3e": {
+            "type": "link_list",
+            "settings": {
+              "heading": "NOS PRODUITS",
+              "menu": "nos-produits"
+            }
+          },
+          "footer-mama-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "CONSEILS",
+              "menu": "conseil"
+            }
+          },
+          "2e429f80-8fe9-41b1-a5ba-21219d6316b4": {
+            "type": "link_list",
+            "settings": {
+              "heading": "CONTACT",
+              "menu": "contact"
+            }
+          }
+        },
+        "block_order": [
+          "c30ab1a5-1881-414b-99a9-89443224eb3e",
+          "footer-mama-0",
+          "2e429f80-8fe9-41b1-a5ba-21219d6316b4"
+        ],
+        "settings": {
+          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo.svg?v=1662912874",
+          "image_certification": "shopify:\/\/shop_images\/Frame_8890_93054863-769c-4751-8cd8-66add179e51f.png",
+          "subtext": "<p>Parce que chaque femme est différente, et que chaque moment nécessite que l’on imagine des produits spécifiques<\/p>",
+          "show_social": true,
+          "image-footer": "shopify:\/\/shop_images\/produit-mamapoule-packshot-desktop.jpg",
+          "subtitle-image-footer": "NOUVEAUTÉ",
+          "header-image-footer": "ENVIE D'UN BOUILLON<br><span>AU COLLAGÈNE ?<\/span>",
+          "link-image-footer": "Je découvre",
+          "link-image": "shopify:\/\/products\/mama-poule",
+          "mention-legal": "<p><a href=\"\/pages\/mentions-legales\" title=\"Mentions legales\">Mentions légales<\/a> — <a href=\"\/pages\/politique-de-confidentialite\" title=\"Politique de confidentialité\">Politique de confidentialité<\/a> © Jolly Mama! 2022<\/p>",
+          "bg_color": "#e8e2db",
+          "subtitle-image-footer-color": "#ffffff",
+          "header-image-footer-color": "#ffffff",
+          "header-image-footer-color-2": "#f4ffaf",
+          "link-image-footer-color": "#ffffff"
+        }
+      },
+      "ingredient-image-text": {
+        "type": "ingredient-image-text",
+        "settings": {
+          "subtitle": "Compatible grossesse",
+          "title": "Magnésium",
+          "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+          "title_accordion": "Nos sources"
+        }
+      },
+      "products-carousel": {
+        "type": "products-carousel",
+        "settings": {
+          "collection": "",
+          "title": "NOTRE SÉLECTION",
+          "collection_link": "Voir tout",
+          "limit": 25,
+          "productPerSlideDesktop": 4,
+          "productPerSlideMobile": 2,
+          "show_title": true,
+          "show_secondary_image": false,
+          "show_cta": false,
+          "show_dots": true
+        }
+      },
+      "logo": {
+        "type": "logo",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/unnamed_1.png",
+          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/unnamed_1.png?v=1673451194"
+        }
+      },
+      "side-cart": {
+        "type": "side-cart",
+        "blocks": {
+          "87e80780-35dd-45c7-bbc3-fe5a495dac51": {
+            "type": "reassurances",
+            "settings": {
+              "icon": "<svg width=\"24\" height=\"24\" id=\"Calque_1\" data-name=\"Calque 1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 15.81 28.49\"><defs><style>.cls-1{fill:#733e2b;}.cls-2,.cls-3{fill:none;stroke:#733e2b;stroke-linecap:round;stroke-linejoin:round;}.cls-2{stroke-width:1.32px;}<\/style><\/defs><path class=\"cls-1\" d=\"M15.47,6.86a6.86,6.86,0,0,1,4.65,1.81h0A6.87,6.87,0,0,1,21.5,17l-3.64,6.76a4.85,4.85,0,0,1-2.25.42,6.37,6.37,0,0,1-2.37-.38L9.49,17.08a6.86,6.86,0,0,1,1.22-8.31h0v0A6.88,6.88,0,0,1,15.4,6.86h.07m0-1H15.4A7.83,7.83,0,0,0,10,8l0,0a7.84,7.84,0,0,0-2.31,4.5,7.92,7.92,0,0,0,.92,5l3.76,6.69a1.07,1.07,0,0,0,.45.42,7.31,7.31,0,0,0,2.79.47,6,6,0,0,0,2.77-.56,1,1,0,0,0,.36-.38l3.64-6.77A7.85,7.85,0,0,0,15.47,5.86Z\" transform=\"translate(-7.6 -0.5)\"><\/path><path class=\"cls-2\" d=\"M13.09,26.14a8.07,8.07,0,0,0,5.14,0\" transform=\"translate(-7.6 -0.5)\"><\/path><path class=\"cls-2\" d=\"M13.67,28.1a8.59,8.59,0,0,0,4,0\" transform=\"translate(-7.6 -0.5)\"><\/path><line class=\"cls-3\" x1=\"0.53\" y1=\"2.99\" x2=\"1.72\" y2=\"5.17\"><\/line><line class=\"cls-3\" x1=\"15.31\" y1=\"2.99\" x2=\"14.13\" y2=\"5.17\"><\/line><line class=\"cls-3\" x1=\"7.86\" y1=\"0.5\" x2=\"7.86\" y2=\"2.98\"><\/line><path class=\"cls-2\" d=\"M13.93,9.21a5.42,5.42,0,0,0-3.17,4\" transform=\"translate(-7.6 -0.5)\"><\/path><\/svg>",
+              "title": "<p>Recommandés par des médecins<\/p>",
+              "note": "<p>Et élaborés avec des experts<\/p>"
+            }
+          },
+          "560203a2-2e4b-4af5-b2a5-35015ebec5e7": {
+            "type": "reassurances",
+            "settings": {
+              "icon": "<svg width=\"24\" height=\"24\" id=\"Calque_1\" data-name=\"Calque 1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 15.81 28.49\"><defs><style>.cls-1{fill:#733e2b;}.cls-2,.cls-3{fill:none;stroke:#733e2b;stroke-linecap:round;stroke-linejoin:round;}.cls-2{stroke-width:1.32px;}<\/style><\/defs><path class=\"cls-1\" d=\"M15.47,6.86a6.86,6.86,0,0,1,4.65,1.81h0A6.87,6.87,0,0,1,21.5,17l-3.64,6.76a4.85,4.85,0,0,1-2.25.42,6.37,6.37,0,0,1-2.37-.38L9.49,17.08a6.86,6.86,0,0,1,1.22-8.31h0v0A6.88,6.88,0,0,1,15.4,6.86h.07m0-1H15.4A7.83,7.83,0,0,0,10,8l0,0a7.84,7.84,0,0,0-2.31,4.5,7.92,7.92,0,0,0,.92,5l3.76,6.69a1.07,1.07,0,0,0,.45.42,7.31,7.31,0,0,0,2.79.47,6,6,0,0,0,2.77-.56,1,1,0,0,0,.36-.38l3.64-6.77A7.85,7.85,0,0,0,15.47,5.86Z\" transform=\"translate(-7.6 -0.5)\"><\/path><path class=\"cls-2\" d=\"M13.09,26.14a8.07,8.07,0,0,0,5.14,0\" transform=\"translate(-7.6 -0.5)\"><\/path><path class=\"cls-2\" d=\"M13.67,28.1a8.59,8.59,0,0,0,4,0\" transform=\"translate(-7.6 -0.5)\"><\/path><line class=\"cls-3\" x1=\"0.53\" y1=\"2.99\" x2=\"1.72\" y2=\"5.17\"><\/line><line class=\"cls-3\" x1=\"15.31\" y1=\"2.99\" x2=\"14.13\" y2=\"5.17\"><\/line><line class=\"cls-3\" x1=\"7.86\" y1=\"0.5\" x2=\"7.86\" y2=\"2.98\"><\/line><path class=\"cls-2\" d=\"M13.93,9.21a5.42,5.42,0,0,0-3.17,4\" transform=\"translate(-7.6 -0.5)\"><\/path><\/svg>",
+              "title": "<p>Recommandés par des médecins<\/p>",
+              "note": "<p>Et élaborés avec des experts<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "87e80780-35dd-45c7-bbc3-fe5a495dac51",
+          "560203a2-2e4b-4af5-b2a5-35015ebec5e7"
+        ],
+        "settings": {
+          "cart_title": "PANIER",
+          "show_counter": true,
+          "sub_total_text": "<p>📦 Livraison offerte dès 100€ - 💰 3x sans frais<\/p>",
+          "validate_text": "Commander",
+          "extra_text": "Code promo et frais de livraison à l’étape suivante",
+          "show_code_promo": false,
+          "cart_title_when_empty": "Panier",
+          "collection_when_empty": "desequilibre-hormonal",
+          "collection_when_empty_2": "booster-sa-lactation",
+          "empty_subtext": "Recommandés par des médecins",
+          "empty_subtext_2": "Et élaborés avec des experts",
+          "upSellTitle": "COMPLÉTEZ AVEC...",
+          "upSellCollection": "carences",
+          "free_shipping_limit": 100,
+          "free_shipping_text_before": "Plus que ((rest)) pour une livraison en point relais offerte.",
+          "free_shipping_text_after": "Vous bénéficiez de la livraison en point relais offerte.",
+          "product_1_limit": 150,
+          "product_1_text_before": "Plus que ((rest)) pour un cadeau.",
+          "product_1_text_after": "Vous bénéficiez du cadeau offert.",
+          "product_2_limit": 0,
+          "product_2_text_before": "Plus que ((rest)) pour un deuxième cadeau.",
+          "product_2_text_after": "Vous bénéficiez du cadeau offert."
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "7570552984445421165": {
+        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8962992520437913685": {
+        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "disabled": false,
+        "settings": {
+          "inject_modules_loader": true,
+          "inject_sdk_loader": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1744161739547163668": {
+        "type": "shopify:\/\/apps\/countdown-timer-bar-hextom\/blocks\/ctb-embeded-block\/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "text_color": "#000",
+            "background_color": "#F4FFAF"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}

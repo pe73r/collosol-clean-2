@@ -1,0 +1,96 @@
+{%- assign blog = blogs[section.settings.blog] -%}
+<section class="max-w-[1200px] mx-auto">
+  <h2 class="leading-[30px] mx-5 mt-10 text-center uppercase">
+    {{ section.settings.heading }}
+  </h2>
+  <div class="my-10 ml-5 mr-0 md:mx-5 lg:mx-5"> 
+    <tail-carousel slidesToShow="xs:1 md:4">
+      <carousel-container>
+        <carousel-content class="w-full">
+          {%- for article in blog.articles limit: section.settings.post_limit -%}
+            <carousel-panel class="px-2 w-full max-w-[280px] md:max-w-full !min-w-[280px] md:!min-w-[25%]">
+              {% render 'article-card', blog: section.settings.blog, article: article, show_image: section.settings.show_image, show_author: section.settings.show_author, show_button: section.settings.show_button, show_tag: section.settings.show_tag, show_date: section.settings.show_date %}
+            </carousel-panel>
+          {%- endfor -%}
+        </carousel-content>
+      </carousel-container>
+    </tail-carousel>
+  </div> 
+  <style>
+    .scroller::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</section>
+{% schema %}
+  {
+    "name": "Featured Blog carousel",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Blog"
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Choix du blog"
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "À LIRE...",
+        "label": "Titre"
+      },
+      {
+        "type": "range",
+        "id": "post_limit",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "default": 4,
+        "label": "Nombre d'articles de blog à afficher en desktop"
+      },
+      {
+        "type": "header",
+        "content": "Contenu des articles"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_author",
+        "default": false,
+        "label": "Afficher l'auteur"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_date",
+        "default": true,
+        "label": "Afficher la date"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_button",
+        "default": true,
+        "label": "Afficher le bouton"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_tag",
+        "default": false,
+        "label": "Afficher le tag"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured blog carousel",
+        "settings": {
+          "blog": "Main Blog"
+        }
+      }
+    ]
+  }
+{% endschema %}

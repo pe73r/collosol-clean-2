@@ -1,0 +1,242 @@
+{
+  "sections": {
+    "cdb1529a-278a-4625-b4c4-c9bd728922fc": {
+      "type": "simple-image-with-text-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Projet_bebe_af87a231-818a-41c1-a9ab-bbf2af3e8c15.jpg",
+        "text": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "71b06117-0b76-4aa6-8356-d48c9c0d77b1": {
+      "type": "simple-text-banner",
+      "settings": {
+        "header": "Nouveau produit teasing",
+        "subheader": "Découvrez en avant première notre nouvelle gamme de produit",
+        "header_color": "#733e2b",
+        "subheader_color": "#927254",
+        "background_color": "#f9f8f6"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_page_title": true,
+        "display_page_content": true
+      }
+    },
+    "9fb0801d-6337-490c-8c51-815dc0ca6c9a": {
+      "type": "simple-image-with-text-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Endo_e6b6000d-bdb9-4382-bcc7-1d6abf54e10f.jpg",
+        "text": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64": {
+      "type": "account-parrainage",
+      "disabled": true,
+      "settings": {
+        "yotpo-content": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"296433\"><\/div>"
+      }
+    },
+    "a42f769b-ade8-43b7-a705-f9b1b84843b9": {
+      "type": "image-text",
+      "disabled": true,
+      "settings": {
+        "layout": "image_left",
+        "hide_image_mobile": false,
+        "subtitle": "sous titre",
+        "title": "Avantage 2",
+        "text": "<p>Nos snacks sont “boostés” de nutriments, et nos compléments alimentaires sont uniques, et issus pour la plupart d’aliments bio. Comme nous avons voulu le meilleur pour nous et nos enfants, nous sommes devenues des passionnées de nutrition, accompagnées par les meilleurs experts. Nous passons des heures et des heures à éplucher les dernières recherches.<\/p>",
+        "subtitle_color": "#713f2e",
+        "title_color": "#733e2b",
+        "text_color": "#927254"
+      }
+    },
+    "310b175d-193d-412d-b5cb-87f1e773b518": {
+      "type": "image-text",
+      "disabled": true,
+      "settings": {
+        "layout": "image_right",
+        "hide_image_mobile": false,
+        "subtitle": "sous titre",
+        "title": "Proposition de valeur 1",
+        "text": "<p>Nos snacks sont “boostés” de nutriments, et nos compléments alimentaires sont uniques, et issus pour la plupart d’aliments bio. Comme nous avons voulu le meilleur pour nous et nos enfants, nous sommes devenues des passionnées de nutrition, accompagnées par les meilleurs experts. Nous passons des heures et des heures à éplucher les dernières recherches.<\/p>",
+        "subtitle_color": "#713f2e",
+        "title_color": "#733e2b",
+        "text_color": "#927254"
+      }
+    },
+    "686372a4-b9b6-4c5a-a4d1-64d574948df7": {
+      "type": "image-with-text-custom",
+      "blocks": {
+        "c1146de8-6212-44d3-b75e-b347cda56cee": {
+          "type": "block",
+          "settings": {
+            "layout": "text_first",
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo-soronity.svg?v=1662458580",
+            "subtitle": "About us",
+            "title": "Une histoire de femmes",
+            "text": "<p>Nous sommes 2 femmes qui ne trouvions pas les produits que nous cherchions alors nous les avons créés ! C’est au retour des US où Marie a vécu quelques années que nous nous sommes revues. Nous avons réalisé à quel point une bonne alimentation et un support avait fait la différence dans nos grossesses et allaitements respectifs. Notre inspiration c’est nos vies, nos bébés, nos enfants, nos sœurs, nos mères, c’est VOUS. <\/p>",
+            "background_color": "#e8e2db",
+            "subtitle_color": "#733e2b",
+            "title_color": "#733e2b",
+            "text_color": "#927254"
+          }
+        },
+        "3836b281-aea6-4e57-9104-a853dd8aab1c": {
+          "type": "block",
+          "settings": {
+            "layout": "text_last",
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo-soronity.svg?v=1662458580",
+            "subtitle": "About us",
+            "title": "Une histoire de femmes",
+            "text": "<p>Nous sommes 2 femmes qui ne trouvions pas les produits que nous cherchions alors nous les avons créés ! C’est au retour des US où Marie a vécu quelques années que nous nous sommes revues. Nous avons réalisé à quel point une bonne alimentation et un support avait fait la différence dans nos grossesses et allaitements respectifs. Notre inspiration c’est nos vies, nos bébés, nos enfants, nos sœurs, nos mères, c’est VOUS. <\/p>",
+            "background_color": "#e8e2db",
+            "subtitle_color": "#733e2b",
+            "title_color": "#733e2b",
+            "text_color": "#927254"
+          }
+        }
+      },
+      "block_order": [
+        "c1146de8-6212-44d3-b75e-b347cda56cee",
+        "3836b281-aea6-4e57-9104-a853dd8aab1c"
+      ],
+      "settings": {
+      }
+    },
+    "5181d575-7b33-44ec-9b17-7d8c2e4fd47f": {
+      "type": "rich-text-expandable",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#733e2b",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "more_text": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "text_mobile": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "more_text_mobile": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "text_link": "Lire plus",
+        "text_less": "Lire moins"
+      }
+    },
+    "98b35f94-9682-4ee9-a877-9b1642578641": {
+      "type": "products-carousel",
+      "settings": {
+        "collection": "frontpage",
+        "title": "Nos produits associés",
+        "collection_link": "Voir tout",
+        "limit": 25,
+        "productPerSlideDesktop": 4,
+        "productPerSlideMobile": 2,
+        "show_title": true,
+        "show_secondary_image": false,
+        "show_cta": false,
+        "show_dots": true
+      }
+    },
+    "9fed6e34-0c96-49b2-8eb2-b8dff85ecbe9": {
+      "type": "newsletter-klaviyo",
+      "disabled": true,
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+        "text_button": "Je m'inscris",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    },
+    "4bb76104-a231-456f-8a7f-ade86515e0d3": {
+      "type": "ebook-form",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Pauline_14735d7c-e801-4b40-92ef-7cc4366b7dd6.jpg",
+        "title": "choisissez le ou les ebooks que vous souhaitez bouquiner",
+        "subtitle": "<p>Cochez les ebooks que vous souhaitez télécharger 🥰<\/p>",
+        "email_label": "<p>Indiquez votre adresse email pour recevoir le format PDF dans votre boite mail 👀<\/p>",
+        "newsletter_list": "",
+        "newsletter_label": "<p>Je souhaite m’inscire à la newsletter pour recevoir des offres exclusives<\/p>",
+        "button_text": "Je télécharge"
+      }
+    },
+    "22eb68ea-b32d-4d89-936a-027a3af97538": {
+      "type": "faq",
+      "blocks": {
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-0": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-1": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-2": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "0534ab8a-dea9-4571-a652-bfd7767dfe27": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        }
+      },
+      "block_order": [
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-0",
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-1",
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-2",
+        "0534ab8a-dea9-4571-a652-bfd7767dfe27"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "title_color": "#733e2b",
+        "title_accordion_color": "#733e2b",
+        "content_accordion_color": "#927254"
+      }
+    },
+    "356e4014-426a-495f-b841-4c0e7f670523": {
+      "type": "banner-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Projet_bebe_a3b3402d-f17f-4909-a53a-4c3266235791.jpg",
+        "subtitle": "<p>la GAMME ESSENTIELLE<\/p>",
+        "title": "<p>DÉCOUVREZ LES PRODUITS LES PLUS ADAPTÉS À VOTRE SITUATION<\/p>",
+        "title_mobile": "<p>DÉCOUVREZ LES PRODUITS LES PLUS ADAPTÉS À VOTRE SITUATION<\/p>",
+        "cta": "Je découvre le gamme",
+        "ctaLink": "",
+        "button_type": "primary"
+      }
+    }
+  },
+  "order": [
+    "cdb1529a-278a-4625-b4c4-c9bd728922fc",
+    "71b06117-0b76-4aa6-8356-d48c9c0d77b1",
+    "main",
+    "9fb0801d-6337-490c-8c51-815dc0ca6c9a",
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64",
+    "a42f769b-ade8-43b7-a705-f9b1b84843b9",
+    "310b175d-193d-412d-b5cb-87f1e773b518",
+    "686372a4-b9b6-4c5a-a4d1-64d574948df7",
+    "5181d575-7b33-44ec-9b17-7d8c2e4fd47f",
+    "98b35f94-9682-4ee9-a877-9b1642578641",
+    "9fed6e34-0c96-49b2-8eb2-b8dff85ecbe9",
+    "4bb76104-a231-456f-8a7f-ade86515e0d3",
+    "22eb68ea-b32d-4d89-936a-027a3af97538",
+    "356e4014-426a-495f-b841-4c0e7f670523"
+  ]
+}

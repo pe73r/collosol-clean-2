@@ -1,0 +1,270 @@
+{
+  "sections": {
+    "cdb1529a-278a-4625-b4c4-c9bd728922fc": {
+      "type": "simple-image-with-text-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/jollymama-louiseskadhauge-DSCF0553_6.jpg",
+        "text": "VANILLA MAMA",
+        "text_color": "#ffffff"
+      }
+    },
+    "71b06117-0b76-4aa6-8356-d48c9c0d77b1": {
+      "type": "simple-text-banner",
+      "settings": {
+        "header": "SOON… VANILLA MAMA",
+        "subheader": "Le complément de grossesse le plus gourmand.",
+        "header_color": "#733e2b",
+        "subheader_color": "#927254",
+        "background_color": "#f9f8f6"
+      }
+    },
+    "2dab6aaa-c8b9-4612-b378-f0706c4c59d5": {
+      "type": "image-text",
+      "settings": {
+        "layout": "image_left",
+        "image": "shopify:\/\/shop_images\/choline--4.jpg",
+        "hide_image_mobile": false,
+        "subtitle": "",
+        "title": "",
+        "text": "<p><strong>La douceur de la vanille, le réconfort du lait d’amande… Et de la choline, beaucoup de choline.<\/strong> Nutriment essentiel pendant la grossesse et pourtant méconnu, la choline joue un rôle clé dans la réduction du risque de malformation du tube neural chez le nourrisson. Chaque dose de Vanilla Mama couvre <strong>plus de 50% <\/strong>de vos besoins en choline (le reste étant apporté par l’alimentation) ainsi que du collagène pour l’élasticité de la peau et la santé des cheveux, et des protéines pour réduire les nausées et réguler sa glycémie… Nous l’avons formulé avec le lait d’amande La Mandorle, pour un résultat très (très) gourmand. <strong>Vous reprendrez bien une tasse, mama ?<\/strong><\/p>",
+        "subtitle_color": "#713f2e",
+        "title_color": "#733e2b",
+        "text_color": "#927254"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_page_title": true,
+        "display_page_content": true
+      }
+    },
+    "9fb0801d-6337-490c-8c51-815dc0ca6c9a": {
+      "type": "simple-image-with-text-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Endo_e6b6000d-bdb9-4382-bcc7-1d6abf54e10f.jpg",
+        "text": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64": {
+      "type": "account-parrainage",
+      "disabled": true,
+      "settings": {
+        "yotpo-content": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"296433\"><\/div>"
+      }
+    },
+    "9ebef7f2-cd45-459e-8fe8-58468e09c004": {
+      "type": "ebook-form",
+      "blocks": {
+        "fa3b0984-04f8-4347-9045-9ae50cdcbedc": {
+          "type": "ebook",
+          "settings": {
+            "title": "Je m'inscris au lancement !",
+            "klaviyo_list": "Vcst7q"
+          }
+        }
+      },
+      "block_order": [
+        "fa3b0984-04f8-4347-9045-9ae50cdcbedc"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled-5.jpg",
+        "title": "Soyez la première alertée du lancement",
+        "subtitle": "",
+        "email_label": "<p>Indiquez votre adresse email pour être alertée du lancement de Vanilla Mama :<\/p>",
+        "newsletter_list": "Vcst7q",
+        "newsletter_label": "<p>Je souhaite m’inscire à la newsletter pour recevoir des offres exclusives<\/p>",
+        "button_text": "Je m'inscris à l'alerte"
+      }
+    },
+    "310b175d-193d-412d-b5cb-87f1e773b518": {
+      "type": "image-text",
+      "settings": {
+        "layout": "image_right",
+        "image": "shopify:\/\/shop_images\/format_v3.jpg",
+        "hide_image_mobile": false,
+        "subtitle": "",
+        "title": "LA CHOLINE… POURQUOI EST-CE SI IMPORTANT ?",
+        "text": "<p><em><strong>Pendant la grossesse…<\/strong><\/em><\/p><ul><li>Une carence en choline peut entraîner une carence en folates (vitamine B9)<\/li><li>Elle permet une diminution du risque d’anomalie du tube neural<\/li><li>Un apport optimal pendant la grossesse améliore la mémoire de l’enfant<\/li><\/ul><p>-<\/p><p><em><strong>Pendant l’allaitement…<\/strong><\/em><\/p><ul><li>La choline favorise la croissance du bébé <\/li><li>La choline booste les niveaux de DHA, essentiel pour le bon développement du cerveau<\/li><li>La choline aide à maintenir la fonction immunitaire<\/li><\/ul>",
+        "subtitle_color": "#713f2e",
+        "title_color": "#733e2b",
+        "text_color": "#927254"
+      }
+    },
+    "4bb76104-a231-456f-8a7f-ade86515e0d3": {
+      "type": "ebook-form",
+      "disabled": true,
+      "blocks": {
+        "1e0d43dd-60b9-420e-ac92-d8bdca5bbea8": {
+          "type": "ebook",
+          "settings": {
+            "title": "La choline pendant la grossesse",
+            "klaviyo_list": "WhCsTG"
+          }
+        }
+      },
+      "block_order": [
+        "1e0d43dd-60b9-420e-ac92-d8bdca5bbea8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/JM_EBOOK_CHOLINE_1.jpg",
+        "title": "POUR TOUT SAVOIR SUR LA CHOLINE ",
+        "subtitle": "<p>Cochez le ebook que vous souhaitez télécharger 🥰<\/p>",
+        "email_label": "<p>Indiquez votre adresse email pour recevoir le format PDF dans votre boite mail 👀<\/p>",
+        "newsletter_list": "Rd64q7",
+        "newsletter_label": "<p>Je souhaite m’inscire à la newsletter pour recevoir des offres exclusives<\/p>",
+        "button_text": "Je télécharge notre ebook"
+      }
+    },
+    "686372a4-b9b6-4c5a-a4d1-64d574948df7": {
+      "type": "image-with-text-custom",
+      "disabled": true,
+      "blocks": {
+        "c1146de8-6212-44d3-b75e-b347cda56cee": {
+          "type": "block",
+          "settings": {
+            "layout": "text_first",
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo-soronity.svg?v=1662458580",
+            "subtitle": "About us",
+            "title": "Une histoire de femmes",
+            "text": "<p>Nous sommes 2 femmes qui ne trouvions pas les produits que nous cherchions alors nous les avons créés ! C’est au retour des US où Marie a vécu quelques années que nous nous sommes revues. Nous avons réalisé à quel point une bonne alimentation et un support avait fait la différence dans nos grossesses et allaitements respectifs. Notre inspiration c’est nos vies, nos bébés, nos enfants, nos sœurs, nos mères, c’est VOUS. <\/p>",
+            "background_color": "#e8e2db",
+            "subtitle_color": "#733e2b",
+            "title_color": "#733e2b",
+            "text_color": "#927254"
+          }
+        },
+        "3836b281-aea6-4e57-9104-a853dd8aab1c": {
+          "type": "block",
+          "settings": {
+            "layout": "text_last",
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo-soronity.svg?v=1662458580",
+            "subtitle": "About us",
+            "title": "Une histoire de femmes",
+            "text": "<p>Nous sommes 2 femmes qui ne trouvions pas les produits que nous cherchions alors nous les avons créés ! C’est au retour des US où Marie a vécu quelques années que nous nous sommes revues. Nous avons réalisé à quel point une bonne alimentation et un support avait fait la différence dans nos grossesses et allaitements respectifs. Notre inspiration c’est nos vies, nos bébés, nos enfants, nos sœurs, nos mères, c’est VOUS. <\/p>",
+            "background_color": "#e8e2db",
+            "subtitle_color": "#733e2b",
+            "title_color": "#733e2b",
+            "text_color": "#927254"
+          }
+        }
+      },
+      "block_order": [
+        "c1146de8-6212-44d3-b75e-b347cda56cee",
+        "3836b281-aea6-4e57-9104-a853dd8aab1c"
+      ],
+      "settings": {
+      }
+    },
+    "98b35f94-9682-4ee9-a877-9b1642578641": {
+      "type": "products-carousel",
+      "disabled": true,
+      "settings": {
+        "collection": "frontpage",
+        "title": "Nos produits associés",
+        "collection_link": "Voir tout",
+        "limit": 25,
+        "productPerSlideDesktop": 4,
+        "productPerSlideMobile": 2,
+        "show_title": true,
+        "show_secondary_image": true,
+        "show_cta": false,
+        "show_dots": true
+      }
+    },
+    "9fed6e34-0c96-49b2-8eb2-b8dff85ecbe9": {
+      "type": "newsletter-klaviyo",
+      "disabled": true,
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+        "text_button": "Je m'inscris",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    },
+    "22eb68ea-b32d-4d89-936a-027a3af97538": {
+      "type": "faq",
+      "disabled": true,
+      "blocks": {
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-0": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-1": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-2": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        },
+        "0534ab8a-dea9-4571-a652-bfd7767dfe27": {
+          "type": "block",
+          "settings": {
+            "question": "Est-ce que cette poudre est vegan ?",
+            "answer": "Non, cette poudre n'est pas vegan car nous avons mis du collagène marin issu de poissons."
+          }
+        }
+      },
+      "block_order": [
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-0",
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-1",
+        "template--16741891080438__22eb68ea-b32d-4d89-936a-027a3af97538-1673973907f89db99f-2",
+        "0534ab8a-dea9-4571-a652-bfd7767dfe27"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "title_color": "#733e2b",
+        "title_accordion_color": "#733e2b",
+        "content_accordion_color": "#927254"
+      }
+    },
+    "356e4014-426a-495f-b841-4c0e7f670523": {
+      "type": "banner-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/homepage-gamme-desktop_54ca9e38-b6fc-45a9-8473-9d04fe0cbef9.jpg",
+        "subtitle": "<p>la GAMME GROSSESSE<\/p>",
+        "title": "COMPLÉMENTS ALIMENTAIRES <strong>POUR LA (FUTURE) MAMA ET SON BÉBÉ<\/strong>",
+        "imageMobile": "shopify:\/\/shop_images\/homepage-gamme-mobile_65a4757d-e5b5-4681-b649-febf8e814694.jpg",
+        "title_mobile": "COMPLÉMENTS ALIMENTAIRES <strong>POUR LA (FUTURE) MAMA ET SON BÉBÉ<\/strong>",
+        "cta": "Je découvre le gamme",
+        "ctaLink": "",
+        "button_type": "primary"
+      }
+    }
+  },
+  "order": [
+    "cdb1529a-278a-4625-b4c4-c9bd728922fc",
+    "71b06117-0b76-4aa6-8356-d48c9c0d77b1",
+    "2dab6aaa-c8b9-4612-b378-f0706c4c59d5",
+    "main",
+    "9fb0801d-6337-490c-8c51-815dc0ca6c9a",
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64",
+    "9ebef7f2-cd45-459e-8fe8-58468e09c004",
+    "310b175d-193d-412d-b5cb-87f1e773b518",
+    "4bb76104-a231-456f-8a7f-ade86515e0d3",
+    "686372a4-b9b6-4c5a-a4d1-64d574948df7",
+    "98b35f94-9682-4ee9-a877-9b1642578641",
+    "9fed6e34-0c96-49b2-8eb2-b8dff85ecbe9",
+    "22eb68ea-b32d-4d89-936a-027a3af97538",
+    "356e4014-426a-495f-b841-4c0e7f670523"
+  ]
+}

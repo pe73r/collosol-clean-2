@@ -1,0 +1,60 @@
+{% unless card_consultion == true %} <a href=" {{ product.url }}"> {% endunless %}
+ <div class="{{ class }} rounded-lg flex gap-2 border-[1px] md:max-w-[378px]  bg-white {% if outline == 'white' %} border-white {% else %} border-acajou {% endif %} {% if card_consultion == true %} !bg-acajou {% endif %}">
+
+     <img src="{{product.featured_image | image_url: width: 400 }}" alt="{{product.featured_image.alt}}" class="max-w-[80px] object-cover rounded-tl-lg rounded-bl-lg">
+
+    <div class="flex items-center justify-between flex-1 pr-2">
+
+      <div class="py-2 mr-2">
+        <!-- TITLE -->
+        <p class="GroteskBold mb-1 text-sm font-bold uppercase text-acajou GroteskBold line-clamp-1 {% if card_consultion == true %} !text-white {% endif %}">{{ product.title }}</p>
+         <!-- Metafield description -->
+        <div class="my-1 text-xs text-chataigne line-clamp-2 h-[32px] {% if card_consultion == true %} !text-white {% endif %}">
+            {% if product.metafields.global.sub_title.value != blank %}
+            {{ product.metafields.global.sub_title.value }}
+            {% else %}
+
+              {{ product.description }}
+              {{ product.description }}
+              {{ product.description }}
+              {{ product.description }}
+            {% endif %}
+        </div>
+
+         <!-- Metafield contenance -->
+        {% if contenance %}
+        <div class="mt-1 text-xs italic text-acajou {% if card_consultion == true %} !text-white {% endif %}">
+            {{ product.metafields.global.weight.value }}
+        </div>
+        {% endif %}
+        <!-- PRICE -->
+        {% unless no_price %}
+            <div class="text-sm text-acajou GrotesqueBold {% if card_consultion == true %} !text-white {% endif %}">
+                {% if product.compare_at_price == nil %}
+                    <span class="font-bold">
+                        {{ product.price | money_without_trailing_zeros }}
+                    </span>
+                {% else %}
+                    <span class="GrotesqueBold">
+                        {{ product.price | money }}
+                    </span>
+                    <span class="line-through text-[-1px] ml-2" >
+                        {{ product.compare_at_price | money }}
+                    </span>
+                {% endif %}
+            </div>
+        {% endunless %}
+    </div>
+
+    <!-- ADDTOCART -->
+    {% if show_quick_add %}
+        <add-to-cart  data-variant={{product.selected_or_first_available_variant.id}} >
+            <button class="my-1 rounded-full w-[30px] h-[30px] flex justify-center items-center text-center bg-ecorce" >
+                {% render 'icon-add-2-cart' class: 'w-[8px] h-[8px]' %}
+            </button>
+        </add-to-cart>
+     {% endif %}
+
+    </div>
+ </div>
+ {% unless card_consultion == true %} </a> {% endunless %}

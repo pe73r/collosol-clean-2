@@ -1,0 +1,76 @@
+{% assign find = false %}
+{% assign class = 'min-w-[13px] max-w-[13px] md:min-w-[18px] md:max-w-[18px]' %}
+
+{% for tag in product.tags %}
+    {%- liquid
+        assign tag = tag | downcase
+        capture icons
+            if tag contains 'pre-natal' 
+                render 'icon-filled-cycle' class: class
+                assign text = 'general.tags.prenatal' | t 
+                assign find = true
+            elsif tag == 'grossesse' 
+                 render 'icon-filled-cycle' class: class
+                assign text = 'general.tags.grossese' | t 
+                assign find = true  
+            elsif tag contains 'pre-postnatal'
+                    render 'icon-filled-cycle' class: class
+                    render 'icon-line-curved' class: class
+                    assign text = 'general.tags.prepostnatal' | t
+                 assign find = true
+            elsif tag contains 'postpartum'
+                render 'icon-line-curved' class: class
+                assign text = 'general.tags.postpartum' | t
+                assign find = true
+            elsif tag == 'allaitement'
+                render 'icon-drop' class: class
+                assign text = 'general.tags.allaitement' | t
+                assign find = true
+            elsif tag contains 'cycle'
+                render 'icon-filled-drop'
+                assign text = 'general.tags.cycle' | t
+                assign find = true
+            elsif tag contains 'confort-mensuel'
+                render 'icon-filled-drop'
+                assign text = 'general.tags.confort-mensuel' | t
+                assign find = true
+            elsif tag contains 'vegan1'
+                render 'icon-vegan' class: class
+                assign text = 'general.tags.vegan' | t
+                assign find = true
+            elsif tag contains 'fertilité' 
+                render 'icon-carreau' class: class
+                assign text = 'general.tags.fertilite' | t
+                assign find = true
+            elsif tag contains 'désir-enfant'
+                render 'icon-carreau' class: class
+                assign text = 'general.tags.desir-enfant' | t
+                assign find = true
+            elsif tag contains 'essentiels'
+                render 'icon-soleil' class: class
+                assign text = 'general.tags.essentiels' | t
+                assign find = true
+            elsif tag contains 'boost'
+                render 'icon-tag-boost' class: class
+                assign text = 'general.tags.boost' | t
+                assign find = true
+            elsif tag contains 'coach'
+                render 'icon-bulb' class: 'min-w-[18px] max-w-[18px] h-[16px]'
+                assign text = 'general.tags.coach' | t
+                assign find = true
+            elsif tag contains 'sans-gluten1'
+                render 'icon-gluten' class: class
+                assign text = 'general.tags.no-gluten' | t
+                assign find = true
+            endif
+        endcapture
+    -%}
+    {% if find == true %}
+        <div class="flex justify-center items-center mb-3 h-full">
+            {{ icons }}
+            <span class="ml-2 line-clamp-1 whitespace-nowrap GrotesqueBold text-[10px] md:text-sm">{{ text }}</span>
+        </div>
+        {% break %}
+    {% else %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,510 @@
+<style>
+  result-template {
+    display: block;
+  }
+  result-template.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  if (!window.customElements.get("result-template")) {
+    window.customElements.define("result-template", class ResultTemplate extends HTMLElement {
+      connectedCallback() {
+        const url = new URL(document.URL)
+        const splited = url.pathname.split("/")
+        const result_id = splited[splited.length - 1]
+        const template = splited[splited.length - 2]
+        console.log({result_id, template})
+        if (result_id === this.dataset["result"]) {
+          this.classList.remove("hidden");
+          localStorage.setItem("result_id", `${template}/${result_id}`)
+        }
+      }
+    })
+  }
+</script>
+
+<!-- result image product -->
+<div id="id">
+  {%- for block in section.blocks -%}
+
+    <result-template data-result="{{block.settings.result_id}}" class="{% if block.settings.result_id == "preview-2" %} ok {% else %} hidden {% endif %}">
+      <section class="section flex flex-col" id="section-{{ section.id }}">
+
+        {% render "results-image-product", data: block.settings, id: block.settings.result_id %}
+
+
+        {% render "text-simple", data: block.settings, id: block.settings.result_id %}
+
+
+        {% render 'diagnostic-tabs', data: block.settings %}
+
+
+        {% render 'reviews-diagnostic', data: block.settings %}
+
+
+        {% render 'coach-text', data: block.settings, id: block.settings.result_id %}
+
+      </section>
+
+    </result-template>
+
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Quiz Results",
+    "settings": [
+      {
+        "type": "text",
+        "id": "result_subtitle",
+        "label": "Subtitle",
+        "default": "VOTRE DIAGNOSTIQUE EST ..."
+      }
+    ],
+    "blocks": [
+
+      {
+        "type": "result",
+        "name": "Result",
+        "settings": [
+          {
+            "type": "text",
+            "id": "result_id",
+            "label": "id"
+          },
+          {
+            "type": "header",
+            "content": "Result image product"
+          },
+          {
+            "type": "product",
+            "id": "product_1",
+            "label": "Product 1 "
+          },
+          {
+            "type": "richtext",
+            "id": "product_description_1",
+            "label": "Product 1 description"
+          }, {
+            "type": "product",
+            "id": "product_2",
+            "label": "Product 2 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_2",
+            "label": "Product 2 description"
+          }, {
+            "type": "product",
+            "id": "product_3",
+            "label": "Product 3 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_3",
+            "label": "Product 3 description"
+          }, {
+            "type": "product",
+            "id": "product_4",
+            "label": "Product 4 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_4",
+            "label": "Product 4 description"
+          }, {
+            "type": "product",
+            "id": "product_5",
+            "label": "Product 5 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_5",
+            "label": "Product 5 description"
+          }, {
+            "type": "product",
+            "id": "product_6",
+            "label": "Product 6 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_6",
+            "label": "Product 6 description"
+          }, {
+            "type": "product",
+            "id": "product_7",
+            "label": "Product 7 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_7",
+            "label": "Product 7 description"
+          }, {
+            "type": "product",
+            "id": "product_8",
+            "label": "Product 8 "
+          }, {
+            "type": "richtext",
+            "id": "product_description_8",
+            "label": "Product 8 description"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "text_image",
+            "label": "Text on the image"
+          }, {
+            "type": "richtext",
+            "id": "subtitle_tabs",
+            "label": "Text below tabs",
+            "default": "<p>Aprés analyses de vos réponses, voici notre recommandantions pour vous accompagner dans votre projet PMA.</p>"
+
+          }, {
+            "type": "text",
+            "id": "text_more",
+            "label": "Text lire plus"
+          }, {
+            "type": "text",
+            "id": "text_less",
+            "label": "Text lire plus"
+          }, {
+            "type": "header",
+            "content": "Colors"
+          }, {
+            "type": "color",
+            "id": "product_title_color",
+            "label": "Color title produits",
+            "default": "#3A0F00"
+
+          }, {
+            "type": "color",
+            "id": "text_produits_color",
+            "label": "Color text produits",
+            "default": "#3A0F00"
+
+          }, {
+            "type": "color",
+            "id": "text_image_color",
+            "label": "Color text image",
+            "default": "#FFFFFF"
+          }, {
+            "type": "header",
+            "content": "Simple text"
+          }, {
+            "type": "text",
+            "id": "title",
+            "default": "NOS CONSEILS",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Pour mettre toutes les chances de votre côté, voici certaines choses que vous pouvez mettre en place pour booster votre fertilité !</p>",
+            "label": "Text"
+          }, {
+            "type": "header",
+            "content": "colors"
+          }, {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text color",
+            "default": "#927254"
+          }, {
+            "type": "header",
+            "content": "Tabs diagnostic"
+          }, {
+            "type": "header",
+            "content": "texts tabs colors"
+          }, {
+            "type": "color",
+            "id": "title_tabs_color",
+            "label": "Title tabs color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "text_tabs_color",
+            "label": "Text tabs color",
+            "default": "#927254"
+          }, {
+            "type": "header",
+            "content": "Tabs"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_1",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_1",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_2",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_2",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_3",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_3",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_4",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_4",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_5",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_5",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_6",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_6",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_7",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_7",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_8",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_8",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_9",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_9",
+            "label": "Content"
+          }, {
+            "type": "richtext",
+            "id": "tab_title_10",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "tab_description_10",
+            "label": "Content"
+          }, {
+            "type": "header",
+            "content": "Reviews"
+          }, {
+            "type": "text",
+            "id": "reviews_title",
+            "label": "Header",
+            "default": "Header text here"
+          }, {
+            "type": "header",
+            "content": "Colors"
+          }, {
+            "type": "color",
+            "id": "reviews_header_color",
+            "label": "Header color",
+            "default": "#713F2E"
+          }, {
+            "type": "color",
+            "id": "reviews_text_color",
+            "label": "Text color",
+            "default": "#713F2E"
+          }, {
+            "type": "color",
+            "id": "background_review_card",
+            "label": "Cards color",
+            "default": "#F0EDE8"
+          }, {
+            "type": "header",
+            "content": "Review 1"
+          }, {
+            "type": "range",
+            "id": "review_1_stars",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 4,
+            "label": "Nombre d'étoiles a afficher"
+          }, {
+            "type": "text",
+            "id": "review_1_text",
+            "label": "Review text",
+            "default": "Review text here"
+          }, {
+            "type": "text",
+            "id": "review_1_owner",
+            "label": "Review owner here"
+          }, {
+            "type": "header",
+            "content": "Review 2"
+          }, {
+            "type": "range",
+            "id": "review_2_stars",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 4,
+            "label": "Nombre d'étoiles a afficher"
+          }, {
+            "type": "text",
+            "id": "review_2_text",
+            "label": "Review text",
+            "default": "Review text here"
+          }, {
+            "type": "text",
+            "id": "review_2_owner",
+            "label": "Review owner here"
+          }, {
+            "type": "header",
+            "content": "Review 3"
+          }, {
+            "type": "range",
+            "id": "review_3_stars",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 4,
+            "label": "Nombre d'étoiles a afficher"
+          }, {
+            "type": "text",
+            "id": "review_3_text",
+            "label": "Review text",
+            "default": "Review text here"
+          }, {
+            "type": "text",
+            "id": "review_3_owner",
+            "label": "Review owner here"
+          }, {
+            "type": "header",
+            "content": "Coaching with text"
+          }, {
+            "type": "header",
+            "content": "Colors"
+          }, {
+            "type": "color",
+            "id": "coaching_title_color",
+            "label": "title color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "coaching_subtitle_color",
+            "label": "subtitle color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "coaching_name_title_color",
+            "label": "Name title color",
+            "default": "#733E2B"
+
+          }, {
+            "type": "color",
+            "id": "coaching_name_subtitle_color",
+            "label": "subtitle color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "coaching_button_color",
+            "label": "button color",
+            "default": "#733E2B"
+          }, {
+            "type": "color",
+            "id": "coaching_button_text_color",
+            "label": "button color",
+            "default": "#FFFFFF"
+          }, {
+            "type": "header",
+            "content": "Coachings image & text"
+          }, {
+            "type": "select",
+            "id": "coaching_layout",
+            "label": "Layout",
+            "options": [
+              {
+                "value": "text_first",
+                "label": "Text left"
+              }, {
+                "value": "text_last",
+                "label": "Text right"
+              }
+            ]
+          }, {
+            "type": "image_picker",
+            "id": "coaching_image",
+            "label": "Image"
+          }, {
+            "id": "coaching_title",
+            "type": "textarea",
+            "label": "Title",
+            "default": "BESOIN DE + DE CONSEILS"
+
+          }, {
+            "id": "coaching_subtitle",
+            "type": "textarea",
+            "label": "Subtitle",
+            "default": "nutrilicious"
+          }, {
+            "id": "coaching_name_title",
+            "type": "textarea",
+            "label": "Title",
+            "default": "PAULINE BENAROCH"
+
+          }, {
+            "id": "coaching_name_subtitle",
+            "type": "textarea",
+            "label": "Title",
+            "default": "Diététicienne, spécialisée en périnatalité"
+
+          }, {
+            "type": "header",
+            "content": "Button settings"
+          }, {
+            "id": "coaching_button_text",
+            "type": "textarea",
+            "label": "button_text",
+            "default": "Prendre Rendez-Vous"
+          }, {
+            "type": "text",
+            "id": "coaching_button_link",
+            "default": "https://shopify.dev/api/liquid/objects/product",
+            "label": "Button link"
+          }, {
+            "type": "text",
+            "id": "coaching_svg",
+            "label": "Image svg",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/rdv.svg?v=1671116163",
+            "info": "Paste the url from files"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Diagnostic results",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

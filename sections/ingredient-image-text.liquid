@@ -1,0 +1,90 @@
+<section class="relative max-w-[1120px] ml-auto mr-auto w-full">
+  <div class="flex relative w-full">
+      <div class="relative p-8 lg:absolute lg:top-4 xl:left-[-120px]">
+        {% render 'breadcrumbs', class: 'text-sm' %}
+      </div>
+  </div>
+  <div class="flex flex-col justify-evenly text-center text-[15px] mx-5 md:mx-36 md:mt-[62px] ">
+    <div class="flex flex-col ">
+      {%- if page.metafields.custom.image_ingr_dient != blank -%}
+        {% render "image" image: page.metafields.custom.image_ingr_dient, class: "m-auto max-h-[100px] max-w-[100px] rounded-[50%] object-cover" %}
+      {% endif %}
+      <h1 class="mt-5 text-[32px] Rebond Grotesque capitalize"> {{ page.metafields.custom.ingr_dient_balise }} </h1>
+
+      <div class="flex items-center justify-center gap-2 text-[13px] font-light">
+        {% render 'logo-grossesse' %}
+        <p class="Rebond Grotesque text-sm capitalize">{{ page.metafields.custom.ingr_dient_d_tail_subtitle }}</p>
+      </div>
+    </div>
+    <div class="my-10 text-[15px] font-extralight">
+      {{ page.content }}
+    </div>
+    <div class="mt-10 text-left">
+      <accordion-group>
+        <accordion-element class="border-y border-black mb-4 py-3">
+          <accordion-trigger class="group">
+            <accordion-header class="flex justify-between items-center">
+              <div class="flex-1">
+                <h2 class="py-3 text-base font-extrabold uppercase">{{ section.settings.title_accordion }}</h2>
+              </div>
+              <accordion-icon class="group-expanded:rotate-180 transition-all origin-center h-[fit-content]">
+                {% render 'plus-icon' %}
+              </accordion-icon>
+            </accordion-header>
+          </accordion-trigger>
+          <accordion-content>
+            {{ page.metafields.custom.ingr_dient_source_content }}
+          </accordion-content>
+        </accordion-element>
+      </accordion-group>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+ "name": "Ingredient details",
+  "settings": [
+      {
+        "type": "text",
+        "id": "subtitle",
+        "default": "Compatible grossesse",
+        "label": "Subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image ingredient"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Magnésium",
+        "label": "Title ingredient"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "default": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! </p>",
+        "label": "Ingredients informations"
+      },
+      {
+        "type": "text",
+        "id": "title_accordion",
+        "default": "Nos sources",
+        "label": "Title source"
+      },
+      {
+        "type": "richtext",
+        "id": "richtext",
+        "label": "Text source",
+        "default": "<p>Un pain nordique délicieux et un snack aux graines et noisettes, tous deux façon complément alimentaire et naturellement riches en vitamine B12 ! L’idéal pour toutes les mama vegans et végétariennes, mais pas que (nos besoins en B12 sont accrus pendant la grossesse et l’allaitement).</p>"
+      }
+   ],
+    "presets": [
+      {
+        "name": "Ingredient image text"
+      }
+  ]
+}
+{% endschema %}

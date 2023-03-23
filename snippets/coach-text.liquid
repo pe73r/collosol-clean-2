@@ -1,0 +1,71 @@
+<section class="md:py-10">
+  <!--Desktop-->
+  <div id="{{ id }}-Anchor-Coaching" class="scroll-m-20 hidden md:flex w-full  flex-wrap justify-evenly py-5 md:p-5 lg:px-10 lg:py-5 xl:px-40 {% if data.coaching_layout == 'text_first' %} flex-row-reverse {% endif %}">
+    <div class="image-container flex w-full justify-center p-5 md:p-0 md:basis-1/2">
+      {% render "image" image: data.coaching_image, class: "w-full rounded-tl-[100px] md:rounded-tr-[5px] object-cover" %}
+    </div>
+
+    <div class="flex flex-col justify-center text-center p-5 pr-10 basis-1/2" style="background-color:{{ data.coaching_background_color }}">
+      <h4 class="font-[800] text-center text:[28px] md:leading-[37px] uppercase GroteskBold" style="color: {{ section.settings.title_color }}">
+        {{ data.coaching_title }}
+      </h4>
+      <div class="py-2 font-medium text-center text-base" style="color: {{ section.settings.subtitle_color }}">
+        {{ data.coaching_subtitle }}
+      </div>
+      <div class="text-5xl leading-[55px] font-[800] uppercase text-center GroteskBold mt-14" style="color: {{ section.settings.name_title_color}}">
+        {{ data.coaching_name_title }}
+      </div>
+      <div class=" text-base font-thin text-center mt-4" style="color: {{ section.settings.name_subtitle_color }}">
+        {{ data.coaching_name_subtitle }}
+      </div>
+      <div class="mx-auto px-5 py-3 mt-8 rounded-full text-base" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }}">
+        <a class="flex font-bold text-white  items-center justify-center gap-2 {% render "button", size: "large", color:"primary" %}" href="{{ data.coaching_button_link }}">
+          <div class="max-w-[24px]">
+            <img src="{{ data.coaching_svg }}" alt="">
+          </div>
+          {{ data.coaching_button_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--Mobile-->
+  <div id="{{ id }}-Anchor-Coachings" class="scroll-m-20 flex md:hidden w-full md:max-h-[400px] flex-wrap justify-evenly py-5{% if data.coaching_layout == 'text_first' %} flex-row-reverse {% endif %}">
+    <div class="flex flex-col justify-center text-center p-5 md:hidden" style="
+                                                                                                                                                                                          background-color: {{ data.coaching_background_color }}">
+      <h4 class="font-[800] text-center text:[28px] leading-[37px] uppercase GroteskBold" style="color: {{ section.settings.title_color }}">
+        {{ data.coaching_title }}
+      </h4>
+      <div style="color: {{ section.settings.subtitle_color }}">
+        <div class="py-2 font-medium text-center text-sm">
+          {{ data.coaching_subtitle }}
+        </div>
+        <div class="image-container flex max-w-[90%] mx-auto justify-center p-3">
+          {% render "image" image: data.coaching_image, class: "w-full" %}
+        </div>
+      </div>
+      <div class="tex-base leading-[55px] font-[800] uppercase text-center GroteskBold md:mt-14" style="color: {{ section.settings.name_title_color}}">
+        {{ data.coaching_name_title }}
+      </div>
+      <div class=" text-base font-thin text-center md:mt-4" style="color: {{ section.settings.name_subtitle_color }}">
+        {{ data.coaching_name_subtitle }}
+      </div>
+      <div class="mx-auto px-5 py-3 mt-8 rounded-full text-base" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }}">
+        <a class="flex items-center text-white {% render "button", size: "large", color:"primary" %} justify-center gap-2" href="{{ data.coaching_button_link }}">
+          <div class="max-w-[24px]">
+            <img src="{{ data.coaching_svg }}" alt="">
+          </div>
+          {{ data.coaching_button_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  {% comment %}
+    .image-container {
+      max-height: 400px;
+    }
+  {% endcomment %}
+</style>

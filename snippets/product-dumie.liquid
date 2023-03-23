@@ -1,0 +1,41 @@
+{%- assign marketing_title = collection.metafields.global.card_marketing_title.value -%}
+{%- assign marketing_link = collection.metafields.global.card_marketing_link -%}
+{%- assign marketing_image = collection.metafields.global.card_marketing_image.value -%}
+
+{% if section.settings.product_dumie_image != blank %}
+  <div class="flex max-w-full product-dumie aspect-[265/369]">
+    <div
+      class="flex flex-col justify-center px-3 items-center w-full rounded-md text-center bg-center bg-cover bg-no-repeat"
+      {% if marketing_image != blank %}
+      style="background-image: url({{ marketing_image | img_url: 'master' }});"
+      {% elsif section.settings.product_dumie_image != blank %}
+      style="background-image: url({{ section.settings.product_dumie_image| img_url: 'master' }});"
+      {% else %}
+      style="background-image: url {{ 'product_dumie_image' | placeholder_svg_tag }}"
+      {% endif %}>
+      <p class="GroteskBold font-bold text-base mb-4" style="color: {{section.settings.text_dumie_color}};">
+        {% if marketing_title != blank %}
+          {{ marketing_title | remove: '<p>' | remove: '</p>' }}
+        {% else %}
+          {{ section.settings.product_dumie_text | remove: '<p>' | remove: '</p>' }}
+        {% endif %}
+      </p>
+      {%- if section.settings.color_dumie_link != blank -%}
+        <a
+          data-product-dumie
+          {% if marketing_link != blank %}
+          href="{{ marketing_link }}"
+          {% endif %}
+          class="text-sm underline"
+          style="color:{{ section.settings.color_dumie_link }}">
+          {{ section.settings.product_dumie_link }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+{% endif %}
+<style>
+  .product-dumie .text-base strong {
+    color: #F4FFAF;
+  }
+</style>

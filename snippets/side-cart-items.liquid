@@ -1,0 +1,90 @@
+{% assign product = item.product %}
+{% assign variant = item.variant %}
+{% assign hasVariants = product.has_only_default_variant %}
+{% assign title = variant.title %}
+{% assign image = variant.featured_image %}
+{% if product.has_only_default_variant  %}
+{% assign title = product.title %}
+{% assign image = product.featured_image %}
+{% endif %}
+
+{% if image == blank %}
+    {% assign image = product.featured_image %}
+{% endif %}
+
+<div data-line-item-variant="{{ item.variant_id }}" class="flex items-center mt-3 bg-white border border-white rounded-md max-w-[380px] relative">
+  <div>
+    <img src="{{image | image_url: width: 400 }}" alt="{{image.alt}}" class="h-[128px] max-w-[85px] object-cover rounded-l-md">
+  </div>
+  <div class="flex-1 px-2 flex-col flex">
+    <h3 class="mb-1 text-xs uppercase GrotesqueBold text-acajou">{{ product.title }}  {% unless hasVariants %} {{title}} {% endunless %}  </h3>
+    <!-- Metafield description -->
+    {% if item.variant_id == 44584120910070 %}
+            <span onclick="removeKdo()" class="absolute top-2 right-2 text-sm cursor-pointer hover:ring-1 ring-0 ring-acajou text-acajou transition-all rounded-full p-1.5">
+              X
+            </span>
+    {% endif %}
+    <div class="text-xs font-bold line-clamp-2 max-w-[90%] max-h-[32px] overflow-hidden">
+      {{ product.description }}
+    </div>
+    {% if item.selling_plan_allocation != nil %}
+      <details class="recharge_edit_container text-xs pt-1 text-ecorce relative">
+        <summary class="font-bold inline-flex items-center gap-2 flex-nowrap cursor-pointer">
+          <span>{{ 'general.cart.selling_plan_html' | t: name: item.selling_plan_allocation.selling_plan.name | capitalize }}</span>
+          {% render 'icon-edit' %}
+        </summary>
+        <div class="absolute top-[2px] left-0 w-full bg-beige z-[1] py-3 px-2 rounded-lg border-[1px] border-ecorce">
+          <update-plan data-product="{{ product.id }}">
+            <ul class="list-none">
+              {% for group_plan in product.selling_plan_groups %}
+                {% for plan in group_plan.selling_plans %}
+                  {% unless plan.id == item.selling_plan_allocation.selling_plan.id %}
+                    <li {% unless forloop.last %}class="mb-1"{% endunless %}>
+                      <button class="recharge_edit_button inline-flex items-center gap-1 flex-nowrap cursor-pointer" data-plan-id="{{ plan.id }}" data-index="{{ item_loop }}" data-loading="false">
+                        <div class="loading-overlay__spinner">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                          </svg> 
+                        </div>
+                        <span>{{ 'general.cart.selling_plan_html' | t: name: plan.name | capitalize }}</span>
+                      </button>
+                    </li> 
+                  {% endunless %}
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          </update-plan>
+        </div>
+      </details>
+    {% endif %}
+
+    <div class="flex items-center justify-between mt-3 text-ecorce">
+      {% unless item.properties.is == "free" or item.variant_id == 44584120910070 %}
+        <cart-item-quantity data-max-quantity={{product.selected_or_first_available_variant.inventory_quantity}} class="flex justify-around items-center border-[1px] border-ecorce rounded-full h-[28px] w-[80px] group" data-quantity="{{ item.quantity }}" data-product="{{ product.id }}" data-title="{{ product.title }}{% unless item.variant.title contains 'Default' %} - {{ item.variant.title }}{% endunless %}" data-discount="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | minus: product.price | divided_by: 100.00 }}{% else %}0.00{% endif %}" data-price="{{ product.price | divided_by: 100.00 }}" data-variant="{{ item.variant_id }}">
+          <button name="minus" class="p-2 text-center">
+            {%- render 'icon-minus' -%}
+          </button>
+          <input value="{{ item.quantity }}" class="w-4 text-sm text-center bg-transparent focus:outline-none Grotesque text-ecorce" type="number">
+          <button name="plus" class="h-full p-2 text-center">
+            {%- render 'icon-plus' -%}
+          </button>
+        </cart-item-quantity>
+      {% endunless%}
+      <!-- Price -->
+      <div class="mt-1 ml-auto text-sm  text-acajou" data-cart-price={{variant.id}}>
+        {% if product.compare_at_price == nil %}
+          <span class="font-bold GrotesqueBold">
+            {{ item.original_line_price | money_without_trailing_zeros }}
+          </span>
+        {% else %}
+          <span class="font-bold GrotesqueBold text-acajou">
+            {{ tem.final_line_price | money_without_trailing_zeros }}
+          </span>
+          <span class="line-through text-[-1px]">
+            {{ product.original_line_price | money_without_trailing_zeros }}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

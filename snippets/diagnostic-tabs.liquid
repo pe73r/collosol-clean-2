@@ -1,0 +1,48 @@
+<section a class="py-5">
+  <div class="w-11/12 max-w-5xl m-auto">
+    <!-- mobile -->
+    <accordion-group id="Anchor-conseils" class="block">
+      {% for i in (1..10) %}
+        {% capture title_key %}tab_title_{{ i }}{% endcapture %}
+        {% capture description_key %}tab_description_{{ i }}{% endcapture %}
+        {% assign title = data[title_key] %}
+        {% assign description = data[description_key] %}
+        {% if title != blank and description != blank %}
+          <accordion-element class="border-b border-chataigne py-6">
+            <accordion-trigger class="group">
+              <accordion-header class="flex justify-between">
+                <div class="flex-1">
+                  <h2 class="text-sm font-extrabold uppercase">{{ title }}</h2>
+                </div>
+                <accordion-icon class="transition-all origin-center h-[fit-content]">
+                  <span class="icon-plus">{% render 'icon-accordion-plus' %}</span>
+                  <span class="icon-minus hidden relative top-2">{% render 'icon-accordion-minus' %}</span>
+                </accordion-icon>
+              </accordion-header>
+            </accordion-trigger>
+            <accordion-content>
+              <div class="text-sm mt-4">{{ description }}</div>
+            </accordion-content>
+          </accordion-element>
+        {% endif %}
+      {% endfor %}
+    </accordion-group>
+  </div>
+</section>
+<style>
+
+  .selected\:text-ecorce[aria-selected="true"] h4 {
+    color: #3A0F00;
+  }
+
+  accordion-element[data-open="true"] .icon-plus {
+    display: none;
+  }
+  accordion-element[data-open="true"] .icon-minus {
+    display: block;
+  }
+  .Grotesque-strong b {
+    font-family: "RebondGrotesqueBold";
+    font-weight: 600;
+  }
+</style>

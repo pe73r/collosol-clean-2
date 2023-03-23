@@ -1,0 +1,125 @@
+{% assign s = section.settings %}
+
+<tail-marquee class="flex relative overflow-hidden min-h-[70px]" style="color: {{ section.settings.text_color }}; background-color: {{ section.settings.background_color }}">
+  <marquee-content style="animation-duration:{{section.settings.animationDuration}}s;" class="items-center max-h-[68px] flex py-3 animate-marquee whitespace-nowrap gap-10 pr-10">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'text' -%}
+        {% if block.settings.url != blank %}
+          <a href="{{ block.settings.url }}">
+            <span class="text-sm">{{ block.settings.text }}</span>
+          </a>
+        {% else %}
+          <div class="text-sm">{{ block.settings.text }}</div>
+        {% endif %}
+        {%- when 'image' -%}
+          {% if block.settings.svg != blank %}
+              <img src="{{ block.settings.svg }}" class="object-contain !max-w-max" alt="{{ block.settings.svg.alt }}">
+          {% else %}
+             <img data-src="{{ block.settings.image | img_url: 'master' }}" class="lazyload object-contain !max-w-max"" alt="{{ block.settings.image.alt }}"/>
+          {% endif %}
+      {%- endcase -%}
+    {%- endfor -%}
+  </marquee-content>
+</tail-marquee>
+<style>
+  .section-marquee strong{
+    font-family: "GroteskBold";
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "class" : "section-marquee",
+  "settings": [
+    {
+      "type": "number",
+      "id": "animationDuration",
+      "label": "Animation duration in seconds",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "text color",
+      "default": "#733E2B"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#E8E2DB"
+    }
+
+  ],
+	"blocks": [
+    {
+        "name": "Text part",
+        "type":"text",
+        "settings": [
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>par les femmes pour les femmes</p>"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+        }
+      ]
+     },
+     {
+        "name": "Image",
+        "type":"image",
+        "settings": [
+
+        {
+          "type": "text",
+          "id": "svg",
+          "label": "Image SVG",
+          "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/femenine.svg?v=1663515225"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Image SVG field has to be empty to display this image"
+        }
+      ]
+     }
+   ],
+   "presets": [
+   {
+     "name": "Marquee slider",
+     "blocks": [
+       {
+         "type": "text"
+       },
+       {
+         "type": "image"
+       },
+       {
+         "type": "text"
+       },
+       {
+         "type": "image"
+       },
+       {
+        "type": "text"
+      },
+      {
+        "type": "image"
+      }
+     ]
+   }
+ ]
+}
+{% endschema %}
+

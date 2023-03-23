@@ -1,0 +1,337 @@
+<section class="mb-5">
+  <div class="relative flex flex-col lg:flex-row lg:gap-6">
+      <!-- breadcrumbs -->
+      <div class="relative lg:absolute lg:top-4 lg:left-[80px] z-[4] p-4 lg:p-0">
+        {% render 'breadcrumbs', class: 'lg:text-white text-[10px]' %}
+      </div>
+      <!-- product carousel -->
+      <div class="w-full relative lg:sticky h-fit top-0 lg:top-5">
+        {% render 'product-carousel' , product:product , show_dots:section.settings.show_dots_mobile %}
+      </div>
+      <!-- product info -->
+      <div class="w-full h-full">
+          {% render 'product-info' , product: product %}
+      </div>
+  </div>
+
+  {% assign form_recharge_id = 'form-Recharge--' | append: product.id %}
+  {% form 'product', product, id: form_recharge_id, class: 'hidden' %}
+    {{ form | payment_terms }}
+    <input tpye="hidden" name="selling_plan" value="">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <input type="hidden" name="quantity" value="1">
+    <button type="submit"></button>
+  {% endform %}
+</section>
+
+<script defer>
+  const productQty = document.querySelector('add-to-cart[data-product="{{ product.id }}"]');
+  if(productQty) {
+    productQty.addEventListener('change', () => {
+      document.querySelector('form#{{ form_recharge_id }} input[name="quantity"]').value = this.value
+    })
+  }  
+
+  {% if product.available %}
+    var x = setInterval(function() {
+      if(window.ReChargeWidget) {
+        clearInterval(x);
+        createWidgets()
+      }
+    },100) 
+
+    function createWidgets(){
+      window.ReChargeWidget.createWidget({ productId: {{ product.id }}, injectionParent: '#rechargeDesktop', selectors: { price: ['[data-dynamic-price]'] } });
+      window.ReChargeWidget.createWidget({ productId: {{ product.id }}, injectionParent: '#rechargeMobile', selectors: { price: ['[data-dynamic-price]'] } });
+      window.ReChargeWidget.createWidget({ productId: {{ product.id }}, injectionParent: '#rechargeSticky', selectors: { price: ['[data-dynamic-price]'] } });
+    }
+
+    var y = setInterval(function(){
+      if(document.querySelector('#rechargeSticky .rc-container-wrapper')){
+        clearInterval(y);
+        updateRechargeSticky()
+        checkInput()
+      }
+    }, 100)
+
+    function checkInput(){
+      const inputs = document.querySelectorAll('input[name="subscribe"]');
+      const selling_plan_Form = document.querySelector('#{{ form_recharge_id }} input[name="selling_plan"]');
+
+      inputs.forEach((input) => {
+        input.addEventListener('input', (e) => {
+          document.body.classList.toggle('subscription_selected')
+
+          if(input.checked){
+            inputs.forEach((input_a) => {
+              input_a.checked = true;
+            })
+
+            const checking = setInterval(function() {
+              if(input.closest('.rc-template__checkbox').querySelector('select[name="selling_plan"]')){
+                clearInterval(checking);
+                checkSelectors(input.closest('.rc-template__checkbox'), selling_plan_Form)
+              }
+            }, 100)
+            
+          } else {
+            inputs.forEach((input_a) => { input_a.checked = false })
+            selling_plan_Form.value = "";
+          }
+        })
+      })
+    }
+
+    function checkSelectors(rc_select, selling_plan_Form) {
+      const selects = document.querySelectorAll('select[name="selling_plan"]')
+      selling_plan_Form.value = Number(rc_select.querySelector('select[name="selling_plan"]').value);
+
+      selects.forEach((select) => {
+        select.value = rc_select.querySelector('select[name="selling_plan"]').value;
+        select.addEventListener('change', () => {
+          selling_plan_Form.value = select.value;
+          selects.forEach((select_a) => { select_a.value = select.value; })
+        })
+      })
+    }
+
+    function updateRechargeSticky() {
+      const stickyRecharge = document.querySelector('#rechargeSticky');
+      stickyRecharge.querySelector('.rc-checkbox span.rc-option__descriptor').innerHTML = "{{ 'recharge.reccuring' | t }}";
+      stickyRecharge.querySelector('.rc-checkbox .rc-option__discount').innerHTML = '-' + stickyRecharge.querySelector('.rc-checkbox .rc-option__discount').innerHTML;
+    }
+  {% endif %}
+</script>
+
+{% schema %}
+{
+  "name": "Main product",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Product title",
+      "limit": 1
+    },
+    {
+      "type": "subtitle",
+      "name": "Metafield subtitle",
+      "limit": 1,
+      "settings": [
+
+      ]
+    },
+    {
+      "type": "contenance",
+      "name": "Contenance",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "contenance_text",
+          "label": "Contenance text",
+          "default": "<p>Le fenugrec soutient la production de lait.</p>"
+        }
+      ]
+    },
+    {
+      "type": "weight",
+      "name": "Weight",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "weight_text",
+          "label": "Text",
+          "default": "<p>112g de poudre par pot, soit 15 doses.</p>"
+        }
+      ]
+    },
+    {
+      "type": "stars",
+      "name": "Yotpo stars",
+      "limit": 1,
+      "settings": [
+
+      ]
+    },
+    {
+      "type": "delivery_note",
+      "name": "Delivery note",
+      "limit": 1,
+      "settings": [
+       {
+        "type": "text",
+        "id": "title_1",
+        "label": "Title"
+       },
+       {
+        "type": "textarea",
+        "id": "icon_1",
+        "label": "Icon"
+       },
+       {
+          "type": "richtext",
+          "id": "note_1",
+          "label": "Note",
+          "default": "<p>À partir de 70€ en France métropolitaine</p>"
+        },
+        {
+        "type": "text",
+        "id": "title_2",
+        "label": "Title",
+        "default": "Livraison offerte"
+       },
+       {
+        "type": "textarea",
+        "id": "icon_2",
+        "label": "Icon",
+        "default": "Livraison offerte"
+       },
+       {
+          "type": "richtext",
+          "id": "note_2",
+          "label": "Note",
+          "default": "<p>À partir de 70€ en France métropolitaine</p>"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Title",
+          "default": "Livraison offerte"
+         },
+         {
+          "type": "textarea",
+          "id": "icon_3",
+          "label": "Icon",
+          "default": "Livraison offerte"
+         },
+         {
+            "type": "richtext",
+            "id": "note_3",
+            "label": "Note",
+            "default": "<p>À partir de 70€ en France métropolitaine</p>"
+          }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    },
+    {
+      "type": "vendor",
+      "name": "Vendor",
+      "limit": 1
+    },
+    {
+      "type": "quantity_selector",
+      "name": "Quantity selector",
+      "limit": 1
+    },
+    {
+      "type": "variant_picker",
+      "name": "Variants",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "dropdown"
+            },
+            {
+              "value": "button",
+              "label": "Buttons"
+            }
+          ],
+          "default": "button",
+          "label": "Variant picker"
+        }
+      ]
+    },
+    {
+      "type": "buy_buttons",
+      "name": "CTA buttons desktop",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "default": true,
+          "label": "CTA Button",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_quantity",
+          "default": true,
+          "label": "Show quantity"
+        }
+      ]
+    },
+    {
+      "type": "buy_buttons_mobile",
+      "name": "CTA buttons mobile",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "default": true,
+          "label": "CTA Button",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_quantity",
+          "default": true,
+          "label": "Show quantity"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Product description",
+      "limit": 1
+    },
+    {
+      "type": "reinsurance",
+      "name": "Reinsurance",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "product tags"
+        }
+      ]
+    },
+    {
+      "type": "short_description",
+      "name": "short description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "short_text",
+          "label": "Short text",
+          "default": "<p>Ce complément alimentaire contient du collagène, un allié pour retendre la peau, lui redonner son élasticité, et prévenir et atténuer les vergetures.</p>"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_dots_mobile",
+      "default": false,
+      "label": "Display dots in mobile carousel"
+    }
+  ]
+}
+{% endschema %}
+

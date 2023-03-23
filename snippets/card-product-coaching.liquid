@@ -1,0 +1,52 @@
+<div class="{{ class }} rounded-lg flex gap-2 border-[1px] md:max-w-[378px] bg-acajou {% if outline == 'white' %} border-white {% else %} border-acajou {% endif %}">
+    <img src="{{product.featured_image | image_url: width: 400 }}" alt="{{product.featured_image.alt}}" class="w-[80px] h-full object-fit rounded-tl-lg rounded-bl-lg">
+    <div class="flex-1 flex items-center justify-between pr-2 ">
+      <div class="mr-2">
+        <!-- TITLE -->
+        <h5 class="my-1 text-sm Grotesque line-clamp-1 uppercase">{{product.title}}</h5>
+
+         <!-- Metafield description -->
+        <div class="my-1 text-xs line-clamp-1 h-[15px]">
+            {% if product.metafields.custom.card_text != blank %}
+                {{ product.metafields.custom.card_text }}
+            {% else %}
+              {{ product.description | truncate: 30 }}
+            {% endif %}
+        </div>
+
+         <!-- Metafield contenance -->
+        {% if contenance %}
+        <div class="mt-1 mb-2 text-xs italic">
+            {{ product.metafields.global.contenance }}
+        </div>
+        {% endif %}
+        <!-- PRICE -->
+        {% unless no_price %}
+            <div class="text-sm text-acajou GrotesqueBold">
+                {% if product.compare_at_price == nil %}
+                    <span class="font-bold">
+                        {{ product.price | money_without_trailing_zeros }}
+                    </span>
+                {% else %}
+                    <span class="font-bold text-capucine" >
+                        {{ product.compare_at_price | money_without_trailing_zeros }}
+                    </span>
+                    <span class="line-through text-[-1px] ml-2">
+                        {{ product.price | money_without_trailing_zeros }}
+                    </span>
+                {% endif %}
+            </div>
+        {% endunless %}
+    </div>
+
+    <!-- ADDTOCART -->
+    {% if show_quick_add %}
+        <add-to-cart data-variant={{product.selected_or_first_available_variant.id}} >
+            <button class="my-1 rounded-full w-[30px] h-[30px] flex justify-center items-center text-center bg-ecorce" >
+                {% render 'icon-add-2-cart' class: 'w-[8px] h-[8px]' %}
+            </button>
+        </add-to-cart>
+     {% endif %}
+
+    </div>
+</div>

@@ -1,0 +1,173 @@
+<section class="{% if section.settings.add_margin > 0 %} my-{{ section.settings.add_margin }} {% endif %} py-10" style="background-color: {{ section.settings.bg_color}}">
+    <div class="w-11/12 mx-auto max-w-[1040px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-4">
+          {%- for block in section.blocks -%}
+            <div class="text-center mb-3 md:mb-0">
+              <div class="min-h-[50px] flex items-center">
+                {% if block.settings.svg != blank or block.settings.image != blank %}
+                    {% if block.settings.svg != blank %}
+                      <img class="m-auto" src="{{ block.settings.svg }} " alt="{{ block.settings.svg.alt }}">
+                    {% else %}
+                      {% render "image" image: block.settings.image , class:"m-auto" %}
+                    {% endif %}
+                {% else %}
+                    {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+              </div>
+                <h3 class="mt-2.5 text-base font-bold uppercase" color: {{ block.settings.text_color }}" >{{ block.settings.title }}</h3>
+                <p class="my-2 text-base" style="color: {{ block.settings.text_color }};">{{ block.settings.text }}</p>
+                {% if block.settings.text_button != blank or block.settings.text_button_2 != blank or block.settings.text_button_3 != blank %}
+                    <div class="flex justify-center font-bold">
+                      {% if block.settings.text_button != blank %}
+                        <a href="mailto:{{block.settings.mail_url}}" class="text-base mx-1 px-4 md:px-2 lg:px-4 py-1 mb-5 max-w-[50px]text-sm rounded-3xl border-2 border-[#3A0F00] text-[#3A0F00]" style="background-color: {{ block.settings.button_color }}" name="commit" %} >
+                          {{ block.settings.text_button }}
+                        </a>
+                      {% endif %}
+                      {% if block.settings.text_button_2 != blank %}
+                        <a href="tel:{{block.settings.phone_number}}" class="text-base mx-1 px-4 md:px-2 lg:px-4 py-1 mb-5 max-w-[50px]text-sm rounded-3xl border-2 border-[#3A0F00] text-[#3A0F00]" style="background-color: {{ block.settings.button_color }}" name="commit" %} >
+                          {{ block.settings.text_button_2 }}
+                        </a>
+                      {% endif %}
+                      {% if block.settings.text_button_3 != blank %}
+                        <div onclick="GorgiasChat.open()" class="cursor-pointer text-base mx-1 px-4 md:px-2 lg:px-4 py-1 mb-5 max-w-[50px]text-sm rounded-3xl border-2 border-[#3A0F00] text-[#3A0F00]" style="background-color: {{ block.settings.button_color }}" name="commit" %} >
+                          {{ block.settings.text_button_3 }}
+                        </a>
+                      {% endif %}
+                  </div>
+               {% endif %}
+          </div>
+          {%- endfor-%}
+       </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Reinsurance",
+  "max_blocks": 3,
+  "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#F4FFAF"
+        },
+        {
+          "type": "range",
+          "id": "add_margin",
+          "label": "Margin",
+          "unit": "px",
+          "min": 0,
+          "max": 10,
+          "step": 2,
+          "default": 0
+        }
+  ],
+	"blocks": [
+     {
+       "name": "Block",
+       "type": "block",
+       "settings": [
+        {
+          "type": "header",
+          "content": "image"
+        },
+        {
+          "type": "text",
+          "id": "svg",
+          "label": "SVG image",
+          "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/france.svg?v=1662734033"
+        },
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image",
+           "info": "SVG field has to be empty"
+         },
+         {
+          "type": "header",
+          "content": "text"
+        },
+         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Livraison rapide et gratuite"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "dès 59€ d'achat en France métropolitaine"
+        },
+        {
+          "type": "header",
+          "content": "buttons"
+        },
+
+        {
+          "type": "text",
+          "id": "text_button",
+          "label": "Mail button"
+        },
+        {
+          "type": "text",
+          "id": "mail_url",
+          "label": "Mail url",
+          "default":"contact@jollymama.fr"
+        },
+
+        {
+          "type": "text",
+          "id": "text_button_2",
+          "label": "Whatsapp button"
+        },
+        {
+          "type": "text",
+          "id": "phone_number",
+          "label": "Phone number",
+          "default":"0675035475"
+        },
+        {
+          "type": "text",
+          "id": "text_button_3",
+          "label": "Chat button"
+        },
+        {
+          "type": "header",
+          "content": "colors"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#3A0F00"
+        },
+        {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button color",
+        "default": "#FFFFFF"
+        }
+       ]
+     }
+   ],
+   "presets": [
+    {
+      "name": "Reinsurance",
+      "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

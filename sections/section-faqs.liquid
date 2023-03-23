@@ -1,0 +1,371 @@
+<section>
+    <tail-tabs class="pb-20 relative faq-buttons">
+         <tabs-buttons id="container" class="flex justify-start sm:justify-center gap-8 md:gap-20 overflow-scroll snap-x snap-mandatory py-5 md:py-10 mb-12 scroller" style="background-color:{{ section.settings.bg_color }}">
+            <div class="item faq-title opacity-[.5] min-w-[100px] sm:min-w-[inherit] sm:ml-0 snap-start text-center block relative group transition-all !border-[0] cursor-pointer selected:border-b-2 selected:after:content-[''] text-chataigne  selected:text-ecorce">
+              <div class="mx-auto flex justify-center items-center w-[45px] h-[45px]">
+                {% render 'icon-questions' %}
+              </div>  
+              <span class="mt-1 text-base last:mr-0 group:selected:text-ecorce capitalize block h-[40px]">questions generales</span>
+            </div>
+            <div class="item faq-title opacity-[.5] min-w-[100px] snap-start text-center block relative group transition-all !border-[0] cursor-pointer selected:border-b-2 selected:after:content-[''] text-chataigne  selected:text-ecorce">
+              <div class="mx-auto flex justify-center items-center w-[45px] h-[45px]">
+                {% render 'icon-bio' %}
+              </div> 
+              <span class="mt-1 text-base last:mr-0 group:selected:text-ecorce capitalize block h-[40px]">Ingredients</span>
+           </div>
+           <div class="item faq-title opacity-[.5] min-w-[100px] snap-start text-center block relative group transition-all !border-[0] cursor-pointer selected:border-b-2 selected:after:content-[''] text-chataigne  selected:text-ecorce">
+            <div class="mx-auto flex justify-center items-center w-[45px] h-[45px]">
+              {% render 'icon-box' %}
+            </div> 
+            <span class="mt-1 text-base last:mr-0 group:selected:text-ecorce capitalize leading-1 block h-[40px]">Commandes<br>& livraison</span>
+           </div>
+           <div class="item faq-title opacity-[.5] min-w-[100px] snap-start text-center block relative group transition-all !border-[0] cursor-pointer selected:border-b-2 selected:after:content-[''] text-chataigne  selected:text-ecorce">
+              <div class="mx-auto flex justify-center items-center w-[45px] h-[45px]">
+                {% render 'icon-sun' %}
+              </div> 
+              <span class="mt-1 text-base last:mr-0 group:selected:text-ecorce capitalize block h-[40px]">Produits</span>
+           </div>
+
+         </tabs-buttons>
+        
+         <div class="snap-arrow sm:hidden absolute right-0 top-0 z-[5] cursor-pointer h-[130px] w-[45px] bg-opacity-5 flex justify-center items-center">
+          {%- comment -%} <span class="btn prev">&lt;</span> {%- endcomment -%}
+          
+          <span class="btn next">{% render 'icon-arrow-snap' %}</span>
+         </div>
+         
+       
+
+         <tabs-panels>
+             <!-- Questions generales -->
+              <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                  <h3 class="text-[32px] md:text-[40px] text-center mb-5 Grotesque">Questions générales</h3>
+                  <accordion-group>
+                  {% for block in section.blocks %}
+                      {% if block.type == 'generales' %}
+                          {% render 'faq', block:block %}
+                      {% endif %}
+                      {% endfor %}
+                  </accordion-group>
+              </div>
+
+              <!-- Questions ingredients -->
+              <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                <h3 class="text-[32px] md:text-[40px] text-center mb-5 Grotesque">Nos ingrédients</h3>
+                <accordion-group>
+                {% for block in section.blocks %}
+                    {% if block.type == 'ingredients' %}
+                        {% render 'faq', block:block %}
+                    {% endif %}
+                    {% endfor %}
+                </accordion-group>
+             </div>
+
+             <!-- Questions commandes -->
+             <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+              <h3 class="text-[32px] md:text-[40px] text-center mb-5 Grotesque">Commandes et livraison</h3>
+              <accordion-group>
+              {% for block in section.blocks %}
+                  {% if block.type == 'commandes' %}
+                      {% render 'faq', block:block %}
+                  {% endif %}
+                  {% endfor %}
+              </accordion-group>
+            </div>
+
+            <!-- Questions produits -->
+            <div class="block mt-4">
+               <h3 class="text-[32px] md:text-[40px] text-center mb-5 Grotesque">Nos produits</h3>
+                <tail-tabs class="">
+                    <tabs-buttons class="flex flex-wrap justify-center gap-4 mb-8 p-2">
+                        <div class="flex justify-center items-center w-[120px] h-[48px] relative group transition-all border rounded-md border-chataigne cursor-pointer selected:border-ecorce text-chataigne  selected:text-ecorce selected:bg-jaune">
+                          <span class="text-sm leading-1">Snacks</span>
+                        </div>
+
+                        <div class="flex justify-center items-center w-[120px] h-[48px] relative group transition-all border rounded-md border-chataigne cursor-pointer selected:border-ecorce text-chataigne  selected:text-ecorce selected:bg-jaune">
+                          <span class="text-sm leading-1">Granola</span>
+                       </div>
+
+                       <div class="flex justify-center items-center w-[120px] h-[48px] relative group transition-all border rounded-md border-chataigne cursor-pointer selected:border-ecorce text-chataigne  selected:text-ecorce selected:bg-jaune">
+                        <span class="text-sm leading-1">Complements</span>
+                       </div>
+
+                       <div class="flex justify-center items-center w-[120px] h-[48px] relative group transition-all border rounded-md border-chataigne cursor-pointer selected:border-ecorce text-chataigne  selected:text-ecorce selected:bg-jaune">
+                         <span class="text-sm leading-1">Nutrichoco</span>
+                       </div>
+
+                       <div class="flex justify-center items-center w-[120px] h-[48px] relative group transition-all border rounded-md border-chataigne cursor-pointer selected:border-ecorce text-chataigne  selected:text-ecorce selected:bg-jaune">
+                         <span class="text-sm leading-1">Boissons<br>& infussions</span>
+                       </div>
+                     </tabs-buttons>
+                     <tabs-panels>
+                          <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                            <accordion-group>
+                            {% for block in section.blocks %}
+                                {% if block.type == 'produits_snacks' %}
+                                    {% render 'faq', block:block %}
+                                {% endif %}
+                                {% endfor %}
+                            </accordion-group>
+                          </div>
+                          <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                            <accordion-group>
+                            {% for block in section.blocks %}
+                                {% if block.type == 'produits_granola' %}
+                                    {% render 'faq', block:block %}
+                                {% endif %}
+                                {% endfor %}
+                            </accordion-group>
+                          </div>
+                          <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                            <accordion-group>
+                            {% for block in section.blocks %}
+                                {% if block.type == 'produits_complements' %}
+                                    {% render 'faq', block:block %}
+                                {% endif %}
+                                {% endfor %}
+                            </accordion-group>
+                          </div>
+                          <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                            <accordion-group>
+                            {% for block in section.blocks %}
+                                {% if block.type == 'produits_nutrichoco' %}
+                                    {% render 'faq', block:block %}
+                                {% endif %}
+                                {% endfor %}
+                            </accordion-group>
+                          </div>
+                          <div class="block w-11/12 max-w-5xl mx-auto mb-10">
+                            <accordion-group>
+                            {% for block in section.blocks %}
+                                {% if block.type == 'produits_boissons' %}
+                                    {% render 'faq', block:block %}
+                                {% endif %}
+                                {% endfor %}
+                            </accordion-group>
+                          </div>
+                     </tabs-panels>
+                 </tail-tabs> 
+              </div>
+         </tabs-panels>
+     </tail-tabs>
+</section>
+<style>
+
+  .faq-title[aria-selected="true"]{
+    opacity: 1;
+  }
+  .faq-title[aria-selected="true"] > div{
+    background-color: #F4FFAF;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  .scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .snap-arrow{
+    background-image: url("{{ 'blur.png' | asset_url }}");
+  }
+</style>
+{%- comment -%} <script>
+    function goPrecious() {
+        document.getElementById('container').scrollBy({ 
+          left: -40,
+          behavior: 'smooth' 
+        });
+      }
+      
+      function goNext() {
+        document.getElementById('container').scrollBy({ 
+          right: 40,
+          behavior: 'smooth' 
+        });
+      }
+</script> {%- endcomment -%}
+<script>
+  const testimonials = document.querySelector('.faq-buttons');
+  const scroller = testimonials.querySelector('.scroller');
+  const nextBtn = testimonials.querySelector('.btn.next');
+  const prevBtn = testimonials.querySelector('.btn.prev');
+  const itemWidth = testimonials.querySelector('.item').clientWidth;
+
+  nextBtn.addEventListener('click', scrollToNextItem);
+  prevBtn.addEventListener('click', scrollToPrevItem);
+
+  function scrollToNextItem() {
+      if(scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
+          // The scroll position is not at the beginning of last item
+          scroller.scrollBy({left: itemWidth, top: 0, behavior:'smooth'});
+      else
+          // Last item reached. Go back to first item by setting scroll position to 0
+          scroller.scrollTo({left: 0, top: 0, behavior:'smooth'});
+  }
+  function scrollToPrevItem() {
+      if(scroller.scrollLeft != 0)
+          // The scroll position is not at the beginning of first item
+          scroller.scrollBy({left: -itemWidth, top: 0, behavior:'smooth'});
+      else
+          // This is the first item. Go to last item by setting scroll position to scroller width
+          scroller.scrollTo({left: scroller.scrollWidth, top: 0, behavior:'smooth'});
+  }
+</script>
+{% schema %}
+{
+  "name": "Faqs",
+  "settings": [
+      {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Header color",
+      "default": "#F0EDE8"
+      }
+   ],
+   "blocks":[
+        {
+            "name": "Questions générales",
+            "type": "generales",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Ingredients",
+            "type": "ingredients",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question ingredient"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Commandes",
+            "type": "commandes",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question commandes"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Produits snacks",
+            "type": "produits_snacks",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question Snack"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Produits granola",
+            "type": "produits_granola",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question Granola"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Produits complements",
+            "type": "produits_complements",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question complements"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Produits nutrichoco",
+            "type": "produits_nutrichoco",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question Nutrichoco"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        },
+        {
+            "name": "Produits boissons",
+            "type": "produits_boissons",
+            "settings": [
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question",
+                "default": "Question Boisson"
+                },
+               {
+                   "type": "richtext",
+                   "id": "answer",
+                   "label": "Answer",
+                   "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos molestiae, odio rem blanditiis accusantium hic quae incidunt impedit fugit exercitationem architecto accusamus id, totam porro adipisci sunt nisi magnam.</p>"
+               }
+            ]
+        } 
+    ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+{% render "side-cart-gift" %}
+
+<form
+
+{% if request.locale.iso_code contains "de" %}
+action="{{ request.locale.root_url }}/cart"
+{% else %}
+action="/cart"
+{% endif %}
+  novalidate
+  method="post">
+  <button
+    data-send="false"
+    name="checkout"
+    type="submit"
+    class="mt-1 GrotesqueBold bg-ecorce text-white text-base {% render "button", size:"large", color: "acajou", fullWidth: true %}">
+    {{ section.settings.validate_text }} -
+    <span data-cart-indicator>{{ cart.total_price | money_without_trailing_zeros }}</span>
+  </button>
+  <!-- Just Button  -->
+  <just-pay-button
+    theme="default"
+    className="just-btn just-btn-product"
+    app_id="ab609961-121b-405d-a916-79da052cce90"
+    domain="jollymama"
+    source="cart"></just-pay-button>
+  <style>
+    #shopify-section-side-cart just-pay-button::part(just-button) {
+      height: 48px;
+      border-radius: 40px;
+      font-family: "RebondGrotesqueBold";
+      text-transform: inherit;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 5px;
+    }
+  </style>
+  <!-- End Of Just Button  -->
+
+
+</form>
+
+{% if section.settings.extra_text != blank %}
+  <div data-sidecart-footer-text class="py-3 text-center">
+    <p class="text-xs hidden {% if cart.total_price < 10000 %}!block{% endif %}">{{ section.settings.extra_text }}</p>
+    <p data-ship-free class=" text-xs hidden {% if cart.total_price >= 10000 %}!block{% endif %}">Code promo à l'étape suivante. Frais de livraison offerts</p>
+  </div>
+{% endif %}
+<style>
+  accordion-element[data-open="true"] .icon-plus {
+    display: none;
+  }
+  accordion-element[data-open="true"] .icon-minus {
+    display: block;
+  }
+</style>

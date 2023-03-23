@@ -1,0 +1,178 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 12,
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_breadcrumbs": true,
+        "show_collection_description": true,
+        "show_collection_size": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_quick_add": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "show_product_dumie": true,
+        "product_dumie_text": "<p>Nutrition pour <strong>les (futures) mamas<\/strong><\/p>",
+        "product_dumie_link": "Découvrir",
+        "product_dumie_image": "shopify:\/\/shop_images\/card_marketing_v2.jpg",
+        "color_dumie_link": "#f4ffaf",
+        "text_dumie_color": "#ffffff",
+        "header-image-footer-color": "#ffffff"
+      }
+    },
+    "494d68ac-5dc3-4f73-9a9a-a83b2079dbda": {
+      "type": "images-grid",
+      "blocks": {
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-0": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Jolly-bread--3-desktop_0c242b7d-8f29-46a3-937c-7928838d3a86.jpg"
+          }
+        },
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-1": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Crazy-nut-1-mobile_4d6073ca-344d-4d0a-93ec-6c4faee2124e.jpg"
+          }
+        },
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-2": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Decouverte-Boost-2-mobile_28d9393c-d38f-45bc-9f00-0c59f6cb9272.jpg"
+          }
+        },
+        "391813d2-581e-48ac-8dbf-06c3ba18641b": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Mama-poule-2-desktop_52030fc4-16a1-464d-8bef-99f756b939ca.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-0",
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-1",
+        "template--16655166177526__494d68ac-5dc3-4f73-9a9a-a83b2079dbda-166636824481a4da7e-2",
+        "391813d2-581e-48ac-8dbf-06c3ba18641b"
+      ],
+      "settings": {
+        "subtitle": "À TESTER",
+        "header": "LA GAMME ESSENTIELLE",
+        "image": "shopify:\/\/shop_images\/produit-Jolly-bread--1-mobile_edc4b87d-c749-4cae-84c8-fc4207a2e202.jpg",
+        "link_url": "shopify:\/\/collections\/la-gamme-essentielle",
+        "link": "Voir toute la gamme",
+        "bg-color": "#e8e2db",
+        "subtitle-color": "#ffffff",
+        "header-color": "#ffffff"
+      }
+    },
+    "dc94c7a7-1cdd-406b-897e-b0abfb887dc1": {
+      "type": "featured-blog-carousel",
+      "settings": {
+        "blog": "guide",
+        "heading": "À LIRE...",
+        "post_limit": 6,
+        "show_author": false,
+        "show_date": true,
+        "show_button": true,
+        "show_tag": false
+      }
+    },
+    "ab76eb3a-4280-480b-b890-53e1b6b9da01": {
+      "type": "faq-collection",
+      "blocks": {
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-0": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-1": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-2": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "6df914da-2aae-4e5e-985b-376a61ed450d": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "1842793c-96aa-4ca0-a730-6e8ac4531feb": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "4c0e8f71-d30e-4b23-8ff0-097d27812f36": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "09702559-dc4d-4779-9f9f-fc87257ccf10": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "55ff851b-baf1-45a3-8aaa-ec01cc0aeffd": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "164dfd4f-b81c-40a1-82e1-e9a6011e423f": {
+          "type": "block",
+          "settings": {
+          }
+        },
+        "11a20bf9-ed00-43fc-a4a6-b4e6cbb69e4d": {
+          "type": "block",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-0",
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-1",
+        "template--16452593910006__ab76eb3a-4280-480b-b890-53e1b6b9da01-16679956660d21e0e6-2",
+        "6df914da-2aae-4e5e-985b-376a61ed450d",
+        "1842793c-96aa-4ca0-a730-6e8ac4531feb",
+        "4c0e8f71-d30e-4b23-8ff0-097d27812f36",
+        "09702559-dc4d-4779-9f9f-fc87257ccf10",
+        "55ff851b-baf1-45a3-8aaa-ec01cc0aeffd",
+        "164dfd4f-b81c-40a1-82e1-e9a6011e423f",
+        "11a20bf9-ed00-43fc-a4a6-b4e6cbb69e4d"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "title_color": "#733e2b",
+        "title_accordion_color": "#733e2b",
+        "content_accordion_color": "#927254"
+      }
+    },
+    "5d03b6b6-9ab0-4bec-b153-c9eb8153def1": {
+      "type": "rich-text-expandable",
+      "settings": {
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "#733e2b",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "more_text": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "text_mobile": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "more_text_mobile": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "text_link": "Lire plus",
+        "text_less": "Lire moins"
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "494d68ac-5dc3-4f73-9a9a-a83b2079dbda",
+    "dc94c7a7-1cdd-406b-897e-b0abfb887dc1",
+    "ab76eb3a-4280-480b-b890-53e1b6b9da01",
+    "5d03b6b6-9ab0-4bec-b153-c9eb8153def1"
+  ]
+}

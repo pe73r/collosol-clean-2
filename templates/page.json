@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "display_page_title": true,
+        "display_page_content": true
+      }
+    },
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64": {
+      "type": "account-parrainage",
+      "disabled": true,
+      "settings": {
+        "yotpo-content": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"296433\"><\/div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ea3c94c5-ae32-4af0-8458-3d55ef485c64"
+  ]
+}

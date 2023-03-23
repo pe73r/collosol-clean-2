@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_page_title": true,
+        "display_page_content": true
+      }
+    },
+    "708dd7c4-d39d-4cec-8bb6-7de6b871b1b2": {
+      "type": "simple-image-with-text-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_34_baffd73a-cd3c-4764-89a0-035b4d9ae50c.png",
+        "text": "MODES D'EMPLOI",
+        "text_color": "#ffffff"
+      }
+    },
+    "mde-grid": {
+      "type": "mde-grid",
+      "blocks": {
+        "b4d9bacf-c03f-4901-9ea9-da02dd7286f7": {
+          "type": "product",
+          "settings": {
+            "product": "cocooning",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_COCOONING_2904V3.pdf?v=1666705235"
+          }
+        },
+        "57b67e76-80d7-4c34-9fad-f40d299c5052": {
+          "type": "product",
+          "settings": {
+            "product": "happy-cycle",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_HAPPY_CYCLE_2608V4.pdf?v=1666705234"
+          }
+        },
+        "def1212c-04cf-4695-b200-4721d4220c94": {
+          "type": "product",
+          "settings": {
+            "product": "happy-periods",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_HAPPY_PERIOD_2904V3.pdf?v=1666705235"
+          }
+        },
+        "07b7dfda-4311-4be8-b8a9-a9afaac2bca0": {
+          "type": "product",
+          "settings": {
+            "product": "jolly-bread",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_JOLLY_BREAD_2904V3.pdf?v=1666705235"
+          }
+        },
+        "293391f9-8ba4-48ea-9d9a-bbba04635113": {
+          "type": "product",
+          "settings": {
+            "product": "light-legs",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_LIGHT_LEGS_1608_V2.pdf?v=1666705235"
+          }
+        },
+        "747491ef-502b-4a35-be45-ded6232d2257": {
+          "type": "product",
+          "settings": {
+            "product": "mama-poule",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_MAMAPOULE_2908V4.pdf?v=1666705235"
+          }
+        },
+        "fb66b451-6737-477c-8283-e333ecbfb3c7": {
+          "type": "product",
+          "settings": {
+            "product": "moon-pack",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_MOON_PACK_2904V3.pdf?v=1666705493"
+          }
+        },
+        "20e79971-aa25-490d-8bc3-8d2f22657dd4": {
+          "type": "product",
+          "settings": {
+            "product": "periods-pack",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PERIODS_PACK_2904V3.pdf?v=1666705554"
+          }
+        },
+        "63a4a90a-06bd-435d-8627-a893d8bc25d7": {
+          "type": "product",
+          "settings": {
+            "product": "pink-balance",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PINK_BALANCE_1608_V2.pdf?v=1666705235"
+          }
+        },
+        "e0383788-d8ad-4800-a0d1-0b676630e21f": {
+          "type": "product",
+          "settings": {
+            "product": "porridge-forever",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PORRIDGE_FOREVER_2904V3.pdf?v=1666705235"
+          }
+        },
+        "d2df91b6-8c40-450d-9025-52ac65c3d97c": {
+          "type": "product",
+          "settings": {
+            "product": "pack-postpartum-mama",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_POUDRES_POST_PARTUM_2904V3.pdf?v=1666705236"
+          }
+        }
+      },
+      "block_order": [
+        "b4d9bacf-c03f-4901-9ea9-da02dd7286f7",
+        "57b67e76-80d7-4c34-9fad-f40d299c5052",
+        "def1212c-04cf-4695-b200-4721d4220c94",
+        "07b7dfda-4311-4be8-b8a9-a9afaac2bca0",
+        "293391f9-8ba4-48ea-9d9a-bbba04635113",
+        "747491ef-502b-4a35-be45-ded6232d2257",
+        "fb66b451-6737-477c-8283-e333ecbfb3c7",
+        "20e79971-aa25-490d-8bc3-8d2f22657dd4",
+        "63a4a90a-06bd-435d-8627-a893d8bc25d7",
+        "e0383788-d8ad-4800-a0d1-0b676630e21f",
+        "d2df91b6-8c40-450d-9025-52ac65c3d97c"
+      ],
+      "settings": {
+        "title": "COMMENT PRÉPARER MON PRODUIT ?",
+        "subtitle": "<p> Quelles sont les contre-indications  éventuelles et les doses journalières ? Besoin d'astuces, d'idées recettes ? On vous a préparé des modes d'emploi à télécharger !<\/p>",
+        "link": "",
+        "title_color": "#733e2b",
+        "subtitlet_color": "#927254"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "708dd7c4-d39d-4cec-8bb6-7de6b871b1b2",
+    "mde-grid"
+  ]
+}

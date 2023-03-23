@@ -1,0 +1,272 @@
+<footer id="footer" class="w-full" style="background-color: {{ section.settings.bg_color }}">
+
+  <div class="flex">
+    <!-- content side -->
+    <div class="pt-10 pl-5 pb-6 md:pl-10 lg:pl-20 pr-5 md:pr-10 w-full {% if section.settings.image-footer != blank %} lg:w-[70%] {% else %} lg:w-full {% endif %}">
+        <div class="flex items-center">
+            <div>
+              {% if section.settings.logo_svg != blank %}
+                <img class="mb-4 lazy" src="{{ section.settings.logo_svg }}" alt="">
+              {% else %}
+                <img class="mb-4 lazy" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ section.settings.logo.alt }} ">
+              {% endif %}
+              <div class="flex items-center text-base">
+                 <div class="md:max-w-[90%]">
+                  {{ section.settings.subtext }}
+                 </div>
+
+                {% if section.settings.image_certification != blank  %}
+                  <div class="hidden md:block">
+                    <div id="y-badges" class="yotpo w-[80px] yotpo-badge badge-init">&nbsp;</div>
+                  </div>
+                {% endif %}
+             </div>
+            </div>
+        </div>
+        <!-- render social  -->
+        {%- if section.settings.show_social -%}
+          <div class="flex items-center justify-between mt-5">
+            <ul class="flex items-center" role="list">
+            {% render 'social' %}
+            </ul>
+            {% if section.settings.image_certification != blank  %}
+             <div class="block md:hidden">
+              <div id="y-badges" class="yotpo w-[80px] yotpo-badge badge-init">&nbsp;</div>
+             </div>
+            {% endif %}
+          </div>
+      {% endif %}
+        <!-- menu blocks desktop -->
+        <div class="justify-between hidden mt-10 md:flex">
+          {% for block in section.blocks %}
+              <div class="flex flex-col">
+                {%- if block.settings.heading != blank -%}
+                  <p class="font-[GroteskBold] text-xs font-extrabold uppercase text-chataigne">{{ block.settings.heading }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.menu != blank and block.settings.heading != blank -%}
+                  <ul class="list-none">
+                    {%- for link in block.settings.menu.links -%}
+                      <li>
+                        <a href="{{ link.url }}" class="uppercase:first-letter text-sm {% if link.active %} font-extrabold {% endif %}">
+                          {{ link.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                </div>
+             {% endfor %}
+         </div>
+
+         <!-- menu blocks mobile -->
+         <div class="block mt-10 md:hidden">
+          <accordion-group>
+            {% for block in section.blocks %}
+                <accordion-element class="mb-4 border-b border-white">
+                  <accordion-trigger class="group">
+                    <accordion-header class="flex justify-between">
+                        <div class="flex-1">
+                          <p class="font-[GroteskBold] pb-4 text-xs font-extrabold uppercase">{{ block.settings.heading }}</p>
+                        </div>
+                        <accordion-icon class="group-expanded:rotate-180 transition-all origin-center h-[fit-content]">
+                        {% render 'icon-arrow-accordion' %}
+                        </accordion-icon>
+                    </accordion-header>
+                  </accordion-trigger>
+                  <accordion-content>
+                    <ul class="mb-5 list-none">
+                      {%- for link in block.settings.menu.links -%}
+                        <li class="mb-2">
+                          <a href="{{ link.url }}" class="uppercase:first-letter text-sm {% if link.active %} font-extrabold {% endif %}">
+                          {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </accordion-content>
+                </accordion-element>
+              {% endfor %}
+           </accordion-group>
+         </div>
+
+        <!-- mentions legal -->
+        <div class="w-full pt-10 text-xs text-center md:text-left">
+          {{ section.settings.mention-legal }}
+        </div>
+    </div> <!-- close content-side -->
+
+    <!-- image-side -->
+    {% if section.settings.image-footer != blank %}
+      <div class="w-[30%] hidden lg:block">
+        <div class="flex flex-col w-full h-full md:text-center md:justify-center md:bg-cover md:bg-center bg-opacity-20" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ section.settings.image-footer | img_url: 'master' }});">
+          <div>
+            <span class="block text-sm font-extralight mb-3 drop-shadow-lg" style="color: {{section.settings.subtitle-image-footer-color}}"> {{ section.settings.subtitle-image-footer }} </span>
+            <p class="font-[GroteskBold] header_footer_image font-extrabold text-2xl drop-shadow-xl" style="color:{{ section.settings.header-image-footer-color }}">{{ section.settings.header-image-footer }}</p>
+            <a href="{{ section.settings.link-image }}" class="block list-none cursor-pointer underline text-base mt-3 drop-shadow-lg" style="color:{{ section.settings.link-image-footer-color }} "> {{ section.settings.link-image-footer }} </a>
+          </div>
+        </div>
+      {% endif %}
+
+    </div> <!-- close image-side-->
+
+  </div>
+</footer>
+<style>
+
+   .header_footer_image span{
+      color: {{ section.settings.header-image-footer-color-2 }};
+   }
+   accordion-element {
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   }
+
+</style>
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "conseils",
+          "label": "Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "Menu",
+          "info": "Affiche uniquement les éléments de menu de niveau supérieur."
+        }
+      ]
+    }
+  ],
+  "settings": [
+        {
+           "type": "header",
+           "content": "Logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "logo_svg",
+          "label": "Logo SVG",
+          "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/logo.svg?v=1662912874"
+        },
+        {
+          "type": "header",
+          "content": "content"
+       },
+        {
+          "type": "image_picker",
+          "id": "image_certification",
+          "label": "Logo certification"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Parce que chaque femme est différente, et que chaque moment nécessite que l’on imagine des produits spécifiques</p>",
+          "label": "Text"
+        },
+        {
+           "type": "checkbox",
+           "id": "show_social",
+           "default": true,
+           "label": "Show social ?"
+        },
+        {
+           "type": "header",
+           "content": "Image and image texts "
+        },
+        {
+          "type": "image_picker",
+          "id": "image-footer",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "subtitle-image-footer",
+          "default": "NOUVEAUTÉ",
+          "label": " Subtitle image"
+        },
+        {
+          "type": "textarea",
+          "id": "header-image-footer",
+          "default": "DEVENEZ UNE <br><span>GOLDEN MAMA</span>",
+          "label": "Header image "
+        },
+        {
+          "type": "text",
+          "id": "link-image-footer",
+          "default": "Je découvre",
+          "label": "Button"
+        },
+        {
+          "type": "url",
+          "id": "link-image",
+          "label": "Link"
+        },
+        {
+           "type": "header",
+           "content": "Mention legal"
+        },
+        {
+          "type": "richtext",
+          "id": "mention-legal",
+          "label": "Text mention legal",
+          "default": "<p>Mentions légales — Privacy Policy ©Jolly Mama 2021</p>"
+        },
+        {
+        "type": "header",
+        "content": "colors"
+        },
+        {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#E8E2DB"
+        },
+        {
+         "type": "color",
+         "id": "subtitle-image-footer-color",
+         "label": "Subtitle color",
+         "default": "#FFFFFF"
+        },
+        {
+         "type": "color",
+         "id": "header-image-footer-color",
+         "label": "Text color",
+         "default": "#FFFFFF"
+        },
+        {
+        "type": "color",
+        "id": "header-image-footer-color-2",
+        "label": "Header color",
+        "default": "#F4FFAF"
+        },
+        {
+        "type": "color",
+        "id": "link-image-footer-color",
+        "label": "Link image color",
+        "default": "#FFFFFF"
+        }
+      ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      }
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,490 @@
+{
+  "sections": {
+    "1b505491-281b-4b2e-a054-565c9b300fca": {
+      "type": "image-with-text-custom",
+      "blocks": {
+        "9a9c9db1-87f3-42f8-817a-54d38f9085bc": {
+          "type": "block",
+          "settings": {
+            "layout": "text_last",
+            "image": "shopify:\/\/shop_images\/ingredients.jpg",
+            "svg": "",
+            "subtitle": "NOS INGRÉDIENTS",
+            "title": "Rien que de la qualité pour votre santé",
+            "text": "<p>Nous passons des mois à sourcer les meilleurs ingrédients. Derrière chaque produit, nous avons des dossiers scientifiques établissant <strong>l'efficacité<\/strong> de nos actifs.<\/p><p>Nous sommes obsédés par la <strong>qualité<\/strong>. Nous allons au-delà des exigences réglementaires en faisant <strong>tester<\/strong> par un laboratoire indépendant nos ingrédients pour vérifier leur absence de métaux lourds et d’autres contaminants.  <\/p><p>Nous conduisons des études de <strong>sécurité<\/strong> sur nos formules, pour valider leur compatibilité avec l’allaitement et la grossesse, des périodes extrêmement sensibles. <\/p>",
+            "background_color": "#e8e2db",
+            "subtitle_color": "#733e2b",
+            "title_color": "#733e2b",
+            "text_color": "#927254"
+          }
+        }
+      },
+      "block_order": [
+        "9a9c9db1-87f3-42f8-817a-54d38f9085bc"
+      ],
+      "settings": {
+      }
+    },
+    "b2e2584d-8a1b-49b4-ab37-1b9ad827d55e": {
+      "type": "ingredients-cards",
+      "blocks": {
+        "ac211840-fbe2-4492-918b-4f0e4731ae88": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-vitamine-b9",
+            "image": "shopify:\/\/shop_images\/JM-logo-quatrefolic_9e4481ba-2e5e-4e07-9f47-731c3bdc37fc.png",
+            "title": "Vitamine B9",
+            "richtext": "<p>Nous utilisons des folates sous forme active, plus stables et bio-disponibles que l’acide folique. Un vrai raccourci pour votre corps.<\/p>"
+          }
+        },
+        "de80f069-3e16-424d-a8d1-844490df2f65": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-choline",
+            "image": "shopify:\/\/shop_images\/JM-logo-vitacholine_15cec8da-e734-4a48-8ad9-5f82cc3103c0.png",
+            "title": "Choline",
+            "richtext": "<p>Nous avons choisi Vitacholine®, la forme bitartrate de la choline, issue de l’acide tartrique naturel et hautement biodisponible.<\/p>"
+          }
+        },
+        "52d0fc1b-3d22-4326-ac54-6dc77d65ba1f": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-dha",
+            "image": "shopify:\/\/shop_images\/Quality_silver.png",
+            "title": "DHA",
+            "richtext": "<p>Nous utilisons du DHA issu d’huiles extra pures et garanties sans polluants ni métaux lourds. Le meilleur pour un bon départ dans la vie.<\/p>"
+          }
+        },
+        "1a347bf4-6875-4b53-be37-091372c9a3b0": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-fer",
+            "image": "shopify:\/\/shop_images\/ing-bisglycinate-fer_258ca635-63e0-4380-bf98-e29cffb87d43.jpg",
+            "title": "Fer",
+            "richtext": "<p>Notre bisglycinate de fer combine excellente biodisponibilité (90.9%) et confort digestif, pour un maximum d'effet !<\/p>"
+          }
+        },
+        "5be6b9f2-2e24-4f29-a971-20230d66a33f": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-magnesium",
+            "image": "shopify:\/\/shop_images\/actif-magnesium_ac645dd7-058f-40d2-b84a-e85b57cbe810.jpg",
+            "title": "Magnésium",
+            "richtext": "<p>Le glycérophosphate de magnésium allie haute teneur, haute biodisponibilité dans l’organisme et confort digestif.<\/p>"
+          }
+        },
+        "33ce72e0-1c99-4081-a43a-62786b9a0315": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actifs-collagene",
+            "image": "shopify:\/\/shop_images\/ing-collagene-marin_3680c96b-4b40-4126-97fd-b3e911abd6f1.jpg",
+            "title": "Collagène",
+            "richtext": "<p>Nous utilisons du collagène marin de haute qualité sous formes de peptides de collagène (ou collagène hydrolysé) dans nos compléments.<\/p>"
+          }
+        },
+        "efae3cf1-bf61-4c8e-aef2-c7122b7ae876": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-iode",
+            "image": "shopify:\/\/shop_images\/ingredients-iode.jpg",
+            "title": "Iode",
+            "richtext": "<p>Nous utilisons la forme la plus absorbable de l’iode, l’iodure de potassium dans nos compléments, et des algues naturellement riches en iode pour nos granolas.<\/p>"
+          }
+        },
+        "3b777152-8f79-4be5-a51b-dcdc3b52c4d2": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-vitamine-b6",
+            "image": "shopify:\/\/shop_images\/actif-vitamine-b6_59c6c520-fc08-4a60-8c94-ccaa2ed41d96.jpg",
+            "title": "Vitamine B6",
+            "richtext": "<p>Nous utilisons la forme pyridoxal-5-phosphate dans nos compléments.<\/p>"
+          }
+        },
+        "d0563556-86ab-4a8e-9481-25f12551dcc7": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-vitamine-b12",
+            "image": "shopify:\/\/shop_images\/actif-vitamine-b12_d61b5656-948b-4b03-b46c-6d9828fc695a.jpg",
+            "title": "Vitamine B12",
+            "richtext": "<p>Nous avons sélectionné la meilleure forme de B12, la forme méthylcobalamine, métaboliquement active et directement assimilable. <\/p>"
+          }
+        },
+        "04d75c93-e33b-4e60-ab70-b7b2568b342d": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-vitamine-d",
+            "image": "shopify:\/\/shop_images\/actif-vitamine-d3_2ae10c7a-b66a-48a2-99fe-8cfcccf07c69.jpg",
+            "title": "Vitamine D",
+            "richtext": "<p>Nous utilisons de la vitamine D3, la forme la mieux absorbée par l’organisme.<\/p>"
+          }
+        },
+        "cc58b396-2042-476d-b189-20eb0f836e23": {
+          "type": "card",
+          "settings": {
+            "link": "shopify:\/\/pages\/actif-vitamine-k2",
+            "image": "shopify:\/\/shop_images\/actif-vitamine-k2_4b07c9a1-aee7-4e24-8a03-a62b4f3cfa8b.jpg",
+            "title": "Vitamine K2",
+            "richtext": "<p>Nous utilisons la forme K2-MK7 de la vitamine K2, K2VITAL®, qui a la meilleure biodisponibilité pour l’organisme. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ac211840-fbe2-4492-918b-4f0e4731ae88",
+        "de80f069-3e16-424d-a8d1-844490df2f65",
+        "52d0fc1b-3d22-4326-ac54-6dc77d65ba1f",
+        "1a347bf4-6875-4b53-be37-091372c9a3b0",
+        "5be6b9f2-2e24-4f29-a971-20230d66a33f",
+        "33ce72e0-1c99-4081-a43a-62786b9a0315",
+        "efae3cf1-bf61-4c8e-aef2-c7122b7ae876",
+        "3b777152-8f79-4be5-a51b-dcdc3b52c4d2",
+        "d0563556-86ab-4a8e-9481-25f12551dcc7",
+        "04d75c93-e33b-4e60-ab70-b7b2568b342d",
+        "cc58b396-2042-476d-b189-20eb0f836e23"
+      ],
+      "settings": {
+        "subtitle": "Ingrédients",
+        "title": "Les meilleurs actifs",
+        "richtext": "<p>Nous privilégions le naturel lorsque cela est possible… Mais jamais au détriment de l’efficacité et de la bio disponibilité. Lorsque cela n’est pas possible alors nous nous tournons toujours vers des vitamines bioactives et des minéraux hautement absorbables.<\/p>"
+      }
+    },
+    "e25eb29d-5564-4f85-af83-4b995e32bc86": {
+      "type": "ingredients-alphabet",
+      "blocks": {
+        "9c44d22e-8f70-4908-a47d-97c61048a184": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-acerola",
+            "image": "shopify:\/\/shop_images\/ingredients-acerola_1.jpg",
+            "title": "Acérola"
+          }
+        },
+        "6ac62bf0-f725-4a02-a791-03bd7d491605": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-alchemille",
+            "image": "shopify:\/\/shop_images\/ing-alchemille_ca75c587-880c-437e-aabe-e8476ffabc29.jpg",
+            "title": "Alchemille"
+          }
+        },
+        "c8234ce2-0c1c-4a00-b26f-a25085ae04c8": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/betterave",
+            "image": "shopify:\/\/shop_images\/ing-betterave_b5059123-315d-49b2-bc7a-e86edbacc9ef.jpg",
+            "title": "Betterave"
+          }
+        },
+        "c75d7a20-c5cc-4749-ac43-3f6825435aac": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-camomille-matricaire",
+            "image": "shopify:\/\/shop_images\/ing-camomille_0ba3f02d-dfd9-4524-b527-d40eb8da560f.jpg",
+            "title": "Camomille"
+          }
+        },
+        "cfc3f3b6-6901-45bd-813d-945ef22b3237": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredients-cannelle-cinnamomum-verum",
+            "image": "shopify:\/\/shop_images\/ing-cannelle_307c1ceb-60fe-44a7-84ae-091059998ff6.jpg",
+            "title": "Cannelle"
+          }
+        },
+        "ffe5960d-9238-4e2f-ab44-c723819e6406": {
+          "type": "ingredient",
+          "settings": {
+            "link": "",
+            "image": "shopify:\/\/shop_images\/ing-cardamone_16aec813-c3f7-42fa-8a4d-fd366e523a5a.jpg",
+            "title": "Cardamone"
+          }
+        },
+        "65743024-d1e6-4c63-8390-7cfbca600b43": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-cassissier",
+            "image": "shopify:\/\/shop_images\/ing-cassissier_7ce1a2c2-dc63-49ba-8c63-a328a8f59288.jpg",
+            "title": "Cassissier"
+          }
+        },
+        "2bfe1ad8-b52a-4d70-b702-26c305bee5f2": {
+          "type": "ingredient",
+          "settings": {
+            "link": "",
+            "image": "shopify:\/\/shop_images\/ing-cranberries_4174ce29-e6c2-48c4-b8db-b1d6fc6bbe25.jpg",
+            "title": "Cranberries"
+          }
+        },
+        "9754dffd-bbb2-4b09-b733-ebb01c6ef312": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/curcuma",
+            "image": "shopify:\/\/shop_images\/ing-curcuma_a74212e4-172e-40ff-a659-44567f00ee84.jpg",
+            "title": "Curcuma"
+          }
+        },
+        "14d7d04a-ba5a-419c-bf72-fd9175e7398f": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredients-fenouil",
+            "image": "shopify:\/\/shop_images\/ing-fenouil_e624704b-aee8-4465-b7ee-ed111addacb5.jpg",
+            "title": "Fenouil"
+          }
+        },
+        "a6744af8-dcff-491d-8814-2c110146fa5f": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-fenugrec",
+            "image": "shopify:\/\/shop_images\/ing-fenugrec_da4a69ad-bfa9-4660-a759-837f97e25ebd.jpg",
+            "title": "Fenugrec"
+          }
+        },
+        "b0417a01-7ef9-4900-916a-81539031023d": {
+          "type": "ingredient",
+          "settings": {
+            "link": "",
+            "image": "shopify:\/\/shop_images\/ing-gattilier_03a1eee0-ef7f-436c-ba1b-a51cf16141af.jpg",
+            "title": "Gattilier"
+          }
+        },
+        "1b51141d-0f14-4698-89ba-e57ec4a634bb": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredients-gingembre",
+            "image": "shopify:\/\/shop_images\/ing-gingembre_06909c1a-6914-409c-8a2d-e80c0ed7b70c.jpg",
+            "title": "Gingembre"
+          }
+        },
+        "9e94b9e7-3bdd-46d1-a26c-a1b99b581b80": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-lavande",
+            "image": "shopify:\/\/shop_images\/ing-lavande_8d0c939e-77ae-4daa-b201-ee429c2217d9.jpg",
+            "title": "Lavande"
+          }
+        },
+        "bd658b4d-d6d8-4e12-929e-faaac898434f": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-lucuma",
+            "image": "shopify:\/\/shop_images\/actif-lucuma_ee642443-a753-4a7c-a5be-39c511ffbbb7.jpg",
+            "title": "Lucuma"
+          }
+        },
+        "93d9d995-bf12-449d-b199-ca53dea1d485": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-maca",
+            "image": "shopify:\/\/shop_images\/ing-maca_0221225a-3e78-4abe-bef8-ce56c164716c.jpg",
+            "title": "Maca"
+          }
+        },
+        "d5a3f51f-462f-438f-a00d-9fc3f9cf4795": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-marronnier-d-inde",
+            "image": "shopify:\/\/shop_images\/ing-marronnier-inde_c7412233-6581-4c75-aa6e-4caf504d9539.jpg",
+            "title": "Marronnier d’Inde "
+          }
+        },
+        "327da371-9436-45ad-a18c-5d2f9de95b9b": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-melisse",
+            "image": "shopify:\/\/shop_images\/ing-melisse_3a350147-6fe4-4cf9-bfe7-c328e92f9bee.jpg",
+            "title": "Mélisse"
+          }
+        },
+        "d4a01c3d-6505-4ac5-8d86-e884a4b3e27d": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-millepertuis",
+            "image": "shopify:\/\/shop_images\/ing-millepertuis_a7214876-faf2-4800-a626-ceaca7aeac3e.jpg",
+            "title": "Millepertuis"
+          }
+        },
+        "6e59aea8-ff62-4edf-b19d-baf9e3a0467b": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-moringa",
+            "image": "shopify:\/\/shop_images\/ing-moringa_c5e09e81-79a8-4cdd-bbfc-9320e9a3db2b.jpg",
+            "title": "Moringa"
+          }
+        },
+        "16d8fb27-679f-4412-bcab-6d5a6c2be1ef": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-ortie",
+            "image": "shopify:\/\/shop_images\/Ortie_piquante_1.jpg",
+            "title": "Ortie"
+          }
+        },
+        "81207351-be2b-4c4b-b13d-8a840aebb6ca": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-passiflore",
+            "image": "shopify:\/\/shop_images\/ing-passiflore_8edf2024-0eb7-48ef-be09-0b7a7e769489.jpg",
+            "title": "Passiflore"
+          }
+        },
+        "888e26b9-093f-4827-b54e-b9c01b8c4073": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-pin-maritime",
+            "image": "shopify:\/\/shop_images\/ing-pin-maritime_21409a9f-b51d-4e13-abae-8a3d35e9fd2c.jpg",
+            "title": "Pin maritime"
+          }
+        },
+        "0741edb5-dfb8-46b2-b4df-ddd1411b5fdb": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-rhodiole",
+            "image": "shopify:\/\/shop_images\/actif-rhodiole_70b48fa3-1934-4442-a330-04af7e379654.jpg",
+            "title": "Rhodiole"
+          }
+        },
+        "9e4027b4-ad87-4652-bc5b-464f22cfe303": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-safran",
+            "image": "shopify:\/\/shop_images\/ing-safran_1daa3b57-213f-4897-9577-f4447dfb1feb.jpg",
+            "title": "Safran"
+          }
+        },
+        "698a8fae-924e-4633-9bdf-acc2e57222f2": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-shatavari",
+            "image": "shopify:\/\/shop_images\/Shatavari-Plant-images-Shatavari-Asparagus-Racemosus-Uses-Benefits-and-Effects-on-Dosha_1.webp",
+            "title": "Shatavari"
+          }
+        },
+        "c89095f0-8ceb-4967-b736-c990540d4c08": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-spiruline",
+            "image": "shopify:\/\/shop_images\/ingredients-spiruline.jpg",
+            "title": "Spiruline"
+          }
+        },
+        "c4880fd8-c14a-47c0-9785-516376f46fad": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/trefle-rouge",
+            "image": "shopify:\/\/shop_images\/ing-trefle-rouge_27f764ec-af96-40eb-a489-c4c0a1fbf455.jpg",
+            "title": "Trèfle rouge"
+          }
+        },
+        "d0d79c68-4d81-4c3d-b894-3101f62beeac": {
+          "type": "ingredient",
+          "settings": {
+            "link": "shopify:\/\/pages\/ingredient-trefle-rouge",
+            "image": "shopify:\/\/shop_images\/ing-vigne-rouge.jpg",
+            "title": "Vigne rouge"
+          }
+        }
+      },
+      "block_order": [
+        "9c44d22e-8f70-4908-a47d-97c61048a184",
+        "6ac62bf0-f725-4a02-a791-03bd7d491605",
+        "c8234ce2-0c1c-4a00-b26f-a25085ae04c8",
+        "c75d7a20-c5cc-4749-ac43-3f6825435aac",
+        "cfc3f3b6-6901-45bd-813d-945ef22b3237",
+        "ffe5960d-9238-4e2f-ab44-c723819e6406",
+        "65743024-d1e6-4c63-8390-7cfbca600b43",
+        "2bfe1ad8-b52a-4d70-b702-26c305bee5f2",
+        "9754dffd-bbb2-4b09-b733-ebb01c6ef312",
+        "14d7d04a-ba5a-419c-bf72-fd9175e7398f",
+        "a6744af8-dcff-491d-8814-2c110146fa5f",
+        "b0417a01-7ef9-4900-916a-81539031023d",
+        "1b51141d-0f14-4698-89ba-e57ec4a634bb",
+        "9e94b9e7-3bdd-46d1-a26c-a1b99b581b80",
+        "bd658b4d-d6d8-4e12-929e-faaac898434f",
+        "93d9d995-bf12-449d-b199-ca53dea1d485",
+        "d5a3f51f-462f-438f-a00d-9fc3f9cf4795",
+        "327da371-9436-45ad-a18c-5d2f9de95b9b",
+        "d4a01c3d-6505-4ac5-8d86-e884a4b3e27d",
+        "6e59aea8-ff62-4edf-b19d-baf9e3a0467b",
+        "16d8fb27-679f-4412-bcab-6d5a6c2be1ef",
+        "81207351-be2b-4c4b-b13d-8a840aebb6ca",
+        "888e26b9-093f-4827-b54e-b9c01b8c4073",
+        "0741edb5-dfb8-46b2-b4df-ddd1411b5fdb",
+        "9e4027b4-ad87-4652-bc5b-464f22cfe303",
+        "698a8fae-924e-4633-9bdf-acc2e57222f2",
+        "c89095f0-8ceb-4967-b736-c990540d4c08",
+        "c4880fd8-c14a-47c0-9785-516376f46fad",
+        "d0d79c68-4d81-4c3d-b894-3101f62beeac"
+      ],
+      "settings": {
+      }
+    },
+    "3f2a2f25-58f4-4ead-aca6-3a8e7837aff0": {
+      "type": "ingredients-footer",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_95_102c35cb-65a1-42e3-b1c5-010fe34a6f9b.png",
+        "subtitle": "Naturel ou non ?",
+        "title": "Ce n’est pas le plus important !",
+        "richtext": "<p>Ce qui compte surtout, c’est d’avoir des nutriments bioactifs et biodisponibles pour l’organisme. C’est d’ailleurs ce que l’on privilégie toujours chez Jolly Mama. <\/p><p>Bioactif : c’est à dire directement assimilable pour ne pas épuiser notre corps.<\/p><p>Biodisponible : c'est-à-dire facilement absorbable par notre intestin. <\/p>",
+        "bg": "#ffffff"
+      }
+    },
+    "24695dbe-b627-45c3-bd70-9abd4d6516d3": {
+      "type": "images-grid",
+      "blocks": {
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-0": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Jolly-bread--3-desktop_0c242b7d-8f29-46a3-937c-7928838d3a86.jpg"
+          }
+        },
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-1": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Crazy-nut-1-mobile_4d6073ca-344d-4d0a-93ec-6c4faee2124e.jpg"
+          }
+        },
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-2": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Decouverte-Boost-2-mobile_28d9393c-d38f-45bc-9f00-0c59f6cb9272.jpg"
+          }
+        },
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-3": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Mama-poule-2-desktop_52030fc4-16a1-464d-8bef-99f756b939ca.jpg"
+          }
+        },
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-4": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/image_31_0bdebba4-d46c-4395-8e76-d7f731dce603.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-0",
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-1",
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-2",
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-3",
+        "template--16655165423862__24695dbe-b627-45c3-bd70-9abd4d6516d3-1665748472f2b1a0b5-4"
+      ],
+      "settings": {
+        "subtitle": "À TESTER",
+        "header": "LA GAMME ESSENTIELLE",
+        "image": "shopify:\/\/shop_images\/produit-utilisation-Pack-vit-B12-desktop.jpg",
+        "link_url": "shopify:\/\/collections\/la-gamme-essentielle",
+        "link": "Voir toute la gamme",
+        "bg-color": "#e8e2db",
+        "subtitle-color": "#ffffff",
+        "header-color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "1b505491-281b-4b2e-a054-565c9b300fca",
+    "b2e2584d-8a1b-49b4-ab37-1b9ad827d55e",
+    "e25eb29d-5564-4f85-af83-4b995e32bc86",
+    "3f2a2f25-58f4-4ead-aca6-3a8e7837aff0",
+    "24695dbe-b627-45c3-bd70-9abd4d6516d3"
+  ]
+}

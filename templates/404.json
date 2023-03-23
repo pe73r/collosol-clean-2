@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/404.png",
+        "title": "Oups,",
+        "subtitle": "NOUS AVONS PERDU CETTE PAGE. <br><span style=\"color:#927254\n\">LE MUM BRAIN NOUS JOUE DES TOURS !<span><\/span><\/span>",
+        "text": "Mais pas de problème, un de nos snacks et ça repart :",
+        "cta": "Nos essentiels",
+        "ctaLink": "shopify:\/\/collections\/la-gamme-essentielle",
+        "cta_2": "Nos snacks",
+        "ctaLink_2": "shopify:\/\/collections\/snacks",
+        "cta_3": "Nouveautés",
+        "ctaLink_3": "shopify:\/\/collections\/nouveau"
+      }
+    },
+    "9b0cbe9c-57bc-4712-bcad-461fd00f6412": {
+      "type": "images-grid",
+      "blocks": {
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-0": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Jolly-bread--3-desktop_0c242b7d-8f29-46a3-937c-7928838d3a86.jpg"
+          }
+        },
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-1": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Decouverte-Boost-2-mobile_28d9393c-d38f-45bc-9f00-0c59f6cb9272.jpg"
+          }
+        },
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-2": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Crazy-nut-1-mobile_4d6073ca-344d-4d0a-93ec-6c4faee2124e.jpg"
+          }
+        },
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-3": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Mama-poule-2-desktop_52030fc4-16a1-464d-8bef-99f756b939ca.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-0",
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-1",
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-2",
+        "template--16452593942774__9b0cbe9c-57bc-4712-bcad-461fd00f6412-16668636666f36319c-3"
+      ],
+      "settings": {
+        "subtitle": "À TESTER",
+        "header": "LA GAMME POST NATAL",
+        "image": "shopify:\/\/shop_images\/produit-Jolly-bread--1-mobile_edc4b87d-c749-4cae-84c8-fc4207a2e202.jpg",
+        "link_url": "shopify:\/\/collections\/postpartum",
+        "link": "Voir toute la gamme",
+        "bg-color": "#e8e2db",
+        "subtitle-color": "#ffffff",
+        "header-color": "#ffffff"
+      }
+    },
+    "3d3fdd63-debe-419c-a4e4-3e81f43dbafa": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+        "text_button": "Je m'inscris",
+        "image": "shopify:\/\/shop_images\/homepage-newsletter-desktop_05e76283-aa65-48ad-bb21-784860c64326.jpg",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    },
+    "6983a21b-a3db-4404-a62f-09d2f9a52830": {
+      "type": "newsletter-klaviyo",
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir <strong>-10% sur VOTRE première commande ! <\/strong><\/p>",
+        "text_button": "Je m'inscris",
+        "image": "shopify:\/\/shop_images\/homepage-newsletter-desktop_05e76283-aa65-48ad-bb21-784860c64326.jpg",
+        "hide_image_mobile": true,
+        "subtitle_color": "#E8E2DB",
+        "title_color": "#733E2B",
+        "text_color": "#927254",
+        "button_color": "#3A0F00"
+      }
+    },
+    "84905772-1181-42f8-b36d-d09fa7289732": {
+      "type": "reinsurance",
+      "blocks": {
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-0": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/france.svg?v=1662734033",
+            "title": "Livraison rapide et gratuite",
+            "text": "dès 59€ d'achat en France métropolitaine",
+            "text_button": "",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "",
+            "phone_number": "0675035475",
+            "text_button_3": "",
+            "text_color": "#927254",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-1": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/fidelity.svg?v=1662734395",
+            "title": "INNOVATION FRANÇAISE",
+            "text": "La majorité de nos ingrédients sont français et bios",
+            "text_button": "",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "",
+            "phone_number": "0675035475",
+            "text_button_3": "",
+            "text_color": "#927254",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-2": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/bulb.svg?v=1662734395",
+            "title": "Une question ? Contactez-nous !",
+            "text": "Nous sommes à votre écoute du lundi au vendredi (9h-13h et 14h-18h) :",
+            "text_button": "Mail",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "Whatsapp",
+            "phone_number": "0675035475",
+            "text_button_3": "Chat",
+            "text_color": "#927254",
+            "button_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-0",
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-1",
+        "template--16452593942774__84905772-1181-42f8-b36d-d09fa7289732-1666864190af658287-2"
+      ],
+      "settings": {
+        "bg_color": "#f4ffaf",
+        "add_margin": 0
+      }
+    },
+    "541adb6b-d2b2-483b-9d90-8f9d38ffd818": {
+      "type": "yotpo-product-reviews",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9b0cbe9c-57bc-4712-bcad-461fd00f6412",
+    "3d3fdd63-debe-419c-a4e4-3e81f43dbafa",
+    "6983a21b-a3db-4404-a62f-09d2f9a52830",
+    "84905772-1181-42f8-b36d-d09fa7289732",
+    "541adb6b-d2b2-483b-9d90-8f9d38ffd818"
+  ]
+}

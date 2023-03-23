@@ -1,0 +1,261 @@
+<section>
+  <div class="containter-abonnement w-full py-10 sm:py-16 " style="background-color: {{ section.settings.bg }};">
+    <div class="flex flex-col gap-10">
+      <div class="w-full px-5 lg:w-7/12 mx-auto">
+        <div class="w-full mt-5 sm:hidden">
+          {% if section.settings.image_mobile != blank %}
+            <img
+              class="w-full object-cover"
+              src="{{ section.settings.image_mobile | image_url: width: 400 }}"
+              alt="">
+          {% else %}
+            {{ 'image' | placeholder_svg_tag }}
+          {% endif %}
+        </div>
+        <div class="text-center pt-5 sm:px-10">
+          <div class="GroteskBold text-[28px]" style="color: {{ section.settings.title_color }};">
+            {{ section.settings.title }}
+          </div>
+          <div class="subtitle-how  text-sm mt-5">
+            {{ section.settings.subtitle }}
+          </div>
+        </div>
+      </div>
+      {% for block in section.blocks %}
+        <div class=" w-full px-5 lg:w-9/12 mx-auto">
+          {% if block.type == 'image_text' %}
+            <div class="flex flex-col items-center pt-5 gap-10 sm:flex-row {% if block.settings.layout == 'text_first' %} sm:flex-row-reverse {% endif %}">
+              <div class="w-full sm:w-2/4 order-1 sm:order-2 ">
+                {% if block.settings.image != blank %}
+                  <img
+                    class="h-[185px] w-full lg:min-w-[320px] object-cover"
+                    src="{{ block.settings.image| image_url: width: 400 }}"
+                    alt="">
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+              </div>
+              <div class="w-full sm:w-2/4">
+                <div class="GroteskBold text-base" style="color: {{ section.settings.title_side_text_color }};">
+                  {{ block.settings.title_side_text }}
+                </div>
+                <div class="text-sm font-rebond-bold mt-2" style="color: {{ section.settings.subtitle_side_text_color }};">
+                  {{ block.settings.subtitle_side_text }}
+                </div>
+              </div>
+            {% elsif block.type == 'text_abonnement_custom' %}
+              <div class="flex flex-col items-center pt-5 sm:pt-10 gap-6 lg:gap-10 sm:flex-row {% if block.settings.layout == 'text_first' %} sm:flex-row-reverse {% endif %}">
+                <div class="flex flex-col w-full sm:w-2/4 order-1 sm:order-2">
+                  <div class="flex flex-col py-5 bg-sable sm:bg-beige p-2 sm:p-5">
+                    <div class="flex items-center  gap-2 GroteskBold text-ecorce text-xs mb-4 md:mb-0">
+                      <div class="block sm:hidden">
+                        {% render 'icon-toggle-abo' %}
+                      </div>
+                      <div class="hidden sm:block">
+                        {% render 'icon-toggle-abo-on' %}
+                      </div>
+                      <div class="px-1 py-2 bg-[#f4ffaf] border border-ecorce font-extrabold text-base rounded-[4px]">{{ block.settings.text_discount }}</div>
+                      <div class="text-sm sm:text-[15px] font-extrabold uppercase GroteskBold leading-[1.5rem]">{{ block.settings.text_abonnement }}</div>
+                    </div>
+                    <div class="hidden sm:flex ">
+                      <div class="flex gap-3 items-center text-sm py-3 text-ecorce">
+                        {{ block.settings.text_abonnement_2 }}
+                        <div class="flex bg-white border-2 text-black border-ecorce text-sm py-1 px-2 gap-2 items-center rounded-full">
+                          {{ block.settings.text_frequence }} {% render 'icon-arrow-down' %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3 text-[14px] italic font-thin text-acajou px-2 sm:px-0">
+                      {% render 'icon-reload' %}
+                      {{ block.settings.text_engagement }}
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full sm:w-2/4">
+                  <div class="GroteskBold text-base" style="color: {{ section.settings.title_side_text_color }};">
+                    {{ block.settings.title_side_text }}
+                  </div>
+                  <div class="text-sm mt-2 font-rebond-bold" style="color: {{ section.settings.subtitle_side_text_color }};">
+                    {{ block.settings.subtitle_side_text }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .subtitle-how strong {
+    font-family: GroteskBold;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 640px) {
+    .containter-abonnement {
+      background-color: #F5F5F5 !important;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "Comment s'abonner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "COMMENT S'ABONNER ?"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "<p>Si vous voulez modifier le contenu de votre abonnement, rendez-vous dans votre compte client 5 jours avant la date de renouvellement. Une urgence ? Vous pouvez aussi avancer la date d'expédition de vos produits préférés !</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile"
+      },
+      {
+        "type": "header",
+        "content": "colors"
+      }, {
+        "type": "color",
+        "id": "bg",
+        "label": "Background",
+        "default": "#ffffff"
+      }, {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title",
+        "default": "#3A0F00"
+      }, {
+        "type": "color",
+        "id": "title_side_text_color",
+        "label": "Title color",
+        "default": "#3A0F00"
+      }, {
+        "type": "color",
+        "id": "subtitle_side_text_color",
+        "label": "Text color",
+        "default": "#3A0F00"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text_abonnement_custom",
+        "name": "Text abonnement custom",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout",
+            "options": [
+              {
+                "value": "text_first",
+                "label": "Text left"
+              }, {
+                "value": "text_last",
+                "label": "Text right"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "title_side_text",
+            "label": "Title left",
+            "default": "<p>2. Géréz votre abonnement DEPUIS votre compte client</p>"
+          },
+          {
+            "type": "richtext",
+            "id": "subtitle_side_text",
+            "label": "Subtitle left",
+            "default": "<p>C’est simple, vous pouvez vous abonner directement sur les pages produits de votre choix. Puis gérez votre abonnement depuis votre compte client sur notre site. </p>"
+          },
+          {
+            "type": "richtext",
+            "id": "text_discount",
+            "label": "Discount pourcentage text",
+            "default": "<p>15%</p>"
+          }, {
+            "type": "richtext",
+            "id": "text_abonnement",
+            "label": "Text abonnement",
+            "default": "<p>De réduction avec l'abonnement</p>"
+          }, {
+            "type": "richtext",
+            "id": "text_abonnement_2",
+            "label": "Subtext",
+            "default": "<p>Fréquence a selectionner :</p>"
+          }, {
+            "type": "richtext",
+            "id": "text_frequence",
+            "label": "Fréquence abonnement",
+            "default": "<p>2 Mois</p>"
+          }, {
+            "type": "richtext",
+            "id": "text_reduction",
+            "label": "Text reduction",
+            "default": "<p>15% de réduction</p>"
+          }, {
+            "type": "richtext",
+            "id": "text_engagement",
+            "label": "Text engagement",
+            "default": "<p>Sans engagement - Des Avantages exclusifs </p>"
+          }
+        ]
+      }, {
+        "name": "Image text",
+        "type": "image_text",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout",
+            "options": [
+              {
+                "value": "text_first",
+                "label": "Text left"
+              }, {
+                "value": "text_last",
+                "label": "Text right"
+              }
+            ]
+          }, {
+            "type": "richtext",
+            "id": "title_side_text",
+            "label": "Title left",
+            "default": "<p>2.  Géréz votre abonnement DEPUIS votre compte client</p>"
+          }, {
+            "type": "richtext",
+            "id": "subtitle_side_text",
+            "label": "Subtitle left",
+            "default": "<p>C’est simple, vous pouvez vous abonner directement sur les pages produits de votre choix. Puis gérez votre abonnement depuis votre compte client sur notre site. </p>"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Comment s'abonner section ",
+        "blocks": [
+          {
+            "type": "text_abonnement_custom"
+          }, {
+            "type": "text_abonnement_custom"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

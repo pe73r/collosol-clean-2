@@ -1,0 +1,129 @@
+{% if template == 'collection' %}
+  {%- if collection.metafields.global.title_SEO.value -%}
+    <div class="mx-5 md:max-w-3xl md:mx-auto py-10 md:py-20" style="background-color: {{ section.settings.bg_color}}; color:{{ section.settings.text_color }}">
+      <div class="text-center">
+        <h2 class="font-bold text-sm">{{ collection.metafields.global.title_SEO.value }}</h2>
+        <tail-details class="mt-4 text-sm">
+          {% assign metafield_content_bis = collection.metafields.global.text_SEO_bis.value %}
+          {% assign metafield_content = collection.metafields.global.text_SEO.value %}
+          <details-part>
+            {% if metafield_content != blank %}
+              {{ metafield_content }}
+            {% endif %}
+          </details-part>
+          <br>
+          <details-part>
+            {% if metafield_content_bis != blank %}
+              {{ metafield_content_bis }}
+            {% endif %}
+          </details-part>
+          <see-more class="block mt-5 text-sm underline capitalize GrotesqueBold">{{ section.settings.text_link }}</see-more>
+          <div class="text-center mt-3">
+            <see-less class="hidden justify-center mt-5 text-sm underline capitalize GrotesqueBold">{{ section.settings.text_less }}</see-less>
+          </div>
+        </tail-details>
+      </div>
+    </div>
+  {%- endif -%}
+{% else %}
+  <div class="mx-5 md:max-w-3xl md:mx-auto py-10 md:py-20" style="background-color: {{ section.settings.bg_color}}; color:{{ section.settings.text_color }}">
+    <div class="text-center">
+      <h2 class="font-bold text-sm">{{ section.settings.title }}</h2>
+      <tail-details class="mt-4 text-sm">
+        <details-part>
+          <div class="{% if section.settings.text_mobile != blank %} hidden md:block {% endif %}">
+            {{ section.settings.text }}
+          </div>
+          {% if section.settings.text_mobile != blank %}
+            <div class="block md:hidden ">
+              {{ section.settings.text_mobile }}
+            </div>
+          {% endif %}
+        </details-part>
+        <details-part>
+          <div class="{% if section.settings.text_mobile != blank %} hidden md:block {% endif %}">
+            {{ section.settings.more_text }}
+          </div>
+          {% if section.settings.text_mobile != blank %}
+            <div class="block md:hidden">
+              {{ section.settings.more_text_mobile }}
+            </div>
+          {% endif %}
+        </details-part>
+        <see-more class="block mt-5 text-sm underline capitalize GrotesqueBold">{{ section.settings.text_link }}</see-more>
+        <div class="text-center mt-3">
+          <see-less class="hidden justify-center mt-5 text-sm underline capitalize GrotesqueBold">{{ section.settings.text_less }}</see-less>
+        </div>
+      </tail-details>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Rich Text Expandable",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#733E2B"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "content desktop"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+        "label": "Paragraph"
+      }, {
+        "type": "richtext",
+        "id": "more_text",
+        "default": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        "label": "More paragraph"
+      }, {
+        "type": "header",
+        "content": "content mobile"
+      }, {
+        "type": "richtext",
+        "id": "text_mobile",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+        "label": "Paragraph"
+      }, {
+        "type": "richtext",
+        "id": "more_text_mobile",
+        "default": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        "label": "More paragraph"
+      }, {
+        "type": "text",
+        "id": "text_link",
+        "default": "Lire plus",
+        "label": "Text button more"
+      }, {
+        "type": "text",
+        "id": "text_less",
+        "default": "Lire moins",
+        "label": "Text button less"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Rich Text Expandable"
+      }
+    ]
+  }
+{% endschema %}

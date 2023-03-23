@@ -1,0 +1,195 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_page_title": true,
+        "display_page_content": true
+      }
+    },
+    "28011c8e-1713-4f3a-82c6-7e861c28aafb": {
+      "type": "simple-image-with-text-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_40_81fdf46a-2ae4-4916-88cd-99e23bb0ee50.jpg",
+        "text": "Mode d'emploi",
+        "text_color": "#ffffff"
+      }
+    },
+    "1a9feaad-c4b6-405c-9dc7-f8a3424dcc6a": {
+      "type": "mde-grid",
+      "blocks": {
+        "d8502455-d6b9-49d2-8ad7-4718c4c460c4": {
+          "type": "product",
+          "settings": {
+            "product": "cocooning",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_COCOONING_2904V3.pdf?v=1666705235"
+          }
+        },
+        "abe12a5a-9a16-4ed0-9fb0-439cb52a3b18": {
+          "type": "product",
+          "settings": {
+            "product": "happy-cycle",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_HAPPY_CYCLE_2608V4.pdf?v=1666705234"
+          }
+        },
+        "87991e1c-dab4-46da-855f-b8cc3e27c18a": {
+          "type": "product",
+          "settings": {
+            "product": "happy-periods",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_HAPPY_PERIOD_2904V3.pdf?v=1666705235"
+          }
+        },
+        "2f1bd149-e79a-4494-a6c4-ae98573a10ca": {
+          "type": "product",
+          "settings": {
+            "product": "jolly-bread",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_JOLLY_BREAD_2904V3.pdf?v=1666705235"
+          }
+        },
+        "c35ac254-651f-426e-8894-1abd273cc9f6": {
+          "type": "product",
+          "settings": {
+            "product": "light-legs",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_LIGHT_LEGS_1608_V2.pdf?v=1666705235"
+          }
+        },
+        "7f8cda52-3035-452e-9ba6-783ececd250b": {
+          "type": "product",
+          "settings": {
+            "product": "mama-poule",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_MAMAPOULE_2908V4.pdf?v=1666705235"
+          }
+        },
+        "125110c0-cbf5-492c-abfb-4df86c3ece00": {
+          "type": "product",
+          "settings": {
+            "product": "moon-pack",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_MOON_PACK_2904V3.pdf?v=1666705493"
+          }
+        },
+        "2d85800c-6002-4302-b811-c46fca9d283a": {
+          "type": "product",
+          "settings": {
+            "product": "periods-pack",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PERIODS_PACK_2904V3.pdf?v=1666705554"
+          }
+        },
+        "e2ec69f4-d7fc-4a97-bf4a-17fc2dccace4": {
+          "type": "product",
+          "settings": {
+            "product": "pink-balance",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PINK_BALANCE_1608_V2.pdf?v=1666705235"
+          }
+        },
+        "a07d2a71-5d2f-4eaf-abdb-66ebb419799e": {
+          "type": "product",
+          "settings": {
+            "product": "porridge-forever",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_PORRIDGE_FOREVER_2904V3.pdf?v=1666705235"
+          }
+        },
+        "e106436e-dd8c-4b0d-86d6-e4ed380a3ad8": {
+          "type": "product",
+          "settings": {
+            "product": "pack-postpartum-mama",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/JOLLY_MAMA_flyer_POUDRES_POST_PARTUM_2904V3.pdf?v=1666705236"
+          }
+        }
+      },
+      "block_order": [
+        "d8502455-d6b9-49d2-8ad7-4718c4c460c4",
+        "abe12a5a-9a16-4ed0-9fb0-439cb52a3b18",
+        "87991e1c-dab4-46da-855f-b8cc3e27c18a",
+        "2f1bd149-e79a-4494-a6c4-ae98573a10ca",
+        "c35ac254-651f-426e-8894-1abd273cc9f6",
+        "7f8cda52-3035-452e-9ba6-783ececd250b",
+        "125110c0-cbf5-492c-abfb-4df86c3ece00",
+        "2d85800c-6002-4302-b811-c46fca9d283a",
+        "e2ec69f4-d7fc-4a97-bf4a-17fc2dccace4",
+        "a07d2a71-5d2f-4eaf-abdb-66ebb419799e",
+        "e106436e-dd8c-4b0d-86d6-e4ed380a3ad8"
+      ],
+      "settings": {
+        "title": "COMMENT PRÉPARER MON PRODUIT ?",
+        "subtitle": "<p> Quelles sont les contre-indications  éventuelles et les doses journalières ? Besoin d'astuces, d'idées recettes ? On vous a préparé des modes d'emploi à télécharger !<\/p>",
+        "link": "",
+        "title_color": "#733e2b",
+        "subtitlet_color": "#927254"
+      }
+    },
+    "b27b931d-5078-411a-b7dc-c1167c10014a": {
+      "type": "images-grid",
+      "blocks": {
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-0": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Jolly-bread--3-desktop_0c242b7d-8f29-46a3-937c-7928838d3a86.jpg"
+          }
+        },
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-1": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Crazy-nut-1-mobile_4d6073ca-344d-4d0a-93ec-6c4faee2124e.jpg"
+          }
+        },
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-2": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Decouverte-Boost-2-mobile_28d9393c-d38f-45bc-9f00-0c59f6cb9272.jpg"
+          }
+        },
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-3": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Mama-poule-2-desktop_52030fc4-16a1-464d-8bef-99f756b939ca.jpg"
+          }
+        },
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-4": {
+          "type": "block",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-0",
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-1",
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-2",
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-3",
+        "template--16680137359606__b27b931d-5078-411a-b7dc-c1167c10014a-16674299420dafa4da-4"
+      ],
+      "settings": {
+        "subtitle": "À TESTER",
+        "header": "LA GAMME ESSENTIELLE",
+        "image": "shopify:\/\/shop_images\/produit-Jolly-bread--1-mobile_edc4b87d-c749-4cae-84c8-fc4207a2e202.jpg",
+        "link_url": "shopify:\/\/collections\/la-gamme-essentielle",
+        "link": "Voir toute la gamme",
+        "bg-color": "#e8e2db",
+        "subtitle-color": "#ffffff",
+        "header-color": "#ffffff"
+      }
+    },
+    "7774d8f2-24bf-4958-ad0d-1a8e82b26c0f": {
+      "type": "newsletter-klaviyo",
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+        "text_button": "Je m'inscris",
+        "image": "shopify:\/\/shop_images\/homepage-newsletter-desktop_05e76283-aa65-48ad-bb21-784860c64326.jpg",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "28011c8e-1713-4f3a-82c6-7e861c28aafb",
+    "1a9feaad-c4b6-405c-9dc7-f8a3424dcc6a",
+    "b27b931d-5078-411a-b7dc-c1167c10014a",
+    "7774d8f2-24bf-4958-ad0d-1a8e82b26c0f"
+  ]
+}

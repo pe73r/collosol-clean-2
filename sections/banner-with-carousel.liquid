@@ -1,0 +1,499 @@
+{% assign s = section.settings %}
+<div class="bg-sable py-[60px] md:my-10">
+    <div class="max-w-6xl w-11/12 max-auto flex flex-col items-center md:flex-row justify-center mx-auto gap-10">
+       <div class="w-full md:w-5/12">
+          {% render "image" image: s.image, class:"w-full object-contain hidden rounded-t-full md:block" %}
+          {% render "image" image: s.imageMobile, class:"object-contain block md:hidden w-full" %}
+       </div>
+        <div class="w-full md:6/12">
+            <tail-carousel slidesToShow="xs:1 sm:1 lg:1 xl:1" loop="true" class="relative">
+              <carousel-container class="w-full">
+                <carousel-content class="w-full">
+                   {% for block in section.blocks %}
+                    {%- if block.type == 'grid_1'-%}
+                      <carousel-panel class="w-full">
+                          <div class="text-center ">
+                              <h2 class="text-[28px] leading-[37px] text-acajou uppercase font-bold">{{ block.settings.title }}</h2>
+                              <div class="text-chataigne text-base mt-2.5 bwc">{{ block.settings.text }}</div>
+                          </div>
+                          <div class="grid grid-cols-2 md:grid-cols-3 grid-rows-2 grid-custom gap-5 mt-5">
+                              <a href="{{block.settings.url_1}}" class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_1 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_1.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_1 }}</p>
+                              </a>
+                              <a href="{{block.settings.url_2}}" class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_2 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_2.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_2 }}</p>
+                              </a>
+                              <a href="{{block.settings.url_3}}" class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_3 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_3.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_3 }}</p>
+                              </a>
+                              <a  href="{{block.settings.url_4}}"class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_4 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_4.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_4 }}</p>
+                              </a>
+                              <a href="{{block.settings.url_5}}" class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_5 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_5.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_5 }}</p>
+                              </a>
+                              <a href="{{block.settings.url_6}}" class="flex flex-col items-center justify-center px-3">
+                                <img src="{{ block.settings.svg_6 }}" class="object-contain !max-w-max mx-auto" alt="{{ block.settings.svg_6.alt }}">
+                                <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_6 }}</p>
+                              </a>
+                           </div>
+                          </carousel-panel>
+                      {%- else -%}
+                          <carousel-panel class="w-full">
+                            <div class="text-center ">
+                                <h3 class="text-[28px] leading-[37px] text-acajou uppercase font-bold">{{ block.settings.title }}</h3>
+                                <div class="text-chataigne text-base mt-2.5 bwc">{{ block.settings.text }}</div>
+                            </div>
+                            <div class="grid grid-cols-2 grid-rows-2 grid-custom-2 gap-5 mt-8 max-w-[500px] mx-auto">
+                                <a href="{{block.settings.url_1}}" class="flex flex-col items-center justify-center px-3">
+                                  <img src="{{ block.settings.svg_1 }}" class="object-contain !max-w-[60px] mx-auto" alt="{{ block.settings.svg_1.alt }}">
+                                  <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_1 }}</p>
+                                </a>
+                                <a href="{{block.settings.url_2}}" class="flex flex-col items-center justify-center px-3">
+                                  <img src="{{ block.settings.svg_2 }}" class="object-contain !max-w-[60px] mx-auto" alt="{{ block.settings.svg_2.alt }}">
+                                  <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_2 }}</p>
+                                </a>
+                                <a href="{{block.settings.url_3}}" class="flex flex-col items-center justify-center px-3">
+                                  <img src="{{ block.settings.svg_3 }}" class="object-contain !max-w-[60px] mx-auto" alt="{{ block.settings.svg_3.alt }}">
+                                  <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_3 }}</p>
+                                </a>
+                                <a href="{{block.settings.url_4}}" class="flex flex-col items-center justify-center px-3">
+                                  <img src="{{ block.settings.svg_4 }}" class="object-contain !max-w-[60px] mx-auto" alt="{{ block.settings.svg_4.alt }}">
+                                  <p class="text-base text-acajou text-center mt-2.5">{{block.settings.text_4 }}</p>
+                                </a>
+                            </div>
+                            </carousel-panel>
+                        {%- endif -%}
+                    {% endfor %}
+                  </carousel-content>
+                </carousel-container>
+                <carousel-dots class="relative flex justify-center mt-5">
+                    <carousel-dot class="w-[10px] h-[10px] m-1 transition-all bg-white border-[1px] border-white rounded-full selected:bg-ecorce selected:border-ecorce"></carousel-dot>
+                </carousel-dots>
+            </tail-carousel>
+
+        </div>
+    </div>
+</div>
+
+<style>
+  .bwc strong {
+    font-family: "GroteskBold";
+     text-transform: uppercase;
+     font-weight: bold;
+   }
+
+  .grid-custom > * {
+    position: relative;
+    overflow: visible;
+  }
+
+  /* Vertical lines to the left of cells in the top row */
+  .grid-custom > :nth-child(2)::before,
+  .grid-custom > :nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 100%;
+    border-left: 1px solid #927254;
+  }
+
+  /* Vertical lines to the left of cells in all other rows */
+  .grid-custom > :nth-child(3n+5)::before,
+  .grid-custom > :nth-child(3n+6)::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    height: calc(100% + 20px);
+    border-left: 1px solid #927254;
+  }
+
+  /* Horizontal lines above cells in the first column */
+  .grid-custom > :nth-child(3n+4)::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #927254;
+  }
+
+  /* Horizontal lines above cells in all other columns */
+  .grid-custom > :nth-child(3n+5)::after,
+  .grid-custom > :nth-child(3n+6)::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: calc(100% + 20px);
+    border-top: 1px solid #927254;
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .grid-custom > :nth-child(3)::before {
+      content: '';
+        position: absolute;
+        top: -25% !important;
+        height: 140% !important;
+        border-right: 1px solid #927254 !important;
+        border-left: none !important;
+        right: -11px !important;
+    }
+    .grid-custom > :nth-child(3)::after {
+      content: '';
+        position: absolute;
+        top: -10px;
+        width: 119%;
+        border-top: 1px solid #927254;
+        right: -21px;
+    }
+    .grid-custom > :nth-child(5)::before{
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -10px;
+      height: calc(100% + 20px);
+      border-left: none;
+   }
+
+  }
+
+
+  /* grid custom 2 */
+  .grid-custom-2 > * {
+    position: relative;
+    overflow: visible;
+  }
+
+  /* Vertical lines to the left of cells in the top row */
+  .grid-custom-2 > :nth-child(2)::before,
+  .grid-custom-2 > :nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: calc(100% + 20px);
+    border-left: 1px solid #927254;
+  }
+
+  /* Vertical lines to the left of cells in all other rows */
+  .grid-custom-2 > :nth-child(3n+5)::before,
+  .grid-custom-2 > :nth-child(3n+6)::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    height: calc(100% + 20px);
+    border-left: 1px solid #927254;
+  }
+
+  /* Horizontal lines above cells in the first column */
+  .grid-custom-2 > :nth-child(3n+4)::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: calc(100% + 20px);
+    border-top: 1px solid #927254;
+  }
+
+  .grid-custom-2 > :nth-child(3)::after  {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: calc(100% + 20px);
+    border-top: 1px solid #927254;
+  }
+
+  /* Horizontal lines above cells in all other columns */
+  .grid-custom-2 > :nth-child(3n+5)::after,
+  .grid-custom-2 > :nth-child(3n+6)::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: calc(100% + 20px);
+    border-top: 1px solid #927254;
+  }
+
+  </style>
+{% schema %}
+  {
+    "name": "Banner With Carousel",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "imageMobile",
+        "label": "Image mobile"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image desktop"
+      }
+    ],
+	"blocks": [
+     {
+       "name": "grid 6 pictos",
+       "type": "grid_1",
+       "settings": [
+            {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Avec vous à chaque moment"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Parce que notre approche est holistique, et que ce qui compte au-delà de vous proposer les meilleurs produits, c’est de vous donner toutes les infos pour que vous fassiez votre choix, un choix éclairé.</p>"
+          },
+          {
+            "type": "header",
+            "content": "picto 1"
+          },
+          {
+            "type": "text",
+            "id": "svg_1",
+            "label": "Picto SVG 1",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "Text",
+            "default": "Conception & fertilité"
+          },
+          {
+            "type": "url",
+            "id": "url_1",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 2"
+          },
+          {
+            "type": "text",
+            "id": "svg_2",
+            "label": "Picto SVG 2",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "Text",
+            "default": "Fausses couches & perte d’un bébé"
+          },
+          {
+            "type": "url",
+            "id": "url_2",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 3"
+          },
+          {
+            "type": "text",
+            "id": "svg_3",
+            "label": "Picto SVG 3",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_3",
+            "label": "Text",
+            "default": "Allaitement"
+          },
+          {
+            "type": "url",
+            "id": "url_3",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 4"
+          },
+          {
+            "type": "text",
+            "id": "svg_4",
+            "label": "Picto SVG 4",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_4",
+            "label": "Text",
+            "default": "Grossesse"
+          },
+          {
+            "type": "url",
+            "id": "url_4",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 5"
+          },
+          {
+            "type": "text",
+            "id": "svg_5",
+            "label": "Picto SVG 5",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_5",
+            "label": "Text",
+            "default": "Après la naissance & postpartum"
+          },
+          {
+            "type": "url",
+            "id": "url_5",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 6"
+          },
+          {
+            "type": "text",
+            "id": "svg_6",
+            "label": "Picto SVG 6",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_6",
+            "label": "Text",
+            "default": "Cycle menstruel"
+          },
+          {
+            "type": "url",
+            "id": "url_6",
+            "label": "Link"
+          }
+       ]
+     },
+     {
+       "name": "grid 4 pictos",
+       "type": "grid_2",
+       "settings": [
+            {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Avec vous à chaque moment"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Parce que notre approche est holistique, et que ce qui compte au-delà de vous proposer les meilleurs produits, c’est de vous donner toutes les infos pour que vous fassiez votre choix, un choix éclairé.</p>"
+          },
+          {
+            "type": "header",
+            "content": "picto 1"
+          },
+          {
+            "type": "text",
+            "id": "svg_1",
+            "label": "Picto SVG 1",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "Text",
+            "default": "Conception & fertilité"
+          },
+          {
+            "type": "url",
+            "id": "url_1",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 2"
+          },
+          {
+            "type": "text",
+            "id": "svg_2",
+            "label": "Picto SVG 2",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "Text",
+            "default": "Fausses couches & perte d’un bébé"
+          },
+          {
+            "type": "url",
+            "id": "url_2",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 3"
+          },
+          {
+            "type": "text",
+            "id": "svg_3",
+            "label": "Picto SVG 3",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_3",
+            "label": "Text",
+            "default": "Allaitement"
+          },
+          {
+            "type": "url",
+            "id": "url_3",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "picto 4"
+          },
+          {
+            "type": "text",
+            "id": "svg_4",
+            "label": "Picto SVG 4",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/Frame_589_3.png?v=1663079489"
+          },
+          {
+            "type": "text",
+            "id": "text_4",
+            "label": "Text",
+            "default": "Grossesse"
+          },
+          {
+            "type": "url",
+            "id": "url_4",
+            "label": "Link"
+          }
+       ]
+     }
+    ],
+     "presets": [
+      {
+        "name": "Banner With Carousel"
+      }
+    ]
+  }
+  {% endschema %}

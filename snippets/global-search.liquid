@@ -1,0 +1,61 @@
+<tail-instant-search>
+    <tail-drawer data-full-height="true">
+        <drawer-overlay class="p-0 overflow-visible justify-end">
+            <drawer-content from="right" class="w-full relative">
+                <drawer-header class="border-none bg-white p-2 py-3">
+                    <input class="w-full text-4xl font-rebond text-acajou outline-none " placeholder="Produits, articles..." type="text">
+                    <drawer-close  class="w-8 h-8 p-2 mb-2">
+                        {% render 'icon-cart-close' %}
+                      </drawer-close >
+                </drawer-header>
+                <div class="w-full bg-sable flex justify-around p-2 ">
+                    <button  data-index="shopify_products" aria-selected="true"  class="text-center px-2 py-1 border border-acajou rounded-full text-sm cursor-pointer bg-white selected:bg-acajou text-acajou selected:text-white transition-all">
+                        Produits <span data-nbHits></span>
+                    </button>
+                    <button  data-index="shopify_pages" aria-selected="true"  class="text-center px-2 py-1 border border-acajou rounded-full text-sm cursor-pointer bg-white selected:bg-acajou text-acajou selected:text-white transition-all">
+                        Conseils <span data-nbHits></span>
+                    </button>
+                    <button  data-index="shopify_articles" aria-selected="true"  class="text-center px-2 py-1 border border-acajou rounded-full text-sm cursor-pointer bg-white selected:bg-acajou text-acajou selected:text-white transition-all">
+                        Blogs <span data-nbHits></span>
+                    </button>
+                    <button  data-index="shopify_collections" aria-selected="true"  class="text-center px-2 py-1 border border-acajou rounded-full text-sm cursor-pointer bg-white selected:bg-acajou text-acajou selected:text-white transition-all">
+                        Collections <span data-nbHits></span>
+                    </button>
+                </div>
+                <drawer-inner class=" p-2 bg-sable ">
+                    <ul class="flex-col flex gap-4">
+
+                    </ul>
+                </drawer-inner>
+            </drawer-content>
+        </drawer-overlay>
+        <drawer-trigger class="flex items-center   justify-center w-10 h-10 p-2 cursor-pointer">
+            {% render 'icon-search' %}
+        </drawer-trigger>
+    </tail-drawer>
+    <script type="text/template">
+        <a  data-id="--id--" rel="nofollow" href="--url--" class="w-full px-4 py-2 hover:ring-1 ring-0 ring-white ring-acajou transition-all rounded bg-white flex items-center justify-between  gap-4 ">
+            <img src="--image--" class="aspect-square rounded w-12 h-12 object-cover" alt="result">
+            <div class="flex flex-1 flex-col">
+                <div class="text-sm text-chataigne font-rebond" >
+              --type--
+                </div>
+                <div class="w-full flex justify-between text-lg text-acajou font-rebond-bold ">
+                    <div class="flex-1" >
+                        --title--
+                    </div>
+                    <div>
+                        --price--
+                    </div>
+                </div>
+                <div class="text-sm italic text-chataigne font-rebond" >
+                    --date--
+                </div>
+                <div class="flex flex-wrap w-full gap-y-0.5 gap-x-2 text-xs" data-tags>
+
+                </div>
+            </div>
+        </a>
+    </script>
+  </tail-instant-search>
+

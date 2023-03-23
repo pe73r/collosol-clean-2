@@ -1,0 +1,178 @@
+{% assign s = section.settings %}
+<section class="font-[RebondGrotesque] w-full relative {% if s.image != blank %}mt-20{% endif %}" id="{{ section.id }}">
+  {% if s.image != blank %}
+    <div class="mb-4 absolute top-0 left-2/4 w-40 h-40 translate-y-[-50%] translate-x-[-50%]">
+      <img src="{{ s.image | image_url: width: 200 }}"
+        class="object-cover h-full w-full"
+        loading="lazy"
+        alt="{{ s.image.alt }}"
+        width="{{ s.image.width }}"
+        height="{{ s.image.height }}">
+    </div>
+  {% endif %}
+  <div class="relative overflow-hidden">
+    <div class="pt-10 text-center max-w-[1120px] m-auto">
+      <div class="ml-auto mr-auto max-w-4xl w-full px-4 md:px-10 {% if s.image != blank %}pt-14{% endif %}">
+        {% if s.title %}
+          <h2 class="mb-7 GroteskBold uppercase text-[28px] md:text-[34px]" style="color: {{ section.settings.title_color }};">
+            {{ s.title }}
+          </h2>
+        {% endif %}
+        <div class="flex justify-center md:flex-col">
+          <!-- svg desktop-->
+          <div class="hidden md:flex mb-4"> {{ s.svg_desktop }} </div>
+          <!--svg mobile-->
+          <div class="flex md:hidden mb-4"> {{ s.svg_mobile }}</div>
+            <div class="text-center px-10 md:my-5 flex-col justify-evenly md:flex">
+              <div class="flex flex-col justify-between items-center md:mx-[-10%] lg:mx-[-15%] xl:mx-[-20%] md:flex-row">
+              {% for block in section.blocks %}
+                  <div class="flex flex-col px-5 md:px-0 md:pr-10 last:pr-0 min-h-[100px]">
+                    <div class="point-title tracking-tighter font-bold uppercase text-[28px] GroteskBold" style="color:{{ section.settings.point_title_color }};">
+                      {{ block.settings.point_title }}
+                    </div>
+                    <div class="text-sm max-w-xs font-rebond" style="color:{{ section.settings.point_text_color }}">
+                      {{ block.settings.point_text }}
+                    </div>
+                  </div>
+              {% endfor %}
+              </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <style>
+
+          .point-title{
+              -webkit-text-stroke: 1.5px #3A0F00;
+          }
+
+          #{{ section.id }} .overflow-hidden::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            translate: -50%;
+            background-color: {{ s.bg }};
+            z-index: -1;
+          }
+
+          @media only screen and (min-width: 768px){
+            #{{ section.id }} .overflow-hidden::before {
+              width: 150%;
+              height: 100%;
+              border-radius: 50% 50% 0 0;
+            }
+        }
+        @media only screen and (max-width: 767px){
+          #{{ section.id }} .overflow-hidden::before {
+            width: 100vw;
+            height: 100%;
+            border-radius: 90vw 90vw 0 0;
+          }
+        }
+      </style>
+{% schema %}
+  {
+    "name": "Pourquoi s'abonner",
+    "max_blocks": 4,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Choisir le bon ingrédient"
+      },
+      {
+        "type":"header",
+         "content":"SVG mobile"
+      },
+      {
+       "type": "text",
+        "id": "svg_mobile",
+        "label": "Paste SVG image from files"
+      },
+      {
+        "type":"header",
+        "content":"Svg desktop"
+      },
+      {
+       "type": "text",
+        "id": "svg_desktop",
+        "label": "Paste SVG image from files"
+      },
+      {
+        "type":"header",
+         "content":"colors"
+      },
+        {
+          "type": "color",
+          "id": "bg",
+          "label": "Background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title",
+          "default": "#3A0F00"
+        },
+        {
+          "type": "color",
+          "id": "point_title_color",
+          "label": "Text color point title",
+          "default": "#F4FFAF"
+        },
+        {
+          "type": "color",
+          "id": "point_text_color",
+          "label": "Text color point title"
+        }
+    ],
+    "blocks": [
+     {
+       "name": "Block",
+       "type": "block",
+       "settings": [
+         {
+           "type": "text",
+           "id": "point_title",
+           "label": "Title",
+           "default": "exclu"
+         },
+         {
+           "type": "richtext",
+           "id": "point_text",
+           "label": "Text",
+           "default": "<p>J'accède à des contenus exclusifs (Le Jolly Club)</p>"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+          "name": "Pourquoi s'abonner section ",
+          "blocks": [
+          {
+            "type": "block"
+          },
+          {
+            "type": "block"
+          },
+          {
+            "type": "block"
+          },
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

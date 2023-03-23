@@ -1,0 +1,142 @@
+{% if show_links %}
+  <!-- Hair filters -->
+  <div class="justify-between hidden pb-4 border-b border-gray-300 md:flex">
+    <a href="">
+      <img class=" max-w-[60px] border-2 border-gray-300 p-[4px] rounded-full {% if collection.handle contains 'laver'%} border-capucine {% endif %}" src="{{ 'laver.png' | asset_url }}" alt="">
+      <h4 class="Wagner text-center md:text-xl xl:text-3xl text-gray-300 {% if collection.handle contains 'laver' %} !text-capucine {% endif %}">LAVER</h4>
+    </a>
+    <a href="">
+      <img class=" max-w-[60px] border-2 border-gray-300 p-[4px] rounded-full {% if collection.handle contains 'soigner' %} border-capucine {% endif %}" src="{{ 'soigner.png' | asset_url }}" alt="">
+      <h4 class="Wagner text-center md:text-xl xl:text-3xl text-gray-300 {% if collection.handle contains 'soigner' %} !text-capucine {% endif %}">SOIGNER</h4>
+    </a>
+    <a href="">
+      <img class=" max-w-[60px] border-2 border-gray-300 p-[4px] rounded-full {% if collection.handle contains 'coiffantes' or collection.handle contains 'coiffer'%} border-capucine {% endif %}" src="{{ 'coiffer.png' | asset_url }}" alt="">
+      <h4 class="Wagner text-center md:text-xl xl:text-3xl text-gray-300 {% if collection.handle contains 'coiffantes' or collection.handle contains 'coiffer'%} !text-capucine {% endif %}">COIFFER</h4>
+    </a>
+  </div>
+{% endif %}
+<tail-filters class="collection-facets">
+  <!-- Active filters -->
+  {%- for filter in results.filters -%}
+    <div class="flex flex-col">
+      {%- for filter_value in filter.values -%}
+        {% if filter_value.active == true %}
+          <span class="my-5 text-xl font-extrabold uppercase">{{ filter_value.label }}</span>
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+
+  <!-- Accordion Filters -->
+  {%- for filter in results.filters -%}
+    <accordion-group>
+      <accordion-element class="py-4 border-b border-gray-300">
+          <accordion-trigger class="group">
+              <accordion-header class="flex justify-between">
+                  <div class="flex-1">
+                  <h2 class="text-xs uppercase">
+                    {% if filter.label contains "hair_type" %}
+                      <span>TYPE DE CHEVEUX</span>
+                    {% else %}
+                      <span>{{ filter.label }}</span>
+                    {% endif %}
+                  </h2>
+                  </div>
+                  <accordion-icon class="group-expanded:rotate-90 transition-all origin-center h-[fit-content]">
+                  {% render 'icon-accordion-arrow' %}
+                  </accordion-icon>
+              </accordion-header>
+          </accordion-trigger>
+          <accordion-content>
+            <div class="mt-8">
+              {%- case filter.type -%}
+                 {%- when 'boolean' or 'list' -%}
+                  {% if filter.label contains "hair_type" %}
+                    <!-- hair_type filters are round images -->
+                    <ul class="flex flex-wrap image--filters">
+                      {%- for filter_value in filter.values -%}
+                            <li class="relative w-1/2 mb-4">
+                              <div>
+                                {{filter.active_values | map : "value" | join: ', ' }}
+                              </div>
+                              <label class="flex flex-col-reverse items-center text-sm first-letter:capitalize" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                                <input type="checkbox"
+                                name="{{ filter_value.param_name }}"
+                                value="{{ filter_value.value }}"
+                                id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                {% if filter_value.active -%}checked{%- endif %}
+                                {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}
+                              >
+
+                                {% if filter_value.label == 'ondulés' %}
+                                  <p class="text-xs text-center">Astuce : Vos <br> cheveux ondulent <br> dans la longueur,<br> en forme de S</p>
+                                  <span class="my-2 font-extrabold uppercase">{{ filter_value.label }}</span>
+                                  <img class="p-1 border border-gray-300 rounded-full" src="{{ 'filter-ondules.png' | asset_url }}" alt="">
+                                {% elsif filter_value.label == 'bouclés' %}
+                                  <p class="text-xs text-center">Astuce : <br> Dès la racine, vos<br> nombreuses<br> boucles sont<br> denses et serrées</p>
+                                  <span class="my-2 font-extrabold uppercase">{{ filter_value.label }}</span>
+                                  <img class="p-1 border border-gray-300 rounded-full" src="{{ 'filter-boucles.png' | asset_url }}" alt="">
+                                {% elsif filter_value.label == 'frisés' %}
+                                  <p class="text-xs text-center">Astuce : <br> Vous avez des boucles larges,<br> souples, de tailles <br> différentes</p>
+                                  <span class="my-2 font-extrabold uppercase">{{ filter_value.label }}</span>
+                                  <img class="p-1 border border-gray-300 rounded-full" src="{{ 'filter-frises.png' | asset_url }}" alt="">
+                                {% elsif filter_value.label == 'crepus' %}
+                                  <p class="text-xs text-center">Astuce : Vos <br> cheveux forment <br>de multiples petits <br> ressorts</p>
+                                  <span class="my-2 font-extrabold uppercase">{{ filter_value.label }}</span>
+                                  <img class="p-1 border border-gray-300 rounded-full" src="{{ 'filter-frises.png' | asset_url }}" alt="">
+                                {% endif %}
+
+                            </label>
+                          </li>
+                      {%- endfor -%}
+                    </ul>
+                  {% else %}
+                   <!-- default checkbox filters -->
+                    <ul class="default--filters">
+                      {%- for filter_value in filter.values -%}
+                        <li class="relative mb-2">
+                            <label class="flex text-xs first-letter:capitalize" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                            <input type="checkbox"
+                              class="mr-2"
+                              name="{{ filter_value.param_name }}"
+                              value="{{ filter_value.value }}"
+                              id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                              {% if filter_value.active -%}checked{%- endif %}
+
+                            >{{ filter_value.label }}
+
+                          </label>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {% endif %}
+
+                {%- when 'price_range' -%}
+                    <!-- price case to be included -->
+                {%- endcase -%}
+             </div>
+             <!-- Aply filters -->
+            <apply-filters>
+              <button class="w-full my-2 cursor-pointer {% render "button", size:"small", color:"sauge" %}">
+                APPLIQUER
+              </button>
+            </apply-filters>
+          </accordion-content>
+      </accordion-element>
+    </accordion-group>
+  {%- endfor -%}
+
+
+  <!-- Delete filters -->
+  {%- for filter in results.filters -%}
+    {%- for filter_value in filter.active_values -%}
+    <remove-filters>
+        <div  class="block w-full px-3 py-4 mt-5 text-sm font-extrabold text-center border border-black rounded-md" >
+          Supprimer les sélections
+        </div>
+      </remove-filters>
+    {%- endfor -%}
+  {%- endfor -%}
+</tail-filters>
+
+

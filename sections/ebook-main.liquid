@@ -1,0 +1,47 @@
+{% assign s = section.settings %}
+<section class="max-w-[792px] mx-auto text-center mt-[10px] pb-5 md:pb-9 px-5 md:px-0">
+  <div class="">
+    {% render 'breadcrumbs' %}
+  </div>
+  <div class="mt-1 md:mt-2">
+    <h1 class="text-base md:text-[34px] font-extrabold text-acajou uppercase leading-[42px] tracking-[0.05em]">
+      {{ s.title }}
+    </h1>
+    <div class="mt-1 md:mt-2 text-sm text-chataigne font-medium leading-[20px] mb-[20px]">
+      {{ s.richtext }}
+    </div>
+    <a href="#form-ebooks" class="block w-fit  mx-auto py-3 px-6 rounded-[50px] border-solid border border-transparent hover:bg-sable hover:border-acajou hover:text-ecorce bg-ecorce text-white font-bold text-base leading-[22px]">
+      {{ s.button_text }}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ebook Main",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Ebook Gratuit"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Richtext",
+      "default": "<p>Cette documentation a été rédigée par des experts de la nutrition. Téléchargez le livret qui correspond le mieux à votre moment de vie. </p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ebook Main"
+    }
+  ]
+}
+{% endschema %}

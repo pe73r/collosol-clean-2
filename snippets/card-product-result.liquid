@@ -1,0 +1,91 @@
+<div class="product-cards mx-auto rounded-md bg-white border-2 border-ecorce p-3 mb-10 relative">
+  {% unless product.available %}
+    <div class="absolute top-2 right-2 z-[15]" data-variant="{{ product.selected_or_first_available_variant.id }}">
+      <a href="{{ product.url }}">
+        <div class="my-2 rounded-full w-[20px] h-[20px] md:w-[40px]  md:h-[40px] flex justify-center items-center text-center bg-white text-ecorce">
+          {% render 'icon-cloche', class: 'w-[15px] h-[15px] md:w-[20px] md:h-[20px]' %}
+        </div>
+      </a>
+    </div>
+  {% endunless %}
+  <div class="flex gap-2">
+    <img
+      class=" product-images aspect-square rounded-md mr-2"
+      src="{{ product.featured_image | img_url: "medium" }}"
+      alt="product">
+    <div class="flex flex-col">
+      <div class="text-base GroteskBold" style="color: {{ section.settings.product_title_color }};">
+        {{ product.title }}
+      </div>
+      <div class="text-xs my-1">
+        {{ product.metafields.global.weight }}
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap text-[10px] gap-3 mt-4">
+        {% render 'product-info-tags-result', product: product, whitelist: "gluten,nonvegan,olea" %}
+      </div>
+    </div>
+  </div>
+  <tail-details data-replace="true" class="md:mt-3 text-sm">
+    <details-part>
+      <div class="line-clamp-4 md:line-clamp-2">
+        {% if description %}
+          {{ description }}
+        {% elsif condition %}
+          {{ product.description }}
+        {% endif %}
+      </div>
+    </details-part>
+    <details-part>
+      <div class="line-clamp-8">
+        {% if description %}
+          {{ description }}
+        {% elsif condition %}
+          {{ product.description }}
+        {% endif %}
+      </div>
+    </details-part>
+    <see-more class="block mt-2 text-sm underline GrotesqueBold">voir plus
+    </see-more>
+    <div class="mt-3">
+      <see-less class="hidden mt-2 text-sm underline  GrotesqueBold">
+        voir moins</see-less>
+    </div>
+  </tail-details>
+
+
+  <div class=" w-full flex justify-end">
+    {% if product.available == true %}
+      <div class="border-acajou border-2 rounded-[50px] w-fit h-fit py-1 px-2 block" {{ block.shopify_attributes }}>
+        <product-quantity
+          data-bundle="{{id}}"
+          data-price-stroke="{{ product.compare_at_price | money_without_trailing_zeros }}"
+          data-price="{{ product.price | money_without_trailing_zeros }}"
+          data-max-quantity={{ product.selected_or_first_available_variant.inventory_quantity}}
+          data-product="{{ product.id }}"
+          data-variant={{product.selected_or_first_available_variant.id}}
+          class="flex items-center justify-center m-auto quantity">
+          <button
+            class="p-2"
+            name="minus"
+            type="button">
+            {% render 'icon-minus' %}
+          </button>
+          <input
+            class="text-acajou bg-transparent text-base font-bold max-w-[20px] max-h-[20px] text-center"
+            type="number"
+            name="quantity"
+            id="Quantity-{{ section.id }}"
+            min="0"
+            value="1"
+            form="{{ product_form_id }}">
+          <button
+            class="p-2"
+            name="plus"
+            type="button">
+            {% render 'icon-plus' %}
+          </button>
+        </product-quantity>
+      </div>
+    {% endif %}
+  </div>
+</div>

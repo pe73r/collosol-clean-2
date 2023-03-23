@@ -1,0 +1,106 @@
+<section class="md:py-10">
+  {% for block in section.blocks %}
+  <div class="w-full flex flex-wrap justify-evenly py-5 md:p-5 lg:px-10 lg:py-5 xl:px-40 {% if block.settings.layout == 'text_first' %} flex-row-reverse {% endif %}">
+    <div class="flex w-full justify-center p-5 md:p-0 md:max-w-[406px] md:h-[508px] md:basis-1/2 ">
+      {% render "image" image: block.settings.image , class:"w-full rounded-tr-[100px] rounded-[5px] md:rounded-tr-[245px] md:rounded-[10px]" %}
+    </div>
+    <div class="flex flex-col justify-center text-center p-5 md:text-left md:pr-10 text-sm  md:text-base md:basis-1/2
+      style=" background-color: {{ block.settings.background_color }}">
+      <p class=" text-center font-[900] md:text-left text-base uppercase GroteskBold"
+        style="color: {{ block.settings.subtitle_color }}">
+        {{ block.settings.subtitle}}
+      </p>
+      <p class=" text-3xl py-2 font-medium text-center md:leading-[48px] md:text-[40px] md:text-left sm:pt-3 sm:pb-10 "
+        style="color: {{ block.settings.title_color}}">
+        {{ block.settings.title }}
+      </p>
+      <p class=" text-[15px] font-thin text-center text-black md:text-left"
+        style="color: {{ block.settings.text_color}}">
+        {{ block.settings.text }}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+
+{
+  "name": "Image-text blocks",
+  "settings": [
+],
+"blocks": [
+{
+  "type": "block",
+  "name": "Image text block",
+  "settings": [
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "text_first",
+            "label": "Text left"
+          }, {
+            "value": "text_last",
+            "label": "Text right"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+        {
+        "id": "subtitle",
+        "type": "textarea",
+        "label": "Subtitle",
+        "default": "nutrilicious"
+        },{
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "subtitle color",
+        "default": "#733E2B"
+        },
+        {
+        "id": "title",
+        "type": "textarea",
+        "label": "Title",
+        "default": "L'art de la nutrition"
+        },
+        {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title color",
+        "default": "#733E2B"
+        },
+        {
+        "id": "text",
+        "type": "richtext",
+        "label": "Text",
+        "default": "<p> Nos snacks sont “boostés” de nutriments, et nos compléments alimentaires sont uniques, et issus pour la plupart d’aliments bio. Comme nous avons voulu le meilleur pour nous et nos enfants, nous sommes devenues des passionnées de nutrition, accompagnées par les meilleurs experts. Nous passons des heures et des heures à éplucher les dernières recherches.</p>"
+        },
+        {
+        "type": "color",
+        "id": "text_color",
+        "label": "text color",
+        "default": "#927254"
+        },
+        {
+        "type": "color",
+        "id": "Background_color",
+        "label": "Background color",
+        "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+     "presets": [
+    {
+      "name": "Nutrition image-text "
+    }
+  ]
+}
+{% endschema %}

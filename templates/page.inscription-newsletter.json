@@ -1,0 +1,293 @@
+{
+  "sections": {
+    "708dd7c4-d39d-4cec-8bb6-7de6b871b1b2": {
+      "type": "simple-image-with-text-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/JM-PAGE-COLLECTION-HD.jpg",
+        "text": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "b5880cdd-f55c-4074-b385-a4a1dd4cc7d5": {
+      "type": "ebook-main",
+      "disabled": true,
+      "settings": {
+        "title": "Ebooks Gratuits",
+        "richtext": "<p>Cette documentation a été rédigée par des experts de la nutrition. Téléchargez le livret qui correspond le mieux à votre moment de vie. <\/p>",
+        "button_text": "Je télécharge nos ebooks"
+      }
+    },
+    "0f756099-6828-47b0-a518-7181379176db": {
+      "type": "ebook-cards",
+      "disabled": true,
+      "blocks": {
+        "2e7b1f50-a5a3-4ff0-9243-2871c1285059": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JM_EBOOK_GROSSESSE_2_HD1.jpg",
+            "title": "Supplémentation pendant la grossesse",
+            "richtext": "<p>Notre guide pour tout savoir sur l’importance de la supplémentation lors de la grossesse.<\/p>"
+          }
+        },
+        "6070e86d-b929-409b-9557-39653f850af9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JM_EBOOK_GROSSESSE_1_HD1.jpg",
+            "title": "Grossesse et fringales ",
+            "richtext": "<p>Découvrez comment appréhender vos envies de grignoter et retrouvez une semaine de menus complets pour une alimentation optimale.<\/p>"
+          }
+        },
+        "54cb6175-1373-4656-bc91-d85dbecc51a8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JM_EBOOK_POST-PARTUM_HD1.jpg",
+            "title": "Alimentation en postpartum pour mieux récupérer",
+            "richtext": "<p>Tous les conseils de notre diététicienne pour mieux vivre votre post partum à travers l’assiette.<\/p>"
+          }
+        },
+        "401ff817-16b1-4abc-a1b3-bc0b248954d0": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JM_EBOOK_ALLAITEMENT_HD1.jpg",
+            "title": "Alimentation pendant l’allaitement : mythes et réalités",
+            "richtext": "<p>Ce guide vous aide à mieux comprendre le rôle de l’alimentation dans l’allaitement.<\/p>"
+          }
+        },
+        "8a090ecb-6ed8-49ec-9553-538124d0e929": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JM_EBOOK_CYCLE_HD1.jpg",
+            "title": "Les 5 facteurs qui impactent négativement le cycle",
+            "richtext": "<p>Si tu as mal durant tes règles,  des maux de tête ou des sauts d’humeur quelques jours avant, ce guide est fait pour toi !<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2e7b1f50-a5a3-4ff0-9243-2871c1285059",
+        "6070e86d-b929-409b-9557-39653f850af9",
+        "54cb6175-1373-4656-bc91-d85dbecc51a8",
+        "401ff817-16b1-4abc-a1b3-bc0b248954d0",
+        "8a090ecb-6ed8-49ec-9553-538124d0e929"
+      ],
+      "settings": {
+        "title": "Les thématiques disponibles pour vous accompagner"
+      }
+    },
+    "b981fa71-757a-4cc4-9eed-756967d2f249": {
+      "type": "ebook-form",
+      "disabled": true,
+      "blocks": {
+        "8d7966c8-861f-4f0b-8385-5122dba31930": {
+          "type": "ebook",
+          "settings": {
+            "title": "Grossesse et fringales ",
+            "klaviyo_list": "TywsKQ"
+          }
+        },
+        "fc0702a5-5d15-463e-993b-5387369724f2": {
+          "type": "ebook",
+          "settings": {
+            "title": "Supplémentation pendant la grossesse",
+            "klaviyo_list": "U8NK9B"
+          }
+        },
+        "0d2a94b5-c040-449d-a509-ab27a08ee584": {
+          "type": "ebook",
+          "settings": {
+            "title": "Mieux récupérer en postpartum",
+            "klaviyo_list": "U7gbR3"
+          }
+        },
+        "8538d908-4af2-4dd5-9fd6-0a7051d18b2b": {
+          "type": "ebook",
+          "settings": {
+            "title": "Alimentation pendant l’allaitement",
+            "klaviyo_list": "XMtgsa"
+          }
+        },
+        "cead4dc2-e549-4255-906c-c4136518aa32": {
+          "type": "ebook",
+          "settings": {
+            "title": "Cycle heureux",
+            "klaviyo_list": "WQwsuj"
+          }
+        }
+      },
+      "block_order": [
+        "8d7966c8-861f-4f0b-8385-5122dba31930",
+        "fc0702a5-5d15-463e-993b-5387369724f2",
+        "0d2a94b5-c040-449d-a509-ab27a08ee584",
+        "8538d908-4af2-4dd5-9fd6-0a7051d18b2b",
+        "cead4dc2-e549-4255-906c-c4136518aa32"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_37.jpg",
+        "title": "choisissez le ou les ebooks que vous souhaitez bouquiner",
+        "subtitle": "<p>Cochez les ebooks que vous souhaitez télécharger 🥰<\/p>",
+        "email_label": "<p>Indiquez votre adresse email pour recevoir le format PDF dans votre boite mail 👀<\/p>",
+        "newsletter_list": "",
+        "newsletter_label": "<p>Je souhaite m’inscrire à la newsletter pour recevoir des offres exclusives<\/p>",
+        "button_text": "Je télécharge"
+      }
+    },
+    "66f635ed-dc63-4a25-91e8-b5bec1e3dca3": {
+      "type": "ebook-image",
+      "disabled": true,
+      "settings": {
+        "layout": "image_right",
+        "image": "shopify:\/\/shop_images\/image_38.jpg",
+        "hide_image_mobile": false,
+        "subtitle": "NOTRE HISTOIRE",
+        "title": "Une histoire de mamas",
+        "text": "<p>Pour ne pas que votre alimentation soit une élément de plus à gérer, au milieu du tourbillon de la grossesse et de la maternité….<br\/><br\/>Nous sommes 2 femmes, 2 mamans, 3 enfants chacune.<br\/>Des grossesses nous en avons connues, toujours différentes, avec plus ou moins de difficultés, avant, pendant et après….<br\/><br\/>Ce que nous voulons avec Jolly Mama c’est prendre soin de votre alimentation, vous accompagner vers une meilleure santé globale, et vous informer, sans filtre et toujours avec une approche HOLISTIQUE et Evidence Based.<\/p>"
+      }
+    },
+    "ce2b9461-e486-42cc-bdb9-f0c028cbe544": {
+      "type": "images-grid",
+      "disabled": true,
+      "blocks": {
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-1": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Jolly-bread--3-desktop_0c242b7d-8f29-46a3-937c-7928838d3a86.jpg"
+          }
+        },
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-2": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Crazy-nut-1-mobile_4d6073ca-344d-4d0a-93ec-6c4faee2124e.jpg"
+          }
+        },
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-3": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Decouverte-Boost-2-mobile_28d9393c-d38f-45bc-9f00-0c59f6cb9272.jpg"
+          }
+        },
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-4": {
+          "type": "block",
+          "settings": {
+            "image-product": "shopify:\/\/shop_images\/produit-Mama-poule-2-desktop_52030fc4-16a1-464d-8bef-99f756b939ca.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-1",
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-2",
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-3",
+        "template--16665751585014__ce2b9461-e486-42cc-bdb9-f0c028cbe544-166687323394b9cae6-4"
+      ],
+      "settings": {
+        "subtitle": "À TESTER",
+        "header": "LA GAMME ESSENTIELLE",
+        "image": "shopify:\/\/shop_images\/produit-Jolly-bread--1-mobile_edc4b87d-c749-4cae-84c8-fc4207a2e202.jpg",
+        "link_url": "shopify:\/\/collections\/la-gamme-essentielle",
+        "link": "Voir toute la gamme",
+        "bg-color": "#e8e2db",
+        "subtitle-color": "#ffffff",
+        "header-color": "#ffffff"
+      }
+    },
+    "ce9572f2-5285-424c-b670-88cd18d77df9": {
+      "type": "newsletter-klaviyo",
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "LES JOLLY DAYS EN AVANT PREMIERE",
+        "text": "<p>Inscrivez-vous juste ici pour profiter d’un accès à nos prix doux 24h avant tout le monde et s’assurer de ne pas passer à côté de vos produits préférés ‎❤️<\/p>",
+        "text_button": "Je m'inscris",
+        "image": "shopify:\/\/shop_images\/homepage-newsletter-desktop_05e76283-aa65-48ad-bb21-784860c64326.jpg",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    },
+    "68eb2fde-e4a6-4194-9f10-59e5ab616da3": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "subtitle": "LA JOLLY NEWSLETTER",
+        "title": "RECEVEZ DES NEWS À CROQUER",
+        "text": "<p>Inscrivez-vous à notre newsletter pour être au courant de nos derniers lancements, recettes éphémères, promos, et autres good stuff et recevoir -10% sur VOTRE première commande ! <\/p>",
+        "text_button": "Je m'inscris",
+        "image": "shopify:\/\/shop_images\/homepage-newsletter-desktop_05e76283-aa65-48ad-bb21-784860c64326.jpg",
+        "hide_image_mobile": true,
+        "subtitle_color": "#e8e2db",
+        "title_color": "#733e2b",
+        "text_color": "#927254",
+        "button_color": "#3a0f00"
+      }
+    },
+    "ce3e6376-baba-4563-80e0-b77311c53c3e": {
+      "type": "reinsurance",
+      "blocks": {
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-0": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/france.svg?v=1662734033",
+            "title": "Livraison offerte",
+            "text": "À partir de 100€ en France métropolitaine",
+            "text_button": "",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "",
+            "phone_number": "0675035475",
+            "text_button_3": "",
+            "text_color": "#3a0f00",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-1": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/fidelity.svg?v=1662734395",
+            "title": "INNOVATION FRANÇAISE",
+            "text": "La majorité de nos ingrédients sont français et bios",
+            "text_button": "",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "",
+            "phone_number": "0675035475",
+            "text_button_3": "",
+            "text_color": "#3a0f00",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-2": {
+          "type": "block",
+          "settings": {
+            "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/bulb.svg?v=1662734395",
+            "title": "Une question ? Contactez-nous !",
+            "text": "Nous sommes à votre écoute du lundi au vendredi (9h-13h et 14h-18h) :",
+            "text_button": "Mail",
+            "mail_url": "contact@jollymama.fr",
+            "text_button_2": "",
+            "phone_number": "",
+            "text_button_3": "Chat",
+            "text_color": "#3a0f00",
+            "button_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-0",
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-1",
+        "template--16665751585014__ce3e6376-baba-4563-80e0-b77311c53c3e-16668741791d10d11b-2"
+      ],
+      "settings": {
+        "bg_color": "#f4ffaf",
+        "add_margin": 0
+      }
+    }
+  },
+  "order": [
+    "708dd7c4-d39d-4cec-8bb6-7de6b871b1b2",
+    "b5880cdd-f55c-4074-b385-a4a1dd4cc7d5",
+    "0f756099-6828-47b0-a518-7181379176db",
+    "b981fa71-757a-4cc4-9eed-756967d2f249",
+    "66f635ed-dc63-4a25-91e8-b5bec1e3dca3",
+    "ce2b9461-e486-42cc-bdb9-f0c028cbe544",
+    "ce9572f2-5285-424c-b670-88cd18d77df9",
+    "68eb2fde-e4a6-4194-9f10-59e5ab616da3",
+    "ce3e6376-baba-4563-80e0-b77311c53c3e"
+  ]
+}

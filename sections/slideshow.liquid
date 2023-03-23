@@ -1,0 +1,231 @@
+<section>
+  <tail-carousel data-auto-dots="false" slidesToShow="xs:1 sm:1 lg:1 xl:1"  class="flex flex-col-reverse w-full">
+    <carousel-container class="h-[70vh]">
+        <carousel-content class="w-full">
+          {%- for block in section.blocks -%}
+           {% if block.type == 'video'%}
+              <carousel-panel class="h-full p-0" id="block-{{ block.id }}">
+                <div class="relative flex flex-col justify-end h-full" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) ,rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.55))">
+>
+                    <video class="absolute z-[-1] w-full h-full object-cover" playsinline  autoplay muted loop>
+                      <source src="{{ block.settings.video }}" type="video/mp4">
+                      <source src="movie.ogg" type="video/ogg">
+                      Your browser does not support the video tag.
+                  </video>
+                  <div class="relative flex flex-col pl-5 md:pl-10 bottom-12">
+                      <h1 style="color: {{ block.settings.text_color }}" class="text-[28px] leading-[37px] md:text-[50px] md:leading-[55px] {% if block.settings.title_mobile != blank %} hidden md:block {% endif%}">{{ block.settings.title }}</h1>
+                      {% if block.settings.title_mobile != blank %}
+                      <h2 style="color: {{ block.settings.text_color }}" class="text-[28px] leading-[37px] md:hidden">{{ block.settings.title_mobile }}</h2>
+                      {% endif %}
+                      {% if block.settings.cta != blank %}
+                        <a href="{{ block.settings.button_link }}"
+                          class="mt-3 max-w-max GrotesqueBold {% render "button" size: "small" %}"
+                          style="color: {{ block.settings.button_color }}; border: 2px solid {{ block.settings.button_color }}; background-color: {{ block.settings.button_bg }}">
+                          {{ block.settings.cta }}
+                        </a>
+                     {% endif %}
+                  </div>
+                </div>
+            </carousel-panel>
+          {% else %}
+            <carousel-panel class="h-full p-0" id="block-{{ block.id }}">
+              <div class="relative flex flex-col justify-end h-full" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.55))">
+                <img data-src="{{ block.settings.image | img_url: 'master'}}" class="lazyload absolute z-[-1] w-full h-full object-cover {% if block.settings.image_mobile != blank %} hidden md:block {% endif%}" loading="lazy"/>
+                {% if block.settings.image_mobile != blank %}
+                  <img data-src="{{ block.settings.image_mobile | img_url: 'master'}}" class="lazyload absolute z-[-1] w-full h-full object-cover block md:hidden" loading="lazy"/>
+                {% endif %}
+                <div class="relative flex flex-col pl-5 md:pl-10 bottom-12">
+                    <h1 style="color: {{ block.settings.text_color }}" class="text-[28px] leading-[37px] md:text-[50px] md:leading-[55px] {% if block.settings.title_mobile != blank %} hidden md:block {% endif%}">{{ block.settings.title }}</h1>
+                    {% if block.settings.title_mobile != blank %}
+                     <h2 style="color: {{ block.settings.text_color }}" class="text-[28px] leading-[37px] md:hidden">{{ block.settings.title_mobile }}</h2>
+                    {% endif %}
+                    {% if block.settings.cta != blank %}
+                      <a href="{{ block.settings.button_link }}"
+                        class="mt-3 max-w-max GrotesqueBold {% render "button" size: "small" %}"
+                        style="color: {{ block.settings.button_color }}; border: 2px solid {{ block.settings.button_color }}; background-color: {{ block.settings.button_bg }}">
+                        {{ block.settings.cta }}
+                      </a>
+                   {% endif %}
+                </div>
+              </div>
+          </carousel-panel>
+         {% endif %}
+        {%- endfor-%}
+      </carousel-content>
+    </carousel-container>
+  </tail-carousel>
+</section>
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "settings": [
+
+  ],
+  "max_blocks": 6,
+	"blocks": [
+     {
+       "name": "Slide",
+       "type":"slide",
+       "settings": [
+       {
+        "type": "header",
+        "content": "Slide image"
+      },
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile"
+      },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title desktop",
+        "default": "NUTRITION POUR LES <br>FEMMES.<br>SCIENTIFIQUEMENT PROUVÉ"
+      },
+      {
+        "type": "textarea",
+        "id": "title_mobile",
+        "label": "Title mobile",
+        "default": "NUTRITION POUR <br>LES FEMMES.<br>SCIENTIFIQUEMENT <br>PROUVÉ"
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "cta",
+        "label": "Call to action "
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "text color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button color",
+        "default": "#3A0F00"
+      },
+      {
+        "type": "color",
+        "id": "button_bg",
+        "label": "Button background color",
+        "default": "#fff"
+      }
+
+    ]
+     },
+     {
+       "name": "Video",
+       "type":"video",
+       "settings": [
+        {
+         "type": "text",
+         "id": "video",
+         "label": "Video mp4",
+         "default": "https://cdn.shopify.com/videos/c/o/v/aeb91bda940a460997bb2f1b9ec7b5a0.mp4"
+       },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title desktop",
+        "default": "NUTRITION POUR LES <br>FEMMES.<br>SCIENTIFIQUEMENT PROUVÉ"
+      },
+      {
+        "type": "textarea",
+        "id": "title_mobile",
+        "label": "Title mobile",
+        "default": "NUTRITION POUR <br>LES FEMMES.<br>SCIENTIFIQUEMENT <br>PROUVÉ"
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "cta",
+        "label": "Call to action "
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "text color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button color",
+        "default": "#3A0F00"
+      },
+      {
+        "type": "color",
+        "id": "button_bg",
+        "label": "Button background color",
+        "default": "#fff"
+      }
+
+    ]
+     }
+   ],
+   "presets": [
+    {
+      "name": "Slideshow",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings":{
+            "title":  "Nutrition pour les femmes. <br> Scientifiquement prouvé",
+            "cta":  "Je shop"
+          }
+        },
+        {
+          "type": "slide",
+          "settings":{
+            "title":  "Nutrition pour les femmes. <br> Scientifiquement prouvé",
+            "cta":  "Je shop"
+          }
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

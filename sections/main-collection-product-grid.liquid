@@ -1,0 +1,458 @@
+
+
+    {% assign results = collection %}
+    {% assign resultsItems = collection.products %}
+    {% assign isSearch = false %}
+ {% if request.page_type == "search" %}
+    {% assign results = search  %}
+    {% assign resultsItems = search.results %}
+    {% assign isSearch = true %}
+ {% endif %}
+
+<section>
+    <div>
+      <!-- collection image -->
+      {%- if section.settings.show_collection_image and collection.image and isSearch == false  -%}
+          <div class="hidden w-full md:block max-h-[200px]">
+            <img
+              srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ collection.image | image_url }} {{ collection.image.width }}w"
+              src="{{ collection.image | image_url: width: 750 }}"
+              alt="{{ collection.title | escape }}"
+              width="{{ collection.image.width }}"
+              height="{{ collection.image.height }}"
+              class="w-full max-h-[200px]"
+              loading="lazy"
+            >
+          </div>
+    {%- endif -%}
+
+     <!-- collection image mobile -->
+    {%- assign image_mobile = collection.metafields.global.image_collection.value -%}
+    {% if image_mobile != blank %}
+    <img class="md:hidden w-full lazy" src="{{ image_mobile.image | img_url: 'master' }}" alt="{{ image_mobile.alt }}" loading="lazy">
+    {% endif %}
+      <!-- collection title and description -->
+      <div class="w-11/12 mx-auto text-center mt-6 pb-5 border-b border-sable">
+
+        {%- if section.settings.show_breadcrumbs -%}
+          <div class="mb-2 md:mb-5">
+            {% render 'breadcrumbs' %}
+          </div>
+      {% endif %}
+
+        {%- if section.settings.show_collection_title and isSearch == false -%}
+            <h1 class="text-2xl md:text-4xl uppercase">
+              {{- collection.title | escape -}}
+            </h1>
+        {% endif %}
+
+        {%- if section.settings.show_collection_description and isSearch == false -%}
+          <div class="text-base mt-5">
+            {{ collection.description }}
+            </div>
+        {%- endif -%}
+      </div>
+        <!-- collection size -->
+        {% assign all_products = 0 %}
+        {% assign available_products = 0 %}
+
+        {% for product in collection.products %}
+          {%- assign all_products = all_products | plus: 1 -%}
+          {% if product.available %}
+            {% assign available_products = available_products | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {%- if section.settings.show_collection_size -%}
+          {%- if all_products == 0 -%}
+            <div class="text-center mt-10 mb-20">
+              <p class="text-sm">La collection est vide</p>
+              <a href="/collections/all" class="block px-7 py-3 mt-5 text-base rounded-full text-white bg-acajou w-fit mx-auto">Découvrir nos produits</a>
+            </div>
+          {%- elsif all_products == 1 -%}
+            <p class="hidden md:block md:my-8 text-sm text-center">{{ all_products }} produit</p>
+          {%- else -%}
+            <p class="hidden md:block md:my-8 text-sm text-center">{{ all_products }} produits</p>
+          {%- endif -%}
+        {%- endif -%}
+    </div>
+
+   {%- unless all_products == 0 -%}
+      <div class="w-11/12 max-w-screen-xl pt-5 pb-10 mx-auto">
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- filters desktop -->
+          {% if section.settings.enable_filtering or section.settings.enable_sorting %}
+            <div class="hidden w-full md:block md:w-1/3 lg:w-1/4" id="main-collection-filters" data-id="{{ section.id }}">
+              <!-- filters -->
+              {% if section.settings.enable_filtering %}
+                <div class="h-[fit-content]">
+                  {% render 'facets', results: results, show_links:section.settings.show_links %}
+                </div>
+              {% endif %}
+
+              <!-- Sorting -->
+                {% if section.settings.enable_sorting %}
+                  <div class="h-[fit-content] mt-10">
+                    {% render 'sorting',  results: results %}
+                  </div>
+                {% endif %}
+            </div>
+          {% endif %}
+
+          <div class="w-full {% if section.settings.enable_filtering or section.settings.enable_sorting %} md:w-2/3 lg:w-3/4 {% endif %}">
+
+            <!-- filters mobile -->
+            {% render "mobile-filters", results: results %}
+
+            {%- if isSearch == true -%}
+              {%- paginate search.results by section.settings.products_per_page -%}
+                <ul id="product-grid" data-id="{{ section.id }}" class="flex flex-wrap">
+                  {%- for product in search.results -%}
+                    <!-- product_card -->
+                    <li class="w-1/2 lg:w-1/3 px-3 mb-5">
+                      {% render 'card-product',
+                        card_product: product,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        lazy_load: true,
+                        show_quick_add: section.settings.show_quick_add
+                      %}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+                {%- if paginate.pages > 1 -%}
+                  {% render 'pagination', paginate: paginate %}
+                {%- endif -%}
+              {%- endpaginate -%}
+            {%- else -%}
+              {%- paginate collection.products by section.settings.products_per_page -%}
+                <ul id="product-grid" data-id="{{ section.id }}" class="flex flex-wrap">
+                  {%- for product in collection.products -%}
+                    {%- unless product.title contains "Consultation" or product.title contains "consultation" or product.title contains "cadeau" -%} 
+                    {% if forloop.index == 3 and section.settings.show_product_dumie %}
+                      <!-- product-dumie -->
+                      <li class="w-1/2 lg:w-1/3 px-3 mb-5">
+                        {% render "product-dumie" %}
+                      </li>
+                    {% elsif forloop.index == 4 and section.settings.show_product_pack %}
+                      <!-- product-double -->
+                      <li class="w-full lg:w-2/3 px-3 mb-5">
+                        {%- assign product_pack = section.settings.product_pack -%}
+                        {% render 'card-product-pack',
+                          collection: collection,
+                          card_product: product_pack,
+                          show_secondary_image: section.settings.show_secondary_image,
+                          show_vendor: section.settings.show_vendor,
+                          lazy_load: true,
+                          show_quick_add: section.settings.show_quick_add
+                        %}
+                      </li>
+                    {% endif %}
+                    {% if product.tags contains 'extend' %}
+                      <!-- product-double -->
+                      <li class="w-full lg:w-2/3 px-3 mb-5">
+                        {% render 'card-product-pack',
+                          collection: collection,
+                          card_product: product,
+                          show_secondary_image: section.settings.show_secondary_image,
+                          show_vendor: section.settings.show_vendor,
+                          lazy_load: true,
+                          show_quick_add: section.settings.show_quick_add
+                        %}
+                      </li>
+                    {% else %}
+                      <!-- product_card -->
+                      <li class="w-1/2 lg:w-1/3 px-3 mb-5">
+                        {% render 'card-product',
+                          card_product: product,
+                          show_secondary_image: section.settings.show_secondary_image,
+                          show_vendor: section.settings.show_vendor,
+                          lazy_load: true,
+                          show_quick_add: section.settings.show_quick_add
+                        %}
+                      </li>
+                    {% endif %}
+                  {%- endunless -%}
+                  {%- endfor -%}
+                  <script>
+                    dataLayer.push({
+                      'event': 'view_item_list',
+                      'ecommerce': {
+                        'currency': '{{ shop.currency }}',
+                        'items': [
+                          {% for product in collection.products %}
+                            {
+                            'item_id': '{{ product.id }}',
+                            'item_name': '{{ product.title }}',
+                            'quantity': 1,
+                            'item_category': "{{ collection.title }}",
+                            'price': {{ product.price | divided_by: 100.00 }},
+                            'item_discount' : {% if product.compare_at_price > product.price %}{{ product.compare_at_price | minus: product.price | divided_by: 100.00 }}{% else %}0.00{% endif %},
+                            }{% unless forloop.last %},{% endunless %}
+                          {% endfor %}
+                        ]
+                      }
+                    });
+                  </script>
+                </ul>
+                {%- if paginate.pages > 1 -%}
+                  {% render 'pagination', paginate: paginate %}
+                {%- endif -%}
+              {%- endpaginate -%}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endunless -%}
+</section>
+
+<style>
+  /* RADIO BUTTON STYLE */
+  .sorting-facets input[type="radio"] {
+    -fx-focus-traversable: false;
+    -fx-focus-color: #733E2B;
+    margin: 0;
+    font: inherit;
+    color: #733E2B;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border: 0.15em solid #733E2B;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+      cursor: pointer;
+    place-content: center;
+    margin-right: 8px;
+  }
+  .sorting-facets input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    transition-duration: 0.2s;
+
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: #733E2B;
+  }
+  .sorting-facets input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  /* END RADIO BUTTON STYLE */
+
+  /**
+   * --------------------------------------------------------------------
+   * COLLECTION CHECKBOX BUTTONS
+   * --------------------------------------------------------------------
+   */
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    cursor: pointer;
+    font: inherit;
+    color: #733E2B;
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+    border: 0.15em solid #733E2B;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+    border-radius: 3px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+
+  }
+   input[type="checkbox"]::before {
+    transform: scale(0);
+    position: relative;
+    transition: 120ms transform ease-in-out;
+    transition-duration: 0.1s;
+    top: 2px;
+  }
+
+  input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .mobile input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1;
+  }
+  .mobile input[type="checkbox"]::before {
+    top: 2px;
+  }
+   input[type="checkbox"]:checked {
+    background-color: #733E2B;
+    border: 1.5px solid white;
+    outline: 1.5px solid #733E2B;
+  }
+   input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+   input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+  }
+   input[type="checkbox"]:checked {
+    opacity: 1;
+  }
+   input[type="checkbox"]:checked ~ span {
+    color: #733E2B;
+  }
+   input[type="checkbox"]:checked ~ img {
+    border-color: #733E2B;
+  }
+   input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  </style>
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "Products per page"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": true,
+      "label": "Show collection image ?"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_title",
+      "default": true,
+      "label": "Show title ?"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "default": true,
+      "label": "Show breadcrumbs ?"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "Show description ?"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_size",
+      "default": true,
+      "label": "Show number of products ?"
+    },
+    {
+      "type": "header",
+      "content": "Grid"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "Show secondary image on hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "Show vendor ?"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_add",
+      "default": true,
+      "label": "Show add to cart button ?"
+    },
+    {
+      "type": "header",
+      "content": "Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "Enable filtering"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "Enable sorting"
+    },
+    {
+      "type": "header",
+      "content": "CARD"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_dumie",
+      "label": "Show card",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "product_dumie_text",
+      "label": "Text",
+      "default": "<p>LOREM IPSUM DOLOR SIT AMET CONSECTEUR AMET SED DO EIUSMOD TEMPORINCIDIDUNT UT LABORE </p>"
+    },
+    {
+      "type": "text",
+      "id": "product_dumie_link",
+      "label": "Link",
+      "default": "<p>Je découvre</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_dumie_image",
+      "label": "Product dumie image"
+    },
+   {
+    "type": "header",
+    "content": "colors"
+   },
+   {
+    "type": "color",
+    "id": "color_dumie_link",
+    "label": "Link dumie",
+    "default": "#F4FFAF"
+    },
+    {
+     "type": "color",
+     "id": "text_dumie_color",
+     "label": "Subtitle color",
+     "default": "#FFFFFF"
+    },
+    {
+     "type": "color",
+     "id": "header-image-footer-color",
+     "label": "Text color",
+     "default": "#FFFFFF"
+    }
+  ]
+}
+{% endschema %}

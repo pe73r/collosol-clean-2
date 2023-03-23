@@ -1,0 +1,176 @@
+<section class="">
+    <div class="pt-10 mx-auto bg-white rounded-t-full md:pt-0 sm:rounded-none sm:bg-inherit ">
+      <!-- section header -->
+        <div class="max-w-xl mx-auto my-5 md:mb-8">
+          <div class="p-5 mx-auto text-center">
+             {% if section.settings.subtitle %}
+                <h2 class="font-[900] GroteskBold text-sm md:text-base uppercase" style="color: {{ block.settings.subtitle_color }} ">
+                  {{ section.settings.subtitle }}
+                </h2>
+             {% endif %}
+             {% if section.settings.title %}
+                <p class="Grotesque text-acajou text-[32px] md:text-[40px] sm:pb-4" style="color: {{ block.settings.title_color}}">
+                    {{ section.settings.title }}
+                </p>
+              {% endif %}
+
+              {% if section.settings.text != blank  %}
+                <div class="text-base" style="color: {{ block.settings.text_color}}">
+                  {{ section.settings.text }}
+                </div>
+              {% endif %}
+
+              {% if section.settings.link_text != blank  %}
+                  <a href="{{ section.settings.header_link }}" class="block cursor-pointer underline text-sm font-bold mt-[10px] text-center" style="color:{{ section.settings.link-color }} "> {{ section.settings.link_text }} </a>
+              {% endif %}
+          </div>
+       </div>
+
+
+
+        <div class="w-full mt-20 bg-top sm:block" style="background-image: url({{ section.settings.image_background | img_url: 'master' }});" >
+          <div class="relative max-w-3xl mx-auto bottom-20">
+            <tail-carousel slidesToShow="xs:2 md:3"  class="flex-1 w-full md:pb-7">
+              <carousel-container>
+                  <carousel-content class="w-full">
+                    {% for block in section.blocks %}
+                      <carousel-panel class="flex flex-col items-center">
+                        {% if block.settings.image != blank %}
+                          {% render "image" image: block.settings.image , class:"aspect-square object-cover" %}
+                        {% else %}
+                          {{ 'image' | placeholder_svg_tag }}
+                        {% endif %}
+                            <div class="text-center">
+                              <p class="GroteskBold mt-3 mb-2 text-base uppercase text-acajou">{{ block.settings.carousel-title }}</p>
+                              <div class="text-[13px]">{{ block.settings.carousel-text }}</div>
+                            </div>
+                      </carousel-panel>
+                    {% endfor %}
+                  </carousel-content>
+              </carousel-container>
+            <!-- <carousel-next class=" flex absolute z-[1] right-2 items-center justify-center h-8 p-2 my-auto cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                {% render 'icon-arrow-right' %}
+              </carousel-next> -->
+              <!-- <carousel-prev class="flex absolute z-[1] items-center left-2 justify-center h-8 p-2 my-auto  cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                {% render 'icon-arrow-left' %}
+              </carousel-prev> -->
+              <carousel-dots class="relative flex items-center justify-center mt-5">
+                  <carousel-dot class="w-[7px] h-[7px] m-1 transition-all bg-sable border-[1px] border-sable rounded-full selected:bg-ecorce selected:border-ecorce selected:border-[5px]"></carousel-dot>
+              </carousel-dots>
+            </tail-carousel>
+          </div>
+        </div>
+
+
+
+</section>
+
+
+{% schema %}
+{
+"name": "Blocks carousel",
+"settings": [
+
+    {
+    "type": "text",
+    "id": "subtitle",
+    "label": "Subtitle",
+    "default": "NOS EXPERTS "
+    },
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Title",
+    "default": "They know it all"
+    },
+    {
+    "type": "richtext",
+    "id": "text",
+    "label": "Text",
+    "default": "<p>Nous nous appuyons sur les meilleurs experts et les dernières études scientifiques et cliniques pour vous proposer les produits les plus efficaces.</p>"
+    },
+    {
+    "type": "text",
+    "id": "link_text",
+    "label": "Link text",
+    "default": "En savoir plus"
+     },
+     {
+      "type": "url",
+      "id": "header_link",
+      "label": "Link"
+     },
+     {
+      "type": "image_picker",
+      "id": "image_background",
+      "label": "Image background"
+     },
+     {
+      "type": "header",
+      "content":"Colors"
+     },
+     {
+     "type": "color",
+     "id": "background_color",
+     "label": "Background color",
+     "default": "#FFFFFF"
+     },
+     {
+     "type": "color",
+     "id": "title_color",
+     "label": "Title color",
+     "default": "#733E2B"
+     },
+     {
+     "type": "color",
+     "id": "subtitle_color",
+     "label": "Subtitle color",
+     "default": "#733E2B"
+     },
+     {
+     "type": "color",
+     "id": "text_color",
+     "label": "Text color",
+     "default": "#733E2B"
+     }
+   ],
+   "blocks": [
+     {
+      "type": "image_text",
+      "name": "Image & text block",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image desktop"
+        },
+        {
+        "type": "text",
+        "id": "carousel-title",
+        "label": "Title carousel",
+        "default": "ALIX D’ANTRAS"
+        },
+        {
+        "type": "text",
+        "id": "carousel-text",
+        "label": "Text carousel",
+       "default": "Naturopathe spécialisée cycle et fertilité"
+        },
+        {
+      "type": "text",
+      "id": "link",
+      "default": "En savoir plus",
+      "label": "Button"
+        }
+    ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "Blocks carousel"
+  }
+ ]
+ }
+
+
+ {% endschema %}

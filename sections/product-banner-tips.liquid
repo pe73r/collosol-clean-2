@@ -1,0 +1,124 @@
+<section>
+    <div style="background-color: {{ section.settings.background }}; color: {{ section.settings.text_color }};"
+    class="py-10 {% if section.settings.text_alignment == 'left' %} text-left {% elsif section.settings.text_alignment == 'right' %} text-right {% else %} text-center {% endif %}">
+     <div class="w-11/12 m-auto">
+       {%- if section.settings.image != blank -%}
+                  <img
+                  srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                      {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                      {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                      {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                      {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                  src="{{ section.settings.image | image_url: width: 1500 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ section.settings.image.alt | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.image.width }}"
+                  height="{{ section.settings.image.height }}"
+                  class="max-w-[50px] m-auto"
+                  >
+          {%- endif -%} 
+  
+          {% if section.settings.title != blank %}
+            <h4 style="color: {{ section.settings.text_color }};" class="text-5xl">{{ section.settings.title }}</h4>
+          {% endif %}
+  
+          {% if section.settings.content != blank %}
+            <div class="text-sm m-auto mt-5 {% if section.settings.text_width == 'small' %} max-w-sm {% elsif section.settings.text_width == 'large' %} max-w-5xl {% else %} max-w-2xl {% endif %}">
+              {{ section.settings.content }}
+            </div> 
+          {% endif %}
+      </div>  
+    </div>
+  </section>
+  
+  {% schema %}
+  {
+    "name": "Banner tips",
+    "settings": [
+     
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "L’astuce belle boucle"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Le shampoing Perfect Clean de Les Secrets de Loly est très doux pour les cheveux bouclés, frisés et crépus. Il convient aux cuirs chevelus secs, sensibles et irrités. Grâce à sa formule naturelle très complète, il évite les noeuds et il prépare les boucles au démêlage.</p>"
+      },
+      {
+          "type": "select",
+          "id": "text_width",
+          "label": "Text width",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "medium"
+        },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#ABC7C2"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#fff"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner tips",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}
+  

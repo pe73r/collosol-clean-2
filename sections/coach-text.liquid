@@ -1,0 +1,166 @@
+<section class="md:py-10">
+  {% for block in section.blocks %}
+    <!--Desktop-->
+
+    <!--Mobile-->
+      <div id="{{ id }}-Anchor-Coachings" class=" flex md:hidden w-full md:max-h-[400px] flex-wrap justify-evenly py-5{% if block.settings.layout == 'text_first' %} flex-row-reverse {% endif %}"> <div class="flex flex-col justify-center text-center p-5 md:hidden" style="
+                                                            background-color: {{ block.settings.background_color }}">
+        <h4 class="font-[800] text-center text:[28px] leading-[37px] uppercase GroteskBold" style="color: {{ section.settings.title_color }}">
+          {{ block.settings.title }}
+        </h4>
+        <div style="color: {{ section.settings.subtitle_color }}">
+          <div class="py-2 font-medium text-center text-sm">
+            {{ block.settings.subtitle }}
+          </div>
+          <div class="image-container flex max-w-[90%] mx-auto justify-center p-3">
+            {% render "image" image: block.settings.image, class: "w-full" %}
+          </div>
+        </div>
+        <div class="tex-base leading-[55px] font-[800] uppercase text-center GroteskBold md:mt-14" style="color: {{ section.settings.name_title_color}}">
+          {{ block.settings.name_title }}
+        </div>
+        <div class=" text-base font-thin text-center md:mt-4" style="color: {{ section.settings.name_subtitle_color }}">
+          {{ block.settings.name_subtitle }}
+        </div>
+        <div class="mx-auto px-5 py-3 mt-8 rounded-full text-base" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }}">
+          <a class="flex items-center justify-center gap-2" href="{{ block.settings.button_link }}">
+            <div class="max-w-[24px]">
+              <img src="{{ block.settings.svg }}" alt="">
+            </div>
+            {{ block.settings.button_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+<style>
+  .image-container {
+    max-height: 400px;
+  }
+</style>
+
+{% schema %}
+
+  {
+    "name": "Coaching with text",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "title color",
+        "default": "#733E2B"
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "subtitle color",
+        "default": "#733E2B"
+      },
+      {
+        "type": "color",
+        "id": "name_title_color",
+        "label": "Name title color",
+        "default": "#733E2B"
+
+      }, {
+        "type": "color",
+        "id": "name_subtitle_color",
+        "label": "subtitle color",
+        "default": "#733E2B"
+      }, {
+        "type": "color",
+        "id": "button_color",
+        "label": "button color",
+        "default": "#733E2B"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "button color",
+        "default": "#FFFFFF"
+      }
+
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Image text block",
+        "settings": [
+          {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout",
+            "options": [
+              {
+                "value": "text_first",
+                "label": "Text left"
+              }, {
+                "value": "text_last",
+                "label": "Text right"
+              }
+            ]
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "id": "title",
+            "type": "textarea",
+            "label": "Title",
+            "default": "BESOIN DE + DE CONSEILS"
+
+          },
+          {
+            "id": "subtitle",
+            "type": "textarea",
+            "label": "Subtitle",
+            "default": "nutrilicious"
+          }, {
+            "id": "name_title",
+            "type": "textarea",
+            "label": "Title",
+            "default": "PAULINE BENAROCH"
+
+          }, {
+            "id": "name_subtitle",
+            "type": "textarea",
+            "label": "Title",
+            "default": "Diététicienne, spécialisée en périnatalité"
+
+          }, {
+            "type": "header",
+            "content": "Button settings"
+          }, {
+            "id": "button_text",
+            "type": "textarea",
+            "label": "button_text",
+            "default": "Prendre Rendez-Vous"
+          }, {
+            "type": "text",
+            "id": "button_link",
+            "default": "https://shopify.dev/api/liquid/objects/product",
+            "label": "Button link"
+          }, {
+            "type": "text",
+            "id": "svg",
+            "label": "Image svg",
+            "default": "https://cdn.shopify.com/s/files/1/0636/1966/2070/files/rdv.svg?v=1671116163",
+            "info": "Paste the url from files"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Coaching with text"
+      }
+    ]
+  }
+{% endschema %}

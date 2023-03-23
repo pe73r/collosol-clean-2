@@ -1,0 +1,289 @@
+const H = HTMLElement;
+function setAttributes(element, ...attribute) {
+  attribute.forEach(([key, value]) => element.setAttribute(key, value));
+}
+function eventListener(element, event, cb, remove) {
+  element[remove ? "removeEventListener" : "addEventListener"](event, cb);
+}
+
+function defineCustomElement(name, component) {
+  customElements.define(name, component);
+}
+function inPath(e, ...tags) {
+  return e.composedPath().find((element) => tags.includes(element.tagName?.toLowerCase()));
+}
+
+function triggerEvent(type, detail) {
+  document.dispatchEvent(new Event(type, { bubbles: true, detail }));
+}
+
+function makeId(type) {
+  return `${type}-${parseInt(
+    Math.ceil(Math.random() * Date.now())
+      .toPrecision(6)
+      .toString()
+      .replace(".", "")
+  )}`;
+}
+class Dialog extends H {
+  constructor(type, withOverlay) {
+    super();
+    this.withOverlay = withOverlay;
+    this.type = type;
+  }
+  connectedCallback() {
+    this.id = makeId(this.type);
+    this.classList.add("group");
+    this.st("out", false);
+    eventListener(this, "click", this.onClick);
+  }
+
+  onClick = (e) => {
+    const { type, withOverlay, isOpen, toggle } = this;
+    if (
+      inPath(e, `${type}-trigger`, `${type}-close`) ||
+      (withOverlay && inPath(e, `${type}-overlay`) && !inPath(e, `${type}-content`) && isOpen)
+    ) {
+      return toggle();
+    }
+  };
+
+  select = (part) => {
+    if (!this[part]) this[part] = this.querySelector(`${this.type}-${part}`);
+    return this[part];
+  };
+
+  st = (state, open) => {
+    if (this.lockScroll) {
+      this.scrollerWidth = window.innerWidth - document.body.offsetWidth;
+      document.body.style.marginRight = open ? `${this.scrollerWidth}px` : "0px";
+      document.body.style.overflow = open ? "hidden" : "auto";
+    }
+
+    if (open && this.getAttribute("fit-page") === "true") {
+      const { height: headerHeight } = document.querySelector("tail-header").getBoundingClientRect();
+      this.select("overlay").style.height = `calc(100vh - ${headerHeight}px)`;
+      this.select("overlay").style.top = `${headerHeight}px`;
+      this.select("overlay").style.padding = `0px`;
+      this.select("content").style.height = `${window.innerHeight - headerHeight}px`;
+      this.select("content").style.width = `100vw`;
+    }
+
+    setAttributes(this, ["data-transition", state]);
+    const content = this.select("content");
+    content && setAttributes(content, ["aria-hidden", String(!open)]);
+    this.isOpen = open;
+
+    // Lock scroll if needed
+
+    // On clickoutside the thing
+    if (this.closeOnClickOutside) {
+      eventListener(document, "click", this.oco, !open);
+    }
+    // On escape close the thing
+    eventListener(document, "keyup", this.oku, !open);
+
+    this.trapFocus(this, open);
+  };
+
+  displayCarousels = () => {
+    Array.from(this.querySelectorAll("tail-carousel"))
+      .concat(Array.from(this.querySelectorAll("tail-tabs")))
+      .forEach((carousel) => {
+        carousel.setAttribute("displayed", "true");
+      });
+  };
+
+  onNavigate = (e) => {
+    var isTabPressed = e.key === "Tab" || e.keyCode === 9;
+    if (!isTabPressed) return;
+    if (e.shiftKey) {
+      if (document.activeElement === this.firstFocusableEl) {
+        this.lastFocusableEl.focus();
+        e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === this.lastFocusableEl) {
+        this.firstFocusableEl.focus();
+        e.preventDefault();
+      }
+    }
+  };
+
+  trapFocus = (element, trap) => {
+    if (!this.firstFocusableEl) {
+      var focusableEls = element.querySelectorAll(
+        `a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled]), ${this.type}-close, [role="button"]`
+      );
+      this.firstFocusableEl = focusableEls[0];
+      this.lastFocusableEl = focusableEls[focusableEls.length - 1];
+    }
+    eventListener(element, "keydown", this.onNavigate, !trap);
+  };
+
+  close = () => {
+    this.st("exiting");
+    this.to = setTimeout(() => this.st("out", false), 150);
+
+    const onClose = this.getAttribute("onClose");
+    if (onClose) {
+      try {
+        eval(onClose);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  open = () => {
+    this.displayCarousels();
+    this.st("entering");
+    if (this.closest("tail-carouse")) this.closest("tail-carouse").setAttribute("displayed", "false");
+    this.to = setTimeout(() => this.st("in", true));
+  };
+
+  toggle = () => {
+    if (this.to) {
+      window.clearTimeout(this.to);
+    }
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
+  };
+
+  oku = (event) => {
+    if (event.code && event.code.toUpperCase() === "ESCAPE") this.toggle();
+  };
+  oco = (event) => {
+    if (this.contains(event.target)) return;
+    this.toggle();
+  };
+}
+
+const getProps = (element) => {
+  return element.propsDefinition.reduce((acc, [prop, type]) => {
+    let value = element.getAttribute(prop);
+    if (value) {
+      switch (type) {
+        case "string": {
+          break;
+        }
+        case "boolean": {
+          value = value === "true";
+          break;
+        }
+        case "number": {
+          value = Number(value);
+          break;
+        }
+      }
+      acc[prop] = value;
+    }
+    return acc;
+  }, {});
+};
+
+function throttle(callback, time) {
+  if (!this.throttlePause) {
+    this.throttlePause = true;
+    setTimeout(() => {
+      callback();
+      this.throttlePause = false;
+    }, time);
+  }
+}
+
+setButtonElement = (element) => {
+  setAttributes(element, ["role", "button"], ["tabindex", "0"], ["aria-pressed", "false"]);
+
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      element.click();
+    }
+  });
+};
+
+class Btn extends H {
+  connectedCallback() {
+    setAttributes(this, ["role", "button"], ["tabindex", "0"], ["aria-pressed", "false"]);
+
+    this.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        this.click();
+      }
+    });
+  }
+}
+class Trigger extends H {
+  connectedCallback() {
+    setAttributes(
+      this,
+      ["role", "button"],
+      ["tabindex", "0"],
+      ["aria-pressed", "false"],
+      ["aria-labelledby", this.findParentId()],
+      ["aria-label", `${this.mode} ${this.type}`]
+    );
+    this.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        this.click();
+      }
+    });
+  }
+  findParentId = () => {
+    let parent = this;
+    while (parent.tagName?.toLocaleLowerCase() !== `tail-${this.type}`) {
+      parent = parent.parentElement;
+    }
+    return parent.id;
+  };
+}
+
+class HeaderDialog extends Dialog {
+  static get observedAttributes() {
+    return ["data-transition"];
+  }
+  attributeChangedCallback(_name, oldValue, newValue) {
+    if (newValue === "entering" || newValue === "out") {
+      if (newValue === "entering" && this.onEntering) this.onEntering();
+      const header = document.querySelector("tail-header");
+      console.log();
+      const overlay = this.querySelector(`${this.type}-overlay`);
+      if (overlay && header) {
+        const { top } = header.getBoundingClientRect();
+        if (newValue === "out") {
+          overlay.style.marginTop = "0px";
+        } else {
+          overlay.style.marginTop = `${-top}px`;
+        }
+      }
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const instaFeed = document.querySelector("#insta-feed");
+
+  if (instaFeed) {
+    const observer = new MutationObserver(() => {
+      const [arrowLeft, arrowRight] = instaFeed.querySelectorAll(".slider-arrow");
+      console.log({ arrowLeft, arrowRight });
+
+      if (arrowLeft && arrowRight) {
+        arrowLeft.classList.add("!flex", "items-center", "justify-start");
+        arrowRight.classList.add("!flex", "items-center", "justify-end");
+        arrowLeft.style.marginLeft = "15px";
+        arrowRight.style.marginRight = "15px";
+        arrowLeft.innerHTML = `<svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.79191 0C5.07514 1.45869 4.40462 2.55271 3.78035 3.28205L24 3.28205V4.71795L3.78035 4.71795C4.40462 5.44729 5.07514 6.54131 5.79191 8H4.57803C3.12139 6.33618 1.59538 5.10541 0 4.30769V3.69231C1.59538 2.91738 3.12139 1.68661 4.57803 0H5.79191Z" fill="#3A0F00"></path></svg>`;
+        arrowRight.innerHTML = `<svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2081 8C18.9249 6.54131 19.5954 5.44729 20.2197 4.71795H0V3.28205H20.2197C19.5954 2.55271 18.9249 1.45869 18.2081 0H19.422C20.8786 1.66382 22.4046 2.89459 24 3.69231V4.30769C22.4046 5.08262 20.8786 6.31339 19.422 8H18.2081Z" fill="#3A0F00"></path></svg>`;
+        observer.disconnect();
+      }
+    });
+    observer.observe(instaFeed, { childList: true });
+  }
+});

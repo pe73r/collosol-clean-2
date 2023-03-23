@@ -1,0 +1,127 @@
+<section>
+  <div class="w-full">
+    <div class="flex flex-col lg:flex-row">
+      <div class="lg:w-1/2">
+        <div
+          class="image sticky flex justify-center px-6 items-center w-full text-center bg-center bg-cover bg-no-repeat"
+          {% if data.image != blank %}
+          style="background-image: url({{ data.image | img_url: 'master' }});"
+          {% endif %}>
+          <div class="text-image text-base md:text-[50px] leading-[4rem] GroteskBold" style="color: {{ data.text_image_color }}">
+            {{ data.text_image }}
+          </div>
+        </div>
+      </div>
+      <div class=" flex flex-col lg:w-1/2 lg:block basis-1/2">
+        <div class="flex items-center justify-evenly gap-4 uppercase text-base px-5 GroteskBold py-2 xl:py-8 md:px-0 md:mt-0 xl:text-[24px]">
+          <a
+            class="border-b-2 border-acajou"
+            style="color:{{ data.text_produits_color }}"
+            href="#">
+            Produits
+          </a>
+          <a href="#{{ id }}-Anchor-conseils">
+            Conseils
+          </a>
+          <a class="hidden md:block" href="#{{ id }}-Anchor-Coaching">
+            Coaching
+          </a>
+          <a class="block md:hidden" href="#{{ id }}-Anchor-Coachings">
+            Coaching
+          </a>
+        </div>
+        <div class="text-center text-base px-8 py-2 md:py-4 md:px-16">{{ data.subtitle_tabs }}</div>
+        <div class="pdt">
+          {% assign products = data.product_list %}
+          {% for i in (1..8) %}
+            {% capture product_key %}product_{{ i }}{% endcapture %}
+            {% capture description_key %}product_description_{{ i }}{% endcapture %}
+            {% assign product = data[product_key] %}
+            {% assign description = data[description_key] %}
+
+            {% if product != blank %}
+              <div class="mx-2 my-3">
+                {% render 'card-product-result', product: product, description: description, id: id %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="flex items-center justify-center  px-2  gap-2 w-full max-w-full md:w-[450px] mx-auto">
+          <div
+            id="buy-buttons"
+            {{ block.shopify_attributes }}
+            class="flex-1 max-w-full ">
+            <add-to-cart
+              data-bundle="{{id}}"
+              data-product="{{ product.id }}"
+              class="{% unless product.available %} {% endunless %}"
+              data-max-quantity={{ product.selected_or_first_available_variant.inventory_quantity }}
+              data-disabled="{% if product.available %}false{% else %}true{% endif %}"
+              class="flex justify-center w-full"
+              data-price-stroke="{{ product.compare_at_price | money_without_trailing_zeros }}"
+              data-price="{{ product.price | money_without_trailing_zeros }}"
+              data-product="{{product.id}}"
+              data-variant="{{product.selected_or_first_available_variant.id}}">
+              <button class="w-full my-2 GrotesqueBold text-white cursor-pointer !px-0 !py-0 {% render "button", size: "large", color:"primary" %}">
+                <div class="px-16 py-3 flex justify-center items-center">
+                  <span class="block">Ajouter au panier</span>
+                  <span class="px-1">-</span>
+                  <span
+                    data-price
+                    data-dynamic-price
+                    class="block">{{ product.price | money_without_trailing_zeros }}</span>
+                  {%- if product.compare_at_price != blank -%}
+                    <span data-price-stroke class="block ml-2 text-xs line-through Grotesque">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                  {%- endif -%}
+                </div>
+              </button>
+            </add-to-cart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--buttons add to cart-->
+
+  </div>
+</section>
+<style>
+  @media only screen and (max-width:720px) {
+    .product-cards {
+      max-width: 100% !important;
+    }
+    .product-images {
+      max-width: 130px !important;
+      max-height: 130px !important;
+    }
+  }
+
+  @media only screen and (min-width:1024px) {
+    .image {
+      min-height: 620px;
+    }
+  }
+  .product-images {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .subtitle-tabs strong {
+    color: #713F2E;
+  }
+
+  .product-cards {
+    max-width: 570px;
+    margin: auto;
+    min-height: fit-content;
+  }
+  .image {
+    top: 4.3rem;
+    height: 120px;
+  }
+  .text-image {
+    line-height: 50px;
+  }
+  #icons-tag-results > svg {
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+</style>

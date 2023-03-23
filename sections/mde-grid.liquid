@@ -1,0 +1,104 @@
+<section class="w-11/12 max-w-7xl mx-auto pt-10 pb-20">
+    <!-- Title section -->
+    <div class="text-center mx-2 m-5 md:text-left md:w-2/3 lg:w-1-2">
+     <div class="text[18.5px] md:text-[22px]">
+      <h1 style=" color:{{ section.settings.title_color }}">
+        {{ section.settings.title }}
+      </h1>
+      </div>
+      <div class="text-[15px] mt-2" style="color:{{section.settings.subtitle_color}}">
+        {{section.settings.subtitle}}
+      </div>
+    </div>
+    <!-- Grid section -->
+    {%- if section.blocks.size > 1 -%}
+      <div class="grid grid-cols-2 gap-x-2 w-full mx-auto my-10 gap-y-[40px] sm:grid-cols-3 sm:gap-y-[86px] sm:gap-x-8 lg:grid-cols-4">
+        {% for block in section.blocks %}
+           {%- assign product = block.settings.product -%}
+            <div class="flex flex-col max-w-[178px] md:max-w-[291px] ">
+              <div class="">
+                  <div class="relative group">
+                     <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{product.featured_image.alt}}" class="w-full object-cover min-h-[198px] md:min-h-[309px]">
+                        <div class="absolute bottom-4 right-4">
+                            <a href="{{ block.settings.link }}" target="_blank">
+                                <div class="flex items-center justify-center w-[34px] h-[34px] md:w-[60px] md:h-[60px] bg-acajou rounded-full">
+                                  <div class="flex items-center w-[18px] md:w-[25px]">
+                                    {%- render 'icon-download' -%}
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                   </div>
+                    <div class="text-[13px] GrotesqueBold uppercase text-acajou mt-3">
+                      {{ product.title }}
+                   </div>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+    {%- endif -%}
+</section>
+
+
+{%- schema -%}
+  {
+    "name": "Modes d'emploi",
+    "settings": [
+
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title",
+        "default": "COMMENT PRÉPARER MON PRODUIT ?"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "text",
+        "default": "<p> Quelles sont les contre-indications  éventuelles et les doses journalières ? Besoin d'astuces, d'idées recettes ? On vous a préparé des modes d'emploi à télécharger !</p>"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "colors"
+      }, {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title color",
+        "default": "#733E2B"
+      }, {
+        "type": "color",
+        "id": "subtitlet_color",
+        "label": "Subtitle color",
+        "default": "#927254"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Choose a product"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label": "PDF link"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Mode d'emploi grid"
+      }
+    ]
+  }
+  {% endschema %}

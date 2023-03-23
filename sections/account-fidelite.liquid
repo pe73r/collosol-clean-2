@@ -1,0 +1,125 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'customer.js' | asset_url }}" defer></script>
+
+<section class="font-[RebondGrotesque] bg-[#F5F5F5]">
+  <div class="relative flex flex-col w-full">
+    <div class="relative w-full md:h-64">
+      <img
+        src="{{ settings.account_image_3 | image_url: width: 1800 }}"
+        loading="eager"
+        width="821"
+        height="285"
+        class="object-cover w-full h-full">
+      <div class="absolute inset-0 flex items-center justify-center w-full h-full">
+        <h2 class="GroteskBold text-white text-xl leading-8 md:leading-10 md:text-3xl font-extrabold uppercase tracking-wider">
+          {{ 'customer.account.fidelite_title' | t }}
+        </h2>
+      </div>
+    </div>
+    <details class="text-sm font-extrabold uppercase cursor-pointer bg-sable text-acajou md:hidden">
+      <a href="{{ routes.account_addresses_url }}" class="p-5 text-acajou GroteskBold opacity-30 block">
+        <span>{{ 'customer.account.informations_link' | t }}</span>
+      </a>
+      <a href="{{ routes.account_url }}?orders=true" class="p-5 text-acajou GroteskBold opacity-30 block">
+        <span>{{ 'customer.account.orders_link' | t }}</span>
+      </a>
+      <summary class="p-5 GroteskBold flex items-center">
+        <span>{{ 'customer.account.fidelite_link' | t }}</span>
+        <div class="ml-auto border-t-8 border-b-0 border-solid border-t-acajou border-x-transparent border-x-8"></div>
+      </summary>
+      <a href="/pages/parrainage" class="p-5 text-acajou GroteskBold opacity-30 block">
+        <span>{{ 'customer.account.parrainage_link' | t }}</span>
+      </a>
+      {% comment %}
+        <a href="/pages/diagnostic-account" class="p-5 text-acajou GroteskBold opacity-30 block">
+        <span>{{ 'customer.account.diagnostic_link' | t }}</span>
+        </a>
+      {% endcomment %}
+    </details>
+    <div class="w-full px-5 pt-2 bg-[#F5F5F5] mb-5 md:hidden">
+      <a href="{{ routes.account_url }}" class="text-xs uppercase">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 10 6"
+          class="inline w-3 align-middle rotate-90">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+            fill="currentColor">
+        </svg>
+        <span class="inline ml-1 align-middle text-[11px]">{{ 'customer.account.back_to_account' | t }}</span>
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-row bg-[#F5F5F5]">
+    <div class="flex-col hidden min-w-[320px] max-w-[320px] h-auto bg-sable md:flex py-10 px-[54px]">
+      <div class="w-full mb-[30px]">
+        <a href="{{ routes.account_url }}" class="text-xs uppercase cursor-pointer">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 10 6"
+            class="inline w-3 align-middle rotate-90">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor">
+          </svg>
+          <span class="inline ml-1 align-middle text-[11px]">{{ 'customer.account.back_to_account' | t }}</span>
+        </a>
+      </div>
+      <div class="flex flex-col text-base font-extrabold uppercase bg-sable  text-acajou">
+        <a href="{{ routes.account_addresses_url }}" class="GroteskBold mb-5 text-acajou opacity-30 cursor-pointer">
+          <span>{{ 'customer.account.informations_link' | t }}</span>
+        </a>
+        <a href="{{ routes.account_url }}?orders=true" class="GroteskBold mb-5 text-acajou opacity-30 cursor-pointer">
+          <span>{{ 'customer.account.orders_link' | t }}</span>
+        </a>
+        <div class="GroteskBold flex items-center mb-5">
+          <span>{{ 'customer.account.fidelite_link' | t }}</span>
+        </div>
+        <a href="/pages/parrainage" class="GroteskBold mb-5 text-acajou opacity-30 cursor-pointer">
+          <span>{{ 'customer.account.parrainage_link' | t }}</span>
+        </a>
+
+        <a href="/pages/diagnostic-account" class="GroteskBold mb-5 text-acajou opacity-30 cursor-pointer">
+          <span>{{ 'customer.account.diagnostic_link' | t }}</span>
+        </a>
+
+      </div>
+    </div>
+    <div class="Wagner bg-[#F5F5F5] w-full max-w-[1120px] md:w-4-6 md:py-10 md:px-16">
+      <div class="px-5 md:px-0">
+        <h2 class="font-[RebondGrotesque] font-medium text-xl mb-4 md:text-2xl">
+          Programme de fidélité
+        </h2>
+      </div>
+      {{ section.settings.yotpo-content }}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+
+  {
+    "name": "Account fidelite",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "yotpo-content",
+        "label": "Content",
+        "info": "Paste de yotpo widget here"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Account fidelité"
+      }
+    ]
+  }
+{% endschema %}
