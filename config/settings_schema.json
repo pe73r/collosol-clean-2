@@ -1,8 +1,8 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "5.0.0",
+    "theme_name": "Collosol",
+    "theme_version": "1.0.",
     "theme_author": "Shopify",
     "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
     "theme_support_url": "https:\/\/support.shopify.com\/"
@@ -31,7 +31,7 @@
       {
         "type": "color",
         "id": "accent",
-        "default": "#F4FFAF",
+        "default": "#F6D8DA",
         "label": "Accent"
       },
       {
@@ -41,7 +41,7 @@
       {
         "type": "color",
         "id": "button_bg_primary",
-        "default": "#3A0F00",
+        "default": "#EA409F",
         "label": "Button primary background"
       },
       {
@@ -57,7 +57,7 @@
       {
         "type": "color",
         "id": "button_bg_secondary",
-        "default": "#F4FFAF",
+        "default": "#F6D8DA",
         "label": "Button secondary background"
       },
       {
@@ -192,99 +192,6 @@
         "id": "favicon",
         "label": "Favicon",
         "info": "Favicon image for the browser"
-      }
-    ]
-  },
-  {
-    "name": "Tags",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "Product tags"
-      },
-      {
-        "type": "text",
-        "id": "tag_allaitement",
-        "label": "Tag Allaitement",
-        "default": "Allaitement"
-      },
-      {
-        "type": "text",
-        "id": "tag_grossesse",
-        "label": "Tag grossesse",
-        "default": "Grossesse"
-      },
-      {
-        "type": "text",
-        "id": "tag_post_partum",
-        "label": "Tag post partum",
-        "default": "Post partum"
-      },
-      {
-        "type": "text",
-        "id": "tag_cycle",
-        "label": "Tag cycle",
-        "default": "Cycle"
-      },
-      {
-        "type": "text",
-        "id": "tag_vegan",
-        "label": "Tag vegan",
-        "default": "Vegan"
-      },
-      {
-        "type": "text",
-        "id": "tag_fertilite",
-        "label": "Tag fertilité",
-        "default": "Fertilité"
-      },
-      {
-        "type": "text",
-        "id": "tag_essentiels",
-        "label": "Tag Essentiels",
-        "default": "Essentiels"
-      },
-      {
-        "type": "text",
-        "id": "tag_boost",
-        "label": "Tag Boost",
-        "default": "Boost"
-      },
-      {
-        "type": "text",
-        "id": "tag_gluten",
-        "label": "Tag gluten",
-        "default": "Sans Gluten"
-      },
-      {
-        "type": "text",
-        "id": "tag_pre_post_natal",
-        "label": "Tag Pré et post natal",
-        "default": "Pré et post natal"
-      },
-      {
-        "type": "text",
-        "id": "tag_menstruel",
-        "label": "Tag menstruel",
-        "default": "Confort menstruel"
-      },
-      {
-        "type": "text",
-        "id": "tag_enfant",
-        "label": "Tag Désir d’enfant",
-        "default": "Désir d’enfant"
-      },
-      {
-        "type": "text",
-        "id": "tag_pre_natal",
-        "label": "Tag Pré natal",
-        "default": "Pré natal"
-      },
-      {
-        "type": "text",
-        "id": "tag_economisez",
-        "label": "Tag Économisez",
-        "default": "Économisez"
       }
     ]
   },

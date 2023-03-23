@@ -6,41 +6,6 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta content="" name="theme-color">
 
-    <!-- Just Button  -->
-    <script src="https://checkout-button-shopify.vercel.app/just-pay-button.js" type="module"></script>
-    <link
-      href="https://checkout-button-shopify.vercel.app/styles.css"
-      rel="stylesheet"
-      crossorigin>
-    <style>
-      #just-frame-payment {
-        z-index: 9999999999;
-      }
-      just-pay-button::part(just-button-lock) {
-        opacity: 0;
-      }
-    </style>
-    <!-- End of Just Button  -->
-    {% if template contains 'search' %}
-      <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
-    {% if handle contains 'products' %}
-      <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
-    {% if handle contains 'collections' %}
-      <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
-    {% if handle contains 'pages' %}
-      <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
-    {% if handle contains 'blogs' %}
-      <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
     {% if handle contains 'account' %}
       <meta name="robots" content="noindex, nofollow">
     {% endif %}
@@ -108,8 +73,7 @@
       {% render "scripts" %}
     {% endif %}
 
-    <script src="{{ 'tail.algolia.js' | asset_url }}" preload></script>
-
+   
     <script>
       const url = new URL(window.location.href);
       const reset_password_url = decodeURIComponent(url.searchParams.get("reset_password_url"));
@@ -147,44 +111,8 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
-
-    <script type="text/javascript">
-      {% render 'GTM-scripts' %}
-    </script>
-
     {{ content_for_header }}
 
-
-    <script type="text/javascript">
-      var yotpo_app_key = "jVZbEAhpSncdn5wMvZU8H8QoZgUnBnc8LcIpTdJI";
-      (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/jVZbEAhpSncdn5wMvZU8H8QoZgUnBnc8LcIpTdJI/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
-    </script>
-
-    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-      Weglot.initialize({api_key: 'wg_187ff30b6f43474274a3e50311808fb25'});
-    </script>
-
-    <!-- Hotjar Tracking Code for https://jollymama.com/ -->
-    <script>
-      (function(h, o, t, j, a, r) {
-        h.hj = h.hj || function() {
-          (h.hj.q = h.hj.q || []).push(arguments)
-        };
-        h._hjSettings = {
-          hjid: 2976148,
-          hjsv: 6
-        };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script');
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-    {% render 'weglot_switcher' %}
-    {% render 'weglot_hreftags' %}
   </head>
   <body>
 
@@ -226,7 +154,7 @@
     </main>
 
 
-    {% section 'footer-mama' %}
+    {% section 'footer' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}
@@ -261,130 +189,5 @@
       }
     </script>
 
-    {{ 'recharge.css' | asset_url | stylesheet_tag }}
-
-    <!--Klaviyo -->
-    <script
-      async
-      type="text/javascript"
-      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RUJmn8"></script>
-
-    {% unless request.locale.iso_code contains "de" %}
-      <!--Gorgias Chat Widget Start-->
-      <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=17912"></script>
-      <style>
-        .gorgias-chat-key-eam2gc {
-          z-index: 1;
-        }
-      </style>
-    {% endunless %}
-
-    {% if request.locale.iso_code contains "de" %}
-      <style>
-      #gorgias-chat-container{
-        display:  none !important;
-      }
-      </style>
-
-    {% endif %}
-    <!--Gorgias Chat Widget End-->
-    <script>
-      window.axeptioSettings = {
-        clientId: "6255e237c95260b3df9dc338"
-      };
-
-      (function(d, s) {
-        var t = d.getElementsByTagName(s)[0],
-          e = d.createElement(s);
-        e.async = true;
-        e.src = "//static.axept.io/sdk.js";
-        t.parentNode.insertBefore(e, t);
-      })(document, "script");
-    </script>
-
-    <!-- Pop up parrainage -->
-    <div class="yotpo-widget-instance" data-yotpo-instance-id="224147"></div>
-
-    <!-- klaviyo back in stock -->
-    <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-    <script>
-      var klaviyo = klaviyo || [];
-      klaviyo.init({account: "RUJmn8", platform: "shopify"});
-      klaviyo.enable("backinstock", {
-        trigger: {
-          product_page_text: "Notify Me When Available",
-          product_page_class: "btn btn-rounded",
-          product_page_text_align: "center",
-          product_page_margin: "0px",
-          replace_anchor: false
-        },
-        modal: {
-          headline: "{product_name}",
-          body_content: "Inscrivez-vous pour être avertie de son retour en stock en avant première",
-          email_field_label: "Email",
-          button_label: "Prévenez-moi",
-          subscription_success_label: "Votre inscription à bien été prise en compte ! À très vite, mama",
-          footer_content: '',
-          additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');text-align: center;",
-          drop_background_color: "#000",
-          background_color: "#fff",
-          text_color: "#343434",
-          button_text_color: "#fff",
-          button_background_color: "#3A0F00",
-          close_button_color: "#ccc",
-          error_background_color: "#fcd6d7",
-          error_text_color: "#C72E2F",
-          success_background_color: "#d3efcd",
-          success_text_color: "#004d1a"
-        }
-      });
-    </script>
-    <!-- Yotpo pop up checkout discount code -->
-    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/ls8PaM3V_SQAYEemet-bbw" async></script>
-
-    <style>
-      #klaviyo-bis-modal {
-        border-radius: 10px;
-        text-align: center;
-      }
-      #klaviyo-bis-modal .modal-title {
-        color: #3A0F00;
-        font-family: "GroteskBold";
-      }
-      #klaviyo-bis-modal .btn,
-      .btn-rounded {
-        border-radius: 30px;
-      }
-
-      .card-product .yotpo .star-clickable a {
-        font-size: 12px;
-        margin-left: 5px;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .card-product .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star,
-        .card-product .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-half-star {
-          font-size: 12px;
-        }
-
-        .card-product .yotpo .star-clickable a {
-          font-size: 11px;
-          margin-left: 5px;
-          position: relative;
-          top: -3px;
-        }
-
-        .logo {
-          max-width: 120px;
-        }
-      }
-    </style>
-
-    <style>
-      {% render 'recharge_css' %}
-    </style>
-    <!-- CRITEO START -->
-    {% render 'criteo-tracking' %}
-    <!-- CRITEO END -->
   </body>
 </html>
