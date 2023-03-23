@@ -7,7 +7,7 @@
             <div>
               {% if section.settings.logo_svg != blank %}
                 <img class="mb-4 lazy" src="{{ section.settings.logo_svg }}" alt="">
-              {% else %}
+              {% elsif section.settings.logo != blank %}
                 <img class="mb-4 lazy" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ section.settings.logo.alt }} ">
               {% endif %}
               <div class="flex items-center text-base">

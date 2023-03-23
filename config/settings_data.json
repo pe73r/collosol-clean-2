@@ -334,19 +334,19 @@
           "footer-0"
         ],
         "settings": {
-          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0636\/1966\/2070\/files\/logo.svg?v=1662912874",
+          "logo_svg": "",
           "subtext": "<p>Parce que chaque femme est différente, et que chaque moment nécessite que l’on imagine des produits spécifiques<\/p>",
           "show_social": true,
           "subtitle-image-footer": "NOUVEAUTÉ",
           "header-image-footer": "DEVENEZ UNE <br><span>GOLDEN MAMA<\/span>",
           "link-image-footer": "Je découvre",
           "link-image": "",
-          "mention-legal": "<p>Mentions légales — Privacy Policy ©Jolly Mama 2021<\/p>",
-          "bg_color": "#fff",
-          "subtitle-image-footer-color": "#FFFFFF",
-          "header-image-footer-color": "#FFFFFF",
-          "header-image-footer-color-2": "#F4FFAF",
-          "link-image-footer-color": "#FFFFFF"
+          "mention-legal": "<p>Mentions légales — Privacy Policy © 2023<\/p>",
+          "bg_color": "#ffffff",
+          "subtitle-image-footer-color": "#ffffff",
+          "header-image-footer-color": "#ffffff",
+          "header-image-footer-color-2": "#f4ffaf",
+          "link-image-footer-color": "#ffffff"
         }
       }
     },
